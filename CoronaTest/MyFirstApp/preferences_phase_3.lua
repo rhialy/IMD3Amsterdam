@@ -15,6 +15,8 @@ local leopardButton;
 local dogButton;
 local apeButton;
 local nextButton;
+local checkedImageNumber;
+local checkMarkSize;
 
 function pp3:create(event)
     
@@ -67,28 +69,62 @@ function pp3:show(event)
     
     if(phase == "did") then
         
+        local function checkHandler(object)
+            if(checkedImageNumber == 1) then
+                firstCheck = display.newImageRect("checkmarck.png", checkMarkSize, checkMarkSize);
+                firstCheck.x = object.x;
+                firstCheck.y = object.y;
+                sceneGroup:insert(firstCheck);
+            end
+            if(checkedImageNumber == 2) then
+                secondCheck = display.newImageRect("checkmarck.png", checkMarkSize, checkMarkSize);
+                secondCheck.x = object.x;
+                secondCheck.y = object.y;
+                sceneGroup:insert(secondCheck);
+            end
+        end
+        
+        local function checkDestroyer(object)
+            if(checkedImageNumber == 0) then
+                if(firstCheck ~= nil) then
+                    firstCheck:removeSelf();
+                    firstcheck = nil;
+                end
+            end
+            if(checkedImageNumber == 1) then
+                print("is in conditional");
+                if(secondCheck ~= nil) then
+                    secondCheck:removeSelf();
+                    secondCheck = nil;
+                end
+            end
+        end
+
         
         local function checkingIfChecked(object)
+            
+            if(object.alpha > 0.95) then
+                if(checkedImageNumber < 2) then
+                    object:setFillColor( 0.55, 0.55, 0.55);
+                    object.alpha = 0.95;
+                    checkedImageNumber = checkedImageNumber + 1;
+                    checkHandler(object);
+                end
+                    
+                --object:translate( 1,0);
+                --object:translate(-1,0);
+            elseif(object.alpha <= 0.95) then
+                
+                object:setFillColor( 1, 1, 1);
+                object.alpha = 1;
+                
+                checkedImageNumber = checkedImageNumber - 1;
+                checkDestroyer(object);
+                --object:translate( 1,0);
+                --object:translate(-1,0);
 
-        if(object.alpha > 0.95) then
-            checkButton = display.newImageRect("checkmarck.png", checkMarkSize, checkMarkSize);
-            sceneGroup:insert(checkButton);
-            object:setFillColor( 0.55, 0.55, 0.55);
-            object.alpha = 0.95;
-            checkButton.x = object.x;
-            checkButton.y = object.y;
-            --object:translate( 1,0);
-            --object:translate(-1,0);
-        elseif(object.alpha <= 0.95) then
-            object:setFillColor( 1, 1, 1);
-            object.alpha = 1;
-            if(checkButton ~= nil) then
-                checkButton:removeSelf()
             end
-            --object:translate( 1,0);
-            --object:translate(-1,0);
-
-            end
+            print("checkedImageNumber :" and tostring(checkedImageNumber));
         end
 
 
@@ -119,7 +155,9 @@ function pp3:show(event)
         local function nextScene(event)
 
             if(event.phase =="ended" or event.phase == "cancelled") then
-                composer.gotoScene("preferences_phase_1");
+                if(checkedImageNumber > 0) then
+                    composer.gotoScene("preferences_phase_4");
+                end
             end
         end
 
@@ -144,10 +182,10 @@ end
 function pp3:destroy( event )
 
     local sceneGroup = self.view
-    sceneGroup:remove(lionButton);
-    sceneGroup:remove(leopardButton);
-    sceneGroup:remove(dogButton);
-    sceneGroup:remove(apeButton);
+    --sceneGroup:remove(lionButton);
+    --sceneGroup:remove(leopardButton);
+    --sceneGroup:remove(dogButton);
+    --sceneGroup:remove(apeButton);
     
 end
 
