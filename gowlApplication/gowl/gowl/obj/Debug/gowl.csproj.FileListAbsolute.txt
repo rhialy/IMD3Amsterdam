@@ -18,3 +18,20 @@ F:\SemesterProjekt3\GitHub\gowlApplication\gowl\gowl\obj\Debug\res\mipmap-xxxhdp
 F:\SemesterProjekt3\GitHub\gowlApplication\gowl\gowl\obj\Debug\res\layout\testlayout.xml
 F:\SemesterProjekt3\GitHub\gowlApplication\gowl\gowl\obj\Debug\R.cs.flag
 F:\SemesterProjekt3\GitHub\gowlApplication\gowl\gowl\obj\Debug\uploadflags.txt
+C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\gowl\bin\Debug\gowl.dll
+C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\gowl\bin\Debug\gowl.pdb
+C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\gowl\bin\Debug\imd3.application.gowl.apk
+C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\gowl\bin\Debug\imd3.application.gowl-Signed.apk
+C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\gowl\obj\Debug\gowl.dll
+C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\gowl\obj\Debug\gowl.pdb
+C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\gowl\obj\Debug\android\bin\imd3.application.gowl.apk
+C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\gowl\obj\Debug\res\layout\main.xml
+C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\gowl\obj\Debug\res\values\strings.xml
+C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\gowl\obj\Debug\res\mipmap-hdpi\icon.png
+C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\gowl\obj\Debug\res\mipmap-mdpi\icon.png
+C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\gowl\obj\Debug\res\mipmap-xhdpi\icon.png
+C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\gowl\obj\Debug\res\mipmap-xxhdpi\icon.png
+C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\gowl\obj\Debug\res\mipmap-xxxhdpi\icon.png
+C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\gowl\obj\Debug\res\layout\testlayout.xml
+C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\gowl\obj\Debug\R.cs.flag
+C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\gowl\obj\Debug\uploadflags.txt

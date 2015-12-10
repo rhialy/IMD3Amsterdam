@@ -28,6 +28,8 @@ namespace gowl
 				ColorName = "Slate Blue", Code = "6A5ACD" });
 			colorItems.Add (new ColorItem () { Color = Android.Graphics.Color.ForestGreen,
 				ColorName = "Forest Green", Code = "228B22" });
+			colorItems.Add (new ColorItem () { Color = Android.Graphics.Color.DarkSalmon,
+				ColorName = "Favorite Blubber", Code = "8BCCDD" });
 
 			listView.Adapter = new ColorAdapter (this, colorItems);
 		}
