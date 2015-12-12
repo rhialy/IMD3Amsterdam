@@ -44,8 +44,44 @@ namespace GOWL
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f050008
+			public const int LayoutImagesLower = 2131034120;
+			
+			// aapt resource value: 0x7f050002
+			public const int LayoutImagesUpper = 2131034114;
+			
+			// aapt resource value: 0x7f050009
+			public const int LayoutNextBackButton = 2131034121;
+			
+			// aapt resource value: 0x7f050001
+			public const int UpperSpace = 2131034113;
+			
+			// aapt resource value: 0x7f05000c
+			public const int backButton = 2131034124;
+			
+			// aapt resource value: 0x7f050004
+			public const int imageButton1 = 2131034116;
+			
+			// aapt resource value: 0x7f050006
+			public const int imageButton2 = 2131034118;
+			
 			// aapt resource value: 0x7f050000
 			public const int myButton = 2131034112;
+			
+			// aapt resource value: 0x7f05000a
+			public const int nextButton = 2131034122;
+			
+			// aapt resource value: 0x7f050005
+			public const int space1 = 2131034117;
+			
+			// aapt resource value: 0x7f05000b
+			public const int space2 = 2131034123;
+			
+			// aapt resource value: 0x7f050003
+			public const int spaceLeft = 2131034115;
+			
+			// aapt resource value: 0x7f050007
+			public const int spaceRight = 2131034119;
 			
 			static Id()
 			{
@@ -62,6 +98,12 @@ namespace GOWL
 			
 			// aapt resource value: 0x7f030000
 			public const int Main = 2130903040;
+			
+			// aapt resource value: 0x7f030001
+			public const int MainPreferences = 2130903041;
+			
+			// aapt resource value: 0x7f030002
+			public const int WelcomeScreen = 2130903042;
 			
 			static Layout()
 			{
