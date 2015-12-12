@@ -1,8 +1,73 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    android:background="#ffeee6d2">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="100dp"
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Willkommen"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/textView1"
+            android:minHeight="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#ff414141"
+            android:paddingLeft="90dp"
+            android:paddingTop="60dp"
+            android:textScaleX="1"
+            android:textSize="35dp"
+            android:paddingBottom="0dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout3">
+        <TextView
+            android:text="bei"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/textView2"
+            android:textColor="#ff414141"
+            android:paddingLeft="170dp"
+            android:textSize="26dp"
+            android:paddingBottom="0dp"
+            android:paddingTop="0dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout2"
+        android:minHeight="400dp">
+        <ImageView
+            android:src="@drawable/gowl_logo"
+            android:id="@+id/logo"
+            android:minHeight="0dp"
+            android:paddingTop="0dp"
+            android:paddingBottom="120dp"
+            android:minWidth="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingRight="0dp"
+            android:paddingLeft="25dp"
+            android:maxHeight="100dp" />
+        <Button
+            android:text="Button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/button1"
+            android:paddingBottom="200dp" />
+    </LinearLayout>
 </LinearLayout>
-
