@@ -1,1 +1,16 @@
+<<<<<<< HEAD
 ﻿<Properties StartupItem="GOWL\GOWL.csproj" />
+=======
+﻿<Properties StartupItem="gowl\gowl.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus_5_API_21" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="gowl\MainActivity.cs">
+    <Files>
+      <File FileName="gowl\MainActivity.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
+>>>>>>> 12efe36e2cb38dff4fadf18efab167ebcf403ce1
