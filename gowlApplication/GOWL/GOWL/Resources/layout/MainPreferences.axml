@@ -21,33 +21,32 @@
             android:minHeight="500dp"
             android:layout_width="wrap_content"
             android:layout_height="match_parent" />
-        <ImageButton
-            android:src="@android:drawable/ic_menu_gallery"
+        <ImageView
+            android:src="@android:drawable/testt.png"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/imageButton1"
+            android:id="@+id/imageView1"
             android:minWidth="150dp"
-            android:minHeight="150dp"
-            android:paddingTop="0dp" />
+            android:minHeight="150dp" />
         <Space
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:id="@+id/space1"
             android:minWidth="40dp"
             android:minHeight="500dp" />
-        <ImageButton
-            android:src="@android:drawable/ic_menu_gallery"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageButton2"
-            android:minWidth="150dp"
-            android:minHeight="150dp" />
         <Space
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:id="@+id/spaceRight"
             android:minWidth="10dp"
             android:minHeight="500dp" />
+        <ImageView
+            android:src="@android:drawable/ic_menu_gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView2"
+            android:minWidth="150dp"
+            android:minHeight="150dp" />
     </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"
@@ -61,33 +60,32 @@
             android:minHeight="500dp"
             android:layout_width="wrap_content"
             android:layout_height="match_parent" />
-        <ImageButton
+        <ImageView
             android:src="@android:drawable/ic_menu_gallery"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/imageButton1"
+            android:id="@+id/imageView3"
             android:minWidth="150dp"
-            android:minHeight="150dp"
-            android:paddingTop="0dp" />
+            android:minHeight="150dp" />
         <Space
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:id="@+id/space1"
             android:minWidth="40dp"
             android:minHeight="500dp" />
-        <ImageButton
-            android:src="@android:drawable/ic_menu_gallery"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageButton2"
-            android:minWidth="150dp"
-            android:minHeight="150dp" />
         <Space
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:id="@+id/spaceRight"
             android:minWidth="10dp"
             android:minHeight="500dp" />
+        <ImageView
+            android:src="@android:drawable/ic_menu_gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView4"
+            android:minWidth="150dp"
+            android:minHeight="150dp" />
     </LinearLayout>
     <LinearLayout
         android:orientation="vertical"
