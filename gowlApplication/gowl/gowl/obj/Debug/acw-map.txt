@@ -1,8 +1,0 @@
-gowl.MainActivity, gowl;md53dfa884cac73e81cc605dca1b95c3f34.MainActivity
-gowl.MainActivity, gowl, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md53dfa884cac73e81cc605dca1b95c3f34.MainActivity
-gowl.MainActivity;md53dfa884cac73e81cc605dca1b95c3f34.MainActivity
-gowl.MainActivity;md53dfa884cac73e81cc605dca1b95c3f34.MainActivity
-gowl.ColorAdapter, gowl;md53dfa884cac73e81cc605dca1b95c3f34.ColorAdapter
-gowl.ColorAdapter, gowl, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md53dfa884cac73e81cc605dca1b95c3f34.ColorAdapter
-gowl.ColorAdapter;md53dfa884cac73e81cc605dca1b95c3f34.ColorAdapter
-gowl.ColorAdapter;md53dfa884cac73e81cc605dca1b95c3f34.ColorAdapter

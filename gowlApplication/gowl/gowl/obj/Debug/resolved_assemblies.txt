@@ -1,8 +1,0 @@
-C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\gowl\obj\Debug\assemblies\gowl.dll
-C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\gowl\obj\Debug\assemblies\Mono.Android.dll
-C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\gowl\obj\Debug\assemblies\mscorlib.dll
-C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\gowl\obj\Debug\assemblies\System.Core.dll
-C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\gowl\obj\Debug\assemblies\System.dll
-C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\gowl\obj\Debug\assemblies\System.Xml.dll
-C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\gowl\obj\Debug\assemblies\System.Runtime.Serialization.dll
-C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\gowl\obj\Debug\assemblies\System.ServiceModel.Internals.dll
