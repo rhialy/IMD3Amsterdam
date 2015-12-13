@@ -45,29 +45,33 @@
             android:paddingTop="0dp" />
     </LinearLayout>
     <LinearLayout
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:minWidth="25px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout2"
-        android:minHeight="400dp">
+        android:minHeight="400dp"
+        android:gravity="center_horizontal">
         <ImageView
             android:src="@drawable/gowl_logo"
             android:id="@+id/logo"
-            android:minHeight="0dp"
+            android:minHeight="250dp"
             android:paddingTop="0dp"
-            android:paddingBottom="120dp"
-            android:minWidth="0dp"
+            android:minWidth="250dp"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:paddingRight="0dp"
-            android:paddingLeft="25dp"
-            android:maxHeight="100dp" />
+            android:maxHeight="250dp"
+            android:adjustViewBounds="true"
+            android:maxWidth="250dp" />
         <Button
-            android:text="Button"
+            android:text="Let's go"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:id="@+id/button1"
-            android:paddingBottom="200dp" />
+            android:layout_height="wrap_content"
+            android:id="@+id/startButton"
+            android:layout_marginTop="20dp"
+            android:minWidth="140dp"
+            android:minHeight="60dp"
+            android:background="#216877" />
     </LinearLayout>
 </LinearLayout>

@@ -6,14 +6,14 @@ using Android.Graphics;
 
 namespace GOWL
 {
-	[Activity (Label = "GOWL", MainLauncher = true, Icon = "@mipmap/icon")]
+	[Activity (Label = "MainActivity")]
 	public class MainActivity : Activity
 	{
 
-		ImageView firstImage;
-		ImageView secondImage;
-		ImageView thirdImage;
-		ImageView fourthImage;
+		ImageView firstImage_1;
+		ImageView secondImage_1;
+		ImageView thirdImage_1;
+		ImageView fourthImage_1;
 
 		LinearLayout imagesUpper;
 		LinearLayout imagesLower;
@@ -37,21 +37,37 @@ namespace GOWL
 
 			Log.Warn (Tag, "OnCreate");
 			SetContentView (Resource.Layout.MainPreferences);
-		
-			takeIt = (Button)FindViewById (Resource.Id.takeIt);
 
-			firstImage = (ImageView)FindViewById (Resource.Id.imageView1);
-			secondImage = (ImageView)FindViewById (Resource.Id.imageView2);
-			thirdImage = (ImageView)FindViewById (Resource.Id.imageView3);
-			fourthImage = (ImageView)FindViewById (Resource.Id.imageView4);
+			/************************************************|
+			 * 				DECLARING VARIABLES				 |
+			 * 					for global class use		 |
+			 * 												 |
+			 * **********************************************/
 
+			//--------Layout Variables---------//
+			// Images - Interests - Main Preferences
+			firstImage_1 = (ImageView)FindViewById (Resource.Id.imageView1);
+			secondImage_1 = (ImageView)FindViewById (Resource.Id.imageView2);
+			thirdImage_1 = (ImageView)FindViewById (Resource.Id.imageView3);
+			fourthImage_1 = (ImageView)FindViewById (Resource.Id.imageView4);
+			// Images - xx - Main Preferences
+
+			// Images - xx - Main Preferences
+
+			// Layout - MainPreferences - Main Preferences
 			imagesUpper = (LinearLayout)FindViewById (Resource.Id.LayoutImagesUpper);
 			imagesLower = (LinearLayout)FindViewById (Resource.Id.LayoutImagesLower);
 			fullScreen = (LinearLayout)FindViewById (Resource.Id.fullScreenLayout);
 
+			// Space - Main Preferences
 			upperSpace = (Space)FindViewById (Resource.Id.upperSpace);
 			lowerSpace = (Space)FindViewById (Resource.Id.lowerSpace);
 
+			// Button - Main Preferences
+			takeIt = (Button)FindViewById (Resource.Id.takeIt);
+
+			//-----------Method Variables---------//
+			// bools
 			isImageFitToScreen = true;
 			hasStarted = true;
 
@@ -60,11 +76,12 @@ namespace GOWL
 				hasStarted = false;
 				isSelected = true;
 			}
+				
+			ImageZoom (firstImage_1, Tag, fullScreen, imagesUpper, upperSpace);
+			ImageZoom (secondImage_1, Tag, fullScreen, imagesUpper, upperSpace);
+			ImageZoom (thirdImage_1, Tag, fullScreen, imagesLower, lowerSpace);
+			ImageZoom (fourthImage_1, Tag, fullScreen, imagesLower, lowerSpace);
 
-			ImageZoom (firstImage, Tag, fullScreen, imagesUpper, upperSpace);
-			ImageZoom (secondImage, Tag, fullScreen, imagesUpper, upperSpace);
-			ImageZoom (thirdImage, Tag, fullScreen, imagesLower, lowerSpace);
-			ImageZoom (fourthImage, Tag, fullScreen, imagesLower, lowerSpace);
 
 			/*firstImage.Click += ((object sender, System.EventArgs e) => {
 				if (isImageFitToScreen) {

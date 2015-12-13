@@ -2,6 +2,10 @@ GOWL.MainActivity, GOWL;md54107e72d59fade0a1e39897504ab4bab.MainActivity
 GOWL.MainActivity, GOWL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md54107e72d59fade0a1e39897504ab4bab.MainActivity
 GOWL.MainActivity;md54107e72d59fade0a1e39897504ab4bab.MainActivity
 gowl.MainActivity;md54107e72d59fade0a1e39897504ab4bab.MainActivity
+GOWL.WelcomeScreen, GOWL;md54107e72d59fade0a1e39897504ab4bab.WelcomeScreen
+GOWL.WelcomeScreen, GOWL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md54107e72d59fade0a1e39897504ab4bab.WelcomeScreen
+GOWL.WelcomeScreen;md54107e72d59fade0a1e39897504ab4bab.WelcomeScreen
+gowl.WelcomeScreen;md54107e72d59fade0a1e39897504ab4bab.WelcomeScreen
 Xamarin.InsightsCore.BackgroundManager, Xamarin.Insights;md55caa6fe88082d2d5789caeda3e8fc56c.BackgroundManager
 Xamarin.InsightsCore.BackgroundManager, Xamarin.Insights, Version=1.11.0.0, Culture=neutral, PublicKeyToken=null;md55caa6fe88082d2d5789caeda3e8fc56c.BackgroundManager
 Xamarin.InsightsCore.BackgroundManager;md55caa6fe88082d2d5789caeda3e8fc56c.BackgroundManager

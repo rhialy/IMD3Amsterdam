@@ -78,9 +78,6 @@ namespace GOWL
 			// aapt resource value: 0x7f06000f
 			public const int backButton = 2131099663;
 			
-			// aapt resource value: 0x7f060016
-			public const int button1 = 2131099670;
-			
 			// aapt resource value: 0x7f060001
 			public const int fullScreenLayout = 2131099649;
 			
@@ -122,6 +119,9 @@ namespace GOWL
 			
 			// aapt resource value: 0x7f060002
 			public const int spaceUp = 2131099650;
+			
+			// aapt resource value: 0x7f060016
+			public const int startButton = 2131099670;
 			
 			// aapt resource value: 0x7f060003
 			public const int takeIt = 2131099651;
