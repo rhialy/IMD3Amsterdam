@@ -69,8 +69,9 @@
     <AndroidResource Include="Resources\layout\WelcomeScreen.axml" />
     <AndroidResource Include="Resources\mipmap-hdpi\GOwl_Logo.png" />
     <AndroidResource Include="Resources\drawable\GOwl_Logo.png" />
-    <AndroidResource Include="Resources\drawable\test.png" />
     <AndroidResource Include="Resources\mipmap-hdpi\test.png" />
+    <AndroidResource Include="Resources\drawable\test.png" />
+    <AndroidResource Include="Resources\drawable\worldclear.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

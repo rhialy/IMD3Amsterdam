@@ -22,3 +22,5 @@ F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\gowl
 F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\R.cs.flag
 F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\uploadflags.txt
 F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\test.png
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\mipmap-hdpi\test.png
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\worldclear.jpg
