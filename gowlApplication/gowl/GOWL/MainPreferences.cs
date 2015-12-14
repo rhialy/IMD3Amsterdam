@@ -6,7 +6,7 @@ using Android.Graphics;
 
 namespace GOWL
 {
-	[Activity (Label = "MainActivity")]
+	[Activity (Label = "GOWL")]
 	public class MainActivity : Activity
 	{
 
