@@ -4,10 +4,12 @@ using Android.OS;
 using Android.Util;
 using Android.Graphics;
 
+using SQLite;
+
 namespace GOWL
 {
 	[Activity (Label = "GOWL")]
-	public class MainActivity : Activity
+	public class MainPreferences : Activity
 	{
 
 		ImageView firstImage_1;
@@ -29,11 +31,12 @@ namespace GOWL
 		bool isSelected;
 
 		private static string Tag = "MainActivity";
-
+		private string dbPath = Environment.DirectoryDocuments;
 
 		protected override void OnCreate (Bundle savedInstanceState)
 		{
 			base.OnCreate (savedInstanceState);
+			createDatabase (dbPath);
 
 			Log.Warn (Tag, "OnCreate");
 			SetContentView (Resource.Layout.MainPreferences);
@@ -76,11 +79,12 @@ namespace GOWL
 				hasStarted = false;
 				isSelected = true;
 			}
-				
+
 			ImageZoom (firstImage_1, Tag, fullScreen, imagesUpper, upperSpace);
 			ImageZoom (secondImage_1, Tag, fullScreen, imagesUpper, upperSpace);
 			ImageZoom (thirdImage_1, Tag, fullScreen, imagesLower, lowerSpace);
 			ImageZoom (fourthImage_1, Tag, fullScreen, imagesLower, lowerSpace);
+
 
 
 			/*firstImage.Click += ((object sender, System.EventArgs e) => {
@@ -102,7 +106,24 @@ namespace GOWL
 					Log.Info(Tag, "maximize");
 				}
 			});*/
+
 		}
+
+		private string createDatabase(string path)
+		{
+			try
+			{
+				var connection = new SQLiteAsyncConnection(path);{
+					connection.CreateTableAsync<User>();
+					return "Database created";
+				}
+			}
+			catch (SQLiteException ex)
+			{
+				return ex.Message;
+			}
+		}
+
 
 		protected void ImageZoom (ImageView imageView, string Tag, LinearLayout fullScreen, LinearLayout downScreen, Space partingSpace) {
 

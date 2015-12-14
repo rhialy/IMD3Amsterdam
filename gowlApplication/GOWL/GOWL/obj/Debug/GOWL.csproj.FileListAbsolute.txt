@@ -24,3 +24,29 @@ F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\uploadflags.txt
 F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\test.png
 F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\mipmap-hdpi\test.png
 F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\worldclear.jpg
+C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\GOWL\bin\Debug\GOWL.dll
+C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\GOWL\bin\Debug\GOWL.pdb
+C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\GOWL\bin\Debug\imd.amsterdam.gowl.apk
+C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\GOWL\bin\Debug\imd.amsterdam.gowl-Signed.apk
+C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\GOWL\obj\Debug\GOWL.dll
+C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\GOWL\obj\Debug\GOWL.pdb
+C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\GOWL\obj\Debug\android\bin\imd.amsterdam.gowl.apk
+C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\GOWL\obj\Debug\res\layout\main.xml
+C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\GOWL\obj\Debug\res\values\strings.xml
+C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\GOWL\obj\Debug\res\mipmap-hdpi\icon.png
+C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\GOWL\obj\Debug\res\mipmap-mdpi\icon.png
+C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\GOWL\obj\Debug\res\mipmap-xhdpi\icon.png
+C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\GOWL\obj\Debug\res\mipmap-xxhdpi\icon.png
+C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\GOWL\obj\Debug\res\mipmap-xxxhdpi\icon.png
+C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\GOWL\obj\Debug\res\layout\mainpreferences.xml
+C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\GOWL\obj\Debug\res\layout\welcomescreen.xml
+C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\GOWL\obj\Debug\res\mipmap-hdpi\gowl_logo.png
+C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\GOWL\obj\Debug\res\drawable\gowl_logo.png
+C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\GOWL\obj\Debug\res\mipmap-hdpi\test.png
+C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\GOWL\obj\Debug\res\drawable\test.png
+C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\GOWL\obj\Debug\res\drawable\worldclear.jpg
+C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\GOWL\obj\Debug\R.cs.flag
+C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\GOWL\obj\Debug\uploadflags.txt
+C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\GOWL\obj\Debug\GOWL.csprojResolveAssemblyReference.cache
+C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\GOWL\bin\Debug\Xamarin.Insights.dll
+C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\GOWL\bin\Debug\Xamarin.Insights.xml

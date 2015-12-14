@@ -28,7 +28,7 @@ namespace GOWL
 			startButton = (Button)FindViewById (Resource.Id.startButton);
 
 			startButton.Click += delegate {
-				StartActivity(typeof(MainActivity));
+				StartActivity(typeof(MainPreferences));
 			};
 		}
 	}
