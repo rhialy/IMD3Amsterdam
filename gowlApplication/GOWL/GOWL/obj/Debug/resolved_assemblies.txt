@@ -4,5 +4,7 @@ C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\G
 C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\GOWL\obj\Debug\assemblies\System.Core.dll
 C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\GOWL\obj\Debug\assemblies\System.dll
 C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\GOWL\obj\Debug\assemblies\System.Xml.dll
+C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\GOWL\obj\Debug\assemblies\Xamarin.Insights.dll
 C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\GOWL\obj\Debug\assemblies\System.Runtime.Serialization.dll
 C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\GOWL\obj\Debug\assemblies\System.ServiceModel.Internals.dll
+C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\GOWL\obj\Debug\assemblies\System.Net.Http.dll

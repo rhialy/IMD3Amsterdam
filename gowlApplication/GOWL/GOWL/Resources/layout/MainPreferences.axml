@@ -4,7 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffeee6d2"
-    android:clickable="true">
+    android:clickable="true"
+    android:showDividers="none"
+    android:gravity="fill">
     <LinearLayout
         android:orientation="vertical"
         android:minWidth="25px"
@@ -35,94 +37,118 @@
     </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/LayoutImagesUpper"
-        android:minHeight="185dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:gravity="center_horizontal"
-        android:clickable="true">
-        <ImageView
+        android:id="@+id/layoutUpperImageLine">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/layoutFirstImage"
+            android:minHeight="185dp"
+            android:gravity="center_vertical"
+            android:clickable="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/imageView1"
-            android:minWidth="150dp"
-            android:minHeight="150dp"
-            android:src="@drawable/test"
-            android:scaleType="centerCrop"
-            android:contextClickable="true"
-            android:fitsSystemWindows="true"
-            android:adjustViewBounds="true"
-            android:layout_marginRight="0dp"
-            android:maxWidth="150dp"
-            android:maxHeight="150dp"
-            android:clickable="true" />
-        <Space
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+            <ImageView
+                android:id="@+id/imageView1"
+                android:minWidth="150dp"
+                android:minHeight="150dp"
+                android:src="@drawable/test"
+                android:scaleType="centerCrop"
+                android:contextClickable="true"
+                android:fitsSystemWindows="true"
+                android:maxWidth="150dp"
+                android:maxHeight="150dp"
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/layoutSecondImage"
+            android:minHeight="185dp"
+            android:gravity="center_vertical"
+            android:clickable="true"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:id="@+id/upperSpace"
-            android:minWidth="30dp" />
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageView2"
-            android:minWidth="150dp"
-            android:minHeight="150dp"
-            android:src="@drawable/test"
-            android:scaleType="centerCrop"
-            android:contextClickable="true"
-            android:fitsSystemWindows="true"
-            android:adjustViewBounds="true"
-            android:layout_marginLeft="0dp"
-            android:maxWidth="150dp"
-            android:maxHeight="150dp"
-            android:clickable="true" />
+            android:layout_marginLeft="20dp">
+            <ImageView
+                android:id="@+id/imageView2"
+                android:minWidth="150dp"
+                android:minHeight="150dp"
+                android:src="@drawable/test"
+                android:scaleType="centerCrop"
+                android:contextClickable="true"
+                android:fitsSystemWindows="true"
+                android:adjustViewBounds="true"
+                android:maxWidth="150dp"
+                android:maxHeight="150dp"
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
     </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/LayoutImagesLower"
-        android:minHeight="175dp"
-        android:clipChildren="true"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:gravity="center_horizontal"
-        android:clickable="true">
-        <ImageView
-            android:id="@+id/imageView3"
-            android:minWidth="150dp"
-            android:minHeight="150dp"
-            android:src="@drawable/test"
-            android:scaleType="centerCrop"
-            android:maxWidth="150dp"
-            android:maxHeight="150dp"
-            android:contextClickable="true"
-            android:fitsSystemWindows="true"
+        android:id="@+id/layoutLowerImageLine">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/layoutThirdImage"
+            android:minHeight="185dp"
+            android:gravity="center_vertical"
+            android:clickable="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:adjustViewBounds="true"
-            android:clickable="true" />
-        <Space
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView3"
+                android:minWidth="150dp"
+                android:minHeight="150dp"
+                android:src="@drawable/test"
+                android:scaleType="centerCrop"
+                android:contextClickable="true"
+                android:fitsSystemWindows="true"
+                android:layout_marginRight="0dp"
+                android:maxWidth="150dp"
+                android:maxHeight="150dp"
+                android:clickable="true"
+                android:adjustViewBounds="true" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/layoutFourthImage"
+            android:minHeight="185dp"
+            android:gravity="center_vertical"
+            android:clickable="true"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:id="@+id/lowerSpace"
-            android:minWidth="30dp" />
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageView4"
-            android:minWidth="150dp"
-            android:minHeight="150dp"
-            android:src="@drawable/test"
-            android:scaleType="centerCrop"
-            android:maxWidth="150dp"
-            android:maxHeight="150dp"
-            android:contextClickable="true"
-            android:fitsSystemWindows="true"
-            android:adjustViewBounds="true"
-            android:clickable="true" />
+            android:layout_marginLeft="20dp">
+            <ImageView
+                android:id="@+id/imageView4"
+                android:minWidth="150dp"
+                android:minHeight="150dp"
+                android:src="@drawable/test"
+                android:scaleType="centerCrop"
+                android:contextClickable="true"
+                android:fitsSystemWindows="true"
+                android:adjustViewBounds="true"
+                android:maxWidth="150dp"
+                android:maxHeight="150dp"
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
     </LinearLayout>
     <LinearLayout
         android:orientation="vertical"

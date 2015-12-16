@@ -8,6 +8,13 @@ using SQLite;
 
 namespace GOWL
 {
+	
+	/************************************************|
+	* This class sets the different preferences tags |
+	* in the user-table (User.cs). After setting	 |
+	* these tags this activity will be ignored		 |
+	*************************************************/
+
 	[Activity (Label = "GOWL")]
 	public class MainPreferences : Activity
 	{
@@ -17,21 +24,26 @@ namespace GOWL
 		ImageView thirdImage_1;
 		ImageView fourthImage_1;
 
-		LinearLayout imagesUpper;
-		LinearLayout imagesLower;
+		LinearLayout layoutFirstImage;
+		LinearLayout layoutSecondImage;
+		LinearLayout layoutThirdImage;
+		LinearLayout layoutFourthImage;
 		LinearLayout fullScreen;
 
-		Space upperSpace;
-		Space lowerSpace;
-
 		Button takeIt;
+		Button nextButton;
+		Button backButton;
 
-		bool isImageFitToScreen;
-		bool hasStarted;
-		bool isSelected;
+		private bool isImageFitToScreen;
+		private bool hasStarted;
+		private bool isSelected;
+		private bool tagSet;
 
 		private static string Tag = "MainActivity";
 		private string dbPath = Environment.DirectoryDocuments;
+
+		private int imagesSelected;
+		private int phase;
 
 		protected override void OnCreate (Bundle savedInstanceState)
 		{
@@ -53,21 +65,22 @@ namespace GOWL
 			secondImage_1 = (ImageView)FindViewById (Resource.Id.imageView2);
 			thirdImage_1 = (ImageView)FindViewById (Resource.Id.imageView3);
 			fourthImage_1 = (ImageView)FindViewById (Resource.Id.imageView4);
-			// Images - xx - Main Preferences
 
-			// Images - xx - Main Preferences
+			// Images - Activities - Main Preferences
+
+			// Images - Standards - Main Preferences
 
 			// Layout - MainPreferences - Main Preferences
-			imagesUpper = (LinearLayout)FindViewById (Resource.Id.LayoutImagesUpper);
-			imagesLower = (LinearLayout)FindViewById (Resource.Id.LayoutImagesLower);
+			layoutFirstImage = (LinearLayout)FindViewById (Resource.Id.layoutFirstImage);
+			layoutSecondImage = (LinearLayout)FindViewById (Resource.Id.layoutSecondImage);
+			layoutThirdImage = (LinearLayout)FindViewById (Resource.Id.layoutThirdImage);
+			layoutFourthImage = (LinearLayout)FindViewById (Resource.Id.layoutFourthImage);
 			fullScreen = (LinearLayout)FindViewById (Resource.Id.fullScreenLayout);
 
-			// Space - Main Preferences
-			upperSpace = (Space)FindViewById (Resource.Id.upperSpace);
-			lowerSpace = (Space)FindViewById (Resource.Id.lowerSpace);
-
-			// Button - Main Preferences
+			// Buttons - Main Preferences
 			takeIt = (Button)FindViewById (Resource.Id.takeIt);
+			nextButton = (Button)FindViewById (Resource.Id.nextButton);
+			backButton = (Button)FindViewById (Resource.Id.backButton);
 
 			//-----------Method Variables---------//
 			// bools
@@ -76,39 +89,31 @@ namespace GOWL
 
 			if (hasStarted == true) {
 				fullScreen.RemoveView (takeIt);
-				hasStarted = false;
 				isSelected = true;
+				hasStarted = false;
 			}
 
-			ImageZoom (firstImage_1, Tag, fullScreen, imagesUpper, upperSpace);
-			ImageZoom (secondImage_1, Tag, fullScreen, imagesUpper, upperSpace);
-			ImageZoom (thirdImage_1, Tag, fullScreen, imagesLower, lowerSpace);
-			ImageZoom (fourthImage_1, Tag, fullScreen, imagesLower, lowerSpace);
+			/************************************************|
+			* 				INVOKING METHODS				 |
+		 	* 												 |
+			* 												 |
+			*************************************************/
 
-
-
-			/*firstImage.Click += ((object sender, System.EventArgs e) => {
-				if (isImageFitToScreen) {
-					isImageFitToScreen = false;
-					//firstImage.SetAdjustViewBounds(false);
-					firstImage.SetMaxHeight (1500);
-					firstImage.SetMaxWidth (1500);
-					firstImage.SetMinimumWidth (1500);
-					firstImage.SetMinimumHeight (1500);
-					Log.Info(Tag, "minimize");
-				} else {
-					isImageFitToScreen = true;
-					//firstImage.SetAdjustViewBounds(true);
-					firstImage.SetMinimumWidth (450);
-					firstImage.SetMinimumHeight (450);
-					firstImage.SetMaxHeight (450);
-					firstImage.SetMaxWidth (450);
-					Log.Info(Tag, "maximize");
-				}
-			});*/
+			// Zoom Methods - Interests
+			ImageZoom (firstImage_1, Tag, fullScreen, layoutFirstImage);
+			ImageZoom (secondImage_1, Tag, fullScreen, layoutSecondImage);
+			ImageZoom (thirdImage_1, Tag, fullScreen, layoutThirdImage);
+			ImageZoom (fourthImage_1, Tag, fullScreen, layoutFourthImage);
 
 		}
 
+
+		/************************************************|
+		* 				DEFINING METHODS				 |
+	 	* 												 |
+		* 												 |
+		*************************************************/
+		//-----------Database is created---------//
 		private string createDatabase(string path)
 		{
 			try
@@ -124,46 +129,88 @@ namespace GOWL
 			}
 		}
 
-
-		protected void ImageZoom (ImageView imageView, string Tag, LinearLayout fullScreen, LinearLayout downScreen, Space partingSpace) {
+		//-----------clicking on images -> image on fullscreen---------//
+		protected void ImageZoom (ImageView imageView, string Tag, LinearLayout fullScreen, LinearLayout downScreen) {
 
 			imageView.Click += ((object sender, System.EventArgs e) => {
 				if (isImageFitToScreen) {
 					isImageFitToScreen = false;
-					//firstImage.SetAdjustViewBounds(false);
 					downScreen.RemoveView(imageView);
-					downScreen.RemoveView(partingSpace);
 					imageView.SetMaxHeight (1500);
 					imageView.SetMaxWidth (1500);
-					imageView.SetMinimumWidth (1500);
-					imageView.SetMinimumHeight (1500);
 					fullScreen.AddView(imageView);
 					fullScreen.AddView(takeIt);
-					Log.Info(Tag, "minimize");
+					Log.Info(Tag, "maximize");
+					clickingImage(imageView);
 				} else {
 					isImageFitToScreen = true;
 					fullScreen.RemoveView(takeIt);
 					fullScreen.RemoveView(imageView);
-					//firstImage.SetAdjustViewBounds(true);
-					imageView.SetMinimumWidth (450);
-					imageView.SetMinimumHeight (450);
 					imageView.SetMaxHeight (450);
 					imageView.SetMaxWidth (450);
-					downScreen.AddView(partingSpace);
 					downScreen.AddView(imageView);
-					Log.Info(Tag, "maximize");
+					Log.Info(Tag, "minimize");
 				}
 			});
 
+		}
+
+		//----------image is clicked and color filter is set---------//
+		private void clickingImage(ImageView imageView) {
+			
 			takeIt.Click += ((object sender, System.EventArgs e) => {
 				if(isSelected) {
+					imagesSelected += 1;
 					imageView.SetColorFilter(Color.DimGray, PorterDuff.Mode.Lighten);
+					Log.Info(Tag, "set color filter");
 					isSelected = false;
+					definingTag(imageView, true);
 				} else {
+					imagesSelected -= 1;
 					imageView.SetColorFilter(null);
+					Log.Info(Tag, "remove color filter");
 					isSelected = true;
+					definingTag(imageView, false);
 				}
 			});
+		}
+
+		//-----------when image is selected check which image and sets bool for the setting tags - method ---------//
+		private void definingTag(ImageView imageView, bool isSet) {
+
+			// TODO: when isSet is true prepare variable for settingTags method
+			// 		 when isSet is false clear the preparation
+
+			if (imageView == firstImage_1) {
+				
+			} else if (imageView == secondImage_1) {
+
+			} else if (imageView == thirdImage_1) {
+
+			} else if (imageView == fourthImage_1) {
+
+			}
+
+		}
+
+		//-----------sets the tag in the user.cs for further utilization in the application---------//
+		protected void settingTags(bool isSet) {
+
+		}
+
+		//-----------next step in main preferences setup---------//
+		private void next (Button nextButton) {
+			
+			nextButton.Click += (object sender, System.EventArgs e) => {
+				if (imagesSelected == 1) {
+					imagesSelected = 0;
+					phase += 1;
+				}
+				if (phase > 4) {
+					// Name and few other infos or immediately to GowlMain acitivity?
+				}
+			};
+
 		}
 	}
 }

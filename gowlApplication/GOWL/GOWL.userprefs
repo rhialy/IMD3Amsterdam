@@ -3,7 +3,7 @@
   <MonoDevelop.Ide.Workbench>
     <Files>
       <File FileName="GOWL\WelcomeScreen.cs" Line="31" Column="41" />
-      <File FileName="GOWL\MainPreferences.cs" Line="39" Column="28" />
+      <File FileName="GOWL\MainPreferences.cs" Line="89" Column="19" />
       <File FileName="GOWL\Resources\Resource.designer.cs" Line="1" Column="1" />
       <File FileName="..\..\..\..\..\..\..\Windows\Microsoft.NET\Framework\v4.0.30319\Microsoft.Common.targets" Line="1606" Column="34" />
       <File FileName="GOWL\User.cs" Line="26" Column="3" />
