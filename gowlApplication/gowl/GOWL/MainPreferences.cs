@@ -134,22 +134,23 @@ namespace GOWL
 
 			imageView.Click += ((object sender, System.EventArgs e) => {
 				if (isImageFitToScreen) {
-					isImageFitToScreen = false;
 					downScreen.RemoveView(imageView);
 					imageView.SetMaxHeight (1500);
 					imageView.SetMaxWidth (1500);
 					fullScreen.AddView(imageView);
 					fullScreen.AddView(takeIt);
 					Log.Info(Tag, "maximize");
+					isSelected = true;
 					clickingImage(imageView);
+					isImageFitToScreen = false;
 				} else {
-					isImageFitToScreen = true;
 					fullScreen.RemoveView(takeIt);
 					fullScreen.RemoveView(imageView);
 					imageView.SetMaxHeight (450);
 					imageView.SetMaxWidth (450);
 					downScreen.AddView(imageView);
 					Log.Info(Tag, "minimize");
+					isImageFitToScreen = true;
 				}
 			});
 
@@ -163,13 +164,12 @@ namespace GOWL
 					imagesSelected += 1;
 					imageView.SetColorFilter(Color.DimGray, PorterDuff.Mode.Lighten);
 					Log.Info(Tag, "set color filter");
-					isSelected = false;
 					definingTag(imageView, true);
+					isSelected = false;
 				} else {
 					imagesSelected -= 1;
 					imageView.SetColorFilter(null);
 					Log.Info(Tag, "remove color filter");
-					isSelected = true;
 					definingTag(imageView, false);
 				}
 			});
