@@ -2,13 +2,11 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus 5 (Lollipop) 5.1.0" />
   <MonoDevelop.Ide.Workbench ActiveDocument="GOWL\NewJourney.cs">
     <Files>
-      <File FileName="gowl\WelcomeScreen.cs" Line="33" Column="36" />
-      <File FileName="c:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\gowl\User.cs" Line="8" Column="15" />
-      <File FileName="GOWL\JourneyPreview.cs" Line="86" Column="4" />
-      <File FileName="GOWL\MainPreferences.cs" Line="235" Column="6" />
+      <File FileName="gowl\WelcomeScreen.cs" Line="1" Column="1" />
+      <File FileName="GOWL\JourneyPreview.cs" Line="1" Column="1" />
+      <File FileName="GOWL\MainPreferences.cs" Line="1" Column="1" />
       <File FileName="GOWL\NewJourney.cs" Line="293" Column="6" />
-      <File FileName="c:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\gowl\SQLite.cs" Line="1425" Column="20" />
-      <File FileName="GOWL\UpdateDestinationDatabase.cs" Line="44" Column="5" />
+      <File FileName="GOWL\UpdateDestinationDatabase.cs" Line="1" Column="1" />
       <File FileName="GOWL\Destination.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
