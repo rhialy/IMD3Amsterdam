@@ -1,7 +1,3 @@
-GOWL.WelcomeScreen, GOWL;md54107e72d59fade0a1e39897504ab4bab.WelcomeScreen
-GOWL.WelcomeScreen, GOWL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md54107e72d59fade0a1e39897504ab4bab.WelcomeScreen
-GOWL.WelcomeScreen;md54107e72d59fade0a1e39897504ab4bab.WelcomeScreen
-gowl.WelcomeScreen;md54107e72d59fade0a1e39897504ab4bab.WelcomeScreen
 GOWL.GowlMain, GOWL;md54107e72d59fade0a1e39897504ab4bab.GowlMain
 GOWL.GowlMain, GOWL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md54107e72d59fade0a1e39897504ab4bab.GowlMain
 GOWL.GowlMain;md54107e72d59fade0a1e39897504ab4bab.GowlMain
@@ -10,6 +6,22 @@ GOWL.MainPreferences, GOWL;md54107e72d59fade0a1e39897504ab4bab.MainPreferences
 GOWL.MainPreferences, GOWL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md54107e72d59fade0a1e39897504ab4bab.MainPreferences
 GOWL.MainPreferences;md54107e72d59fade0a1e39897504ab4bab.MainPreferences
 gowl.MainPreferences;md54107e72d59fade0a1e39897504ab4bab.MainPreferences
+GOWL.NewJourney, GOWL;md54107e72d59fade0a1e39897504ab4bab.NewJourney
+GOWL.NewJourney, GOWL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md54107e72d59fade0a1e39897504ab4bab.NewJourney
+GOWL.NewJourney;md54107e72d59fade0a1e39897504ab4bab.NewJourney
+gowl.NewJourney;md54107e72d59fade0a1e39897504ab4bab.NewJourney
+GOWL.WelcomeScreen, GOWL;md54107e72d59fade0a1e39897504ab4bab.WelcomeScreen
+GOWL.WelcomeScreen, GOWL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md54107e72d59fade0a1e39897504ab4bab.WelcomeScreen
+GOWL.WelcomeScreen;md54107e72d59fade0a1e39897504ab4bab.WelcomeScreen
+gowl.WelcomeScreen;md54107e72d59fade0a1e39897504ab4bab.WelcomeScreen
+GOWL.JourneyPreview, GOWL;md54107e72d59fade0a1e39897504ab4bab.JourneyPreview
+GOWL.JourneyPreview, GOWL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md54107e72d59fade0a1e39897504ab4bab.JourneyPreview
+GOWL.JourneyPreview;md54107e72d59fade0a1e39897504ab4bab.JourneyPreview
+gowl.JourneyPreview;md54107e72d59fade0a1e39897504ab4bab.JourneyPreview
+GOWL.UpdateDestinationDatabase, GOWL;md54107e72d59fade0a1e39897504ab4bab.UpdateDestinationDatabase
+GOWL.UpdateDestinationDatabase, GOWL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md54107e72d59fade0a1e39897504ab4bab.UpdateDestinationDatabase
+GOWL.UpdateDestinationDatabase;md54107e72d59fade0a1e39897504ab4bab.UpdateDestinationDatabase
+gowl.UpdateDestinationDatabase;md54107e72d59fade0a1e39897504ab4bab.UpdateDestinationDatabase
 Xamarin.InsightsCore.BackgroundManager, Xamarin.Insights;md55caa6fe88082d2d5789caeda3e8fc56c.BackgroundManager
 Xamarin.InsightsCore.BackgroundManager, Xamarin.Insights, Version=1.11.0.0, Culture=neutral, PublicKeyToken=null;md55caa6fe88082d2d5789caeda3e8fc56c.BackgroundManager
 Xamarin.InsightsCore.BackgroundManager;md55caa6fe88082d2d5789caeda3e8fc56c.BackgroundManager

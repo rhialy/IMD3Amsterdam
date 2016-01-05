@@ -5,23 +5,34 @@ namespace GOWL
 {
 	public class User
 	{
-		[PrimaryKey, AutoIncrement]
+		[PrimaryKey]
 		public int ID { get; set; }
 
 		public string FirstName { get; set; }
 
 		public string LastName { get; set; }
 
-		public string Interests { get; set; }
+		public int Standards { get; set; }
 
-		public string Standards { get; set; }
+		public int IsActive { get; set; }
 
-		public string Activities { get; set; }
+		public int InterestNature { get; set; }
+
+		public int InterestCity { get; set; }
+
+		public int InterestCulture { get; set; }
+
+		public int InterestSportActivities { get; set; }
+
+		public int InterestEvents { get; set; }
+
+		public int Persons { get; set; }
+
 
 		public override string ToString()
 		{
-			return string.Format("[User: ID={0}, FirstName={1}, LastName={2}, Interesets={3}, Standards={4}, Activities={5}]", 
-								 ID, FirstName, LastName, Interests, Standards, Activities);
+			return string.Format("[User: ID={0}, FirstName={1}, LastName={2}, Standards={4}, IsActive={5}, InterestNature={6}, InterestCity={7}, InterestCulture={8}, InterestSportActivites={9}, InterestEvents={10}, Persons={11}]", 
+								 ID, FirstName, LastName, Standards, IsActive, InterestNature, InterestCity, InterestCulture, InterestSportActivities, InterestEvents, Persons);
 		}
 	}
 }

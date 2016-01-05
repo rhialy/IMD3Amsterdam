@@ -18,6 +18,7 @@ namespace GOWL
 	{
 
 		Button startButton;
+		private int situation;
 
 		protected override void OnCreate (Bundle savedInstanceState)
 		{
@@ -26,9 +27,10 @@ namespace GOWL
 			SetContentView (Resource.Layout.WelcomeScreen);
 
 			startButton = (Button)FindViewById (Resource.Id.startButton);
+			situation = 1;
 
 			startButton.Click += delegate {
-				StartActivity(typeof(MainPreferences));
+				StartActivity(typeof(NewJourney));
 			};
 		}
 	}

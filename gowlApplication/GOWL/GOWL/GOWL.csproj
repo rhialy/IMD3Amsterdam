@@ -45,23 +45,28 @@
     <Reference Include="Xamarin.Insights">
       <HintPath>..\packages\Xamarin.Insights.1.11.3\lib\MonoAndroid10\Xamarin.Insights.dll</HintPath>
     </Reference>
+    <Reference Include="System.Data" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WelcomeScreen.cs" />
     <Compile Include="SQLite.cs" />
     <Compile Include="SQLiteAsync.cs" />
     <Compile Include="User.cs" />
     <Compile Include="Destination.cs" />
     <Compile Include="GowlMain.cs" />
     <Compile Include="MainPreferences.cs" />
+    <Compile Include="NewJourney.cs" />
+    <Compile Include="..\gowl\WelcomeScreen.cs" />
+    <Compile Include="JourneyPreview.cs" />
+    <Compile Include="UpdateDestinationDatabase.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="packages.config" />
+    <None Include="..\gowl\GOWL.csproj" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
@@ -78,6 +83,12 @@
     <AndroidResource Include="Resources\mipmap-hdpi\test.png" />
     <AndroidResource Include="Resources\drawable\test.png" />
     <AndroidResource Include="Resources\drawable\worldclear.jpg" />
+    <AndroidResource Include="..\gowl\Resources\drawable\test_cym.png" />
+    <AndroidResource Include="Resources\drawable\test_test.png" />
+    <AndroidResource Include="Resources\layout\MainPreferencesName.axml" />
+    <AndroidResource Include="Resources\layout\ExistingJourney.axml" />
+    <AndroidResource Include="Resources\layout\NewJourney.axml" />
+    <AndroidResource Include="Resources\layout\JourneyPreview.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

@@ -2,9 +2,14 @@ C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\G
 C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\GOWL\obj\Debug\assemblies\Mono.Android.dll
 C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\GOWL\obj\Debug\assemblies\mscorlib.dll
 C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\GOWL\obj\Debug\assemblies\System.Core.dll
+C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\GOWL\obj\Debug\assemblies\System.Data.dll
 C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\GOWL\obj\Debug\assemblies\System.dll
 C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\GOWL\obj\Debug\assemblies\System.Xml.dll
 C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\GOWL\obj\Debug\assemblies\Xamarin.Insights.dll
 C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\GOWL\obj\Debug\assemblies\System.Runtime.Serialization.dll
 C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\GOWL\obj\Debug\assemblies\System.ServiceModel.Internals.dll
+C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\GOWL\obj\Debug\assemblies\System.Numerics.dll
+C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\GOWL\obj\Debug\assemblies\System.Transactions.dll
+C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\GOWL\obj\Debug\assemblies\Mono.Data.Tds.dll
+C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\GOWL\obj\Debug\assemblies\Mono.Security.dll
 C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\GOWL\obj\Debug\assemblies\System.Net.Http.dll

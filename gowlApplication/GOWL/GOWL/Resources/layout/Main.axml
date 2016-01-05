@@ -6,52 +6,107 @@
     android:background="#ffeee6d2"
     android:minWidth="25px"
     android:minHeight="25px">
-    <LinearLayout
-        android:orientation="vertical"
-        android:minWidth="25px"
-        android:minHeight="25px"
+    <ViewFlipper
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/linearLayout1"
-        android:gravity="center_horizontal">
-        <Button
-            android:text="Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/button1"
-            android:background="#216877"
-            android:minWidth="140dp"
-            android:minHeight="50dp"
-            android:layout_marginTop="60dp"
-            android:layout_marginBottom="45dp" />
-        <Button
-            android:text="Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/button1"
-            android:background="#216877"
-            android:minWidth="140dp"
-            android:minHeight="50dp"
-            android:layout_marginTop="45dp"
-            android:layout_marginBottom="45dp" />
-        <Button
-            android:text="Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/button1"
-            android:background="#216877"
-            android:minWidth="140dp"
-            android:minHeight="50dp"
-            android:layout_marginTop="45dp"
-            android:layout_marginBottom="45dp" />
-        <ImageView
-            android:src="@android:drawable/ic_menu_gallery"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageView1"
-            android:minWidth="80dp"
-            android:minHeight="80dp"
-            android:layout_marginRight="100dp"
-            android:layout_marginTop="20dp" />
-    </LinearLayout>
+        android:id="@+id/viewFlipper1">
+        <LinearLayout
+            android:orientation="vertical"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/linearLayout1"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="75dp">
+            <Button
+                android:text="Neue Reise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/NewJourneyButton"
+                android:background="#216877"
+                android:minWidth="260dp"
+                android:minHeight=" 70dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="45dp"
+                android:textSize="20dp" />
+            <Button
+                android:text="Profildaten"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/UserDataButton"
+                android:background="#216877"
+                android:minWidth="260dp"
+                android:minHeight=" 70dp"
+                android:layout_marginTop="45dp"
+                android:layout_marginBottom="45dp"
+                android:textSize="20dp" />
+            <ImageView
+                android:src="@android:drawable/ic_menu_gallery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView1"
+                android:minWidth="80dp"
+                android:minHeight="80dp"
+                android:layout_marginRight="100dp"
+                android:layout_marginTop="20dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/linearLayout2"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="75dp">
+            <Button
+                android:text="Zurücksetzen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/NewMainPreferences"
+                android:background="#216877"
+                android:minWidth="260dp"
+                android:minHeight=" 70dp"
+                android:layout_marginBottom="45dp"
+                android:textSize="20dp" />
+            <TextView
+                android:text="Wenn Du mit deinen Ergebnissen nicht zufrieden bist, kannst du mit Hilfe dieses Buttons alle Präferenz-Daten zurücksetzen"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ResetExplanation"
+                android:gravity="center_horizontal"
+                android:textSize="28dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="20dp"
+                android:textColor="#ff414141" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linearLayout3">
+                <ImageView
+                    android:src="@android:drawable/ic_menu_gallery"
+                    android:id="@+id/imageView1"
+                    android:minWidth="90dp"
+                    android:minHeight="90dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp" />
+                <Button
+                    android:text="Zurück"
+                    android:id="@+id/backButtonUserData"
+                    android:minWidth="200dp"
+                    android:minHeight="60dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical"
+                    android:background="#216877" />
+            </LinearLayout>
+        </LinearLayout>
+    </ViewFlipper>
 </LinearLayout>

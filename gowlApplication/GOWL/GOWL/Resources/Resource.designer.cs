@@ -51,7 +51,10 @@ namespace GOWL
 			public const int test = 2130837505;
 			
 			// aapt resource value: 0x7f020002
-			public const int worldclear = 2130837506;
+			public const int test_test = 2130837506;
+			
+			// aapt resource value: 0x7f020003
+			public const int worldclear = 2130837507;
 			
 			static Drawable()
 			{
@@ -66,80 +69,170 @@ namespace GOWL
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f06000f
-			public const int LayoutNextBackButton = 2131099663;
+			// aapt resource value: 0x7f060030
+			public const int CalendarLayoutEnd = 2131099696;
 			
-			// aapt resource value: 0x7f060012
-			public const int backButton = 2131099666;
+			// aapt resource value: 0x7f060028
+			public const int CalendarLayoutStart = 2131099688;
 			
-			// aapt resource value: 0x7f060001
-			public const int button1 = 2131099649;
+			// aapt resource value: 0x7f06002a
+			public const int CalendarSubLayout = 2131099690;
 			
-			// aapt resource value: 0x7f060003
-			public const int fullScreenLayout = 2131099651;
+			// aapt resource value: 0x7f060031
+			public const int ChooseEndDateText = 2131099697;
 			
-			// aapt resource value: 0x7f060002
-			public const int imageView1 = 2131099650;
+			// aapt resource value: 0x7f060029
+			public const int ChooseStartDateText = 2131099689;
 			
-			// aapt resource value: 0x7f060009
-			public const int imageView2 = 2131099657;
+			// aapt resource value: 0x7f060032
+			public const int DatePickerEnd = 2131099698;
 			
-			// aapt resource value: 0x7f06000c
-			public const int imageView3 = 2131099660;
+			// aapt resource value: 0x7f06002b
+			public const int DatePickerStart = 2131099691;
 			
-			// aapt resource value: 0x7f06000e
-			public const int imageView4 = 2131099662;
-			
-			// aapt resource value: 0x7f060007
-			public const int layoutFirstImage = 2131099655;
-			
-			// aapt resource value: 0x7f06000d
-			public const int layoutFourthImage = 2131099661;
-			
-			// aapt resource value: 0x7f06000a
-			public const int layoutLowerImageLine = 2131099658;
-			
-			// aapt resource value: 0x7f060008
-			public const int layoutSecondImage = 2131099656;
-			
-			// aapt resource value: 0x7f06000b
-			public const int layoutThirdImage = 2131099659;
-			
-			// aapt resource value: 0x7f060006
-			public const int layoutUpperImageLine = 2131099654;
-			
-			// aapt resource value: 0x7f060000
-			public const int linearLayout1 = 2131099648;
-			
-			// aapt resource value: 0x7f060016
-			public const int linearLayout2 = 2131099670;
-			
-			// aapt resource value: 0x7f060014
-			public const int linearLayout3 = 2131099668;
-			
-			// aapt resource value: 0x7f060017
-			public const int logo = 2131099671;
-			
-			// aapt resource value: 0x7f060010
-			public const int nextButton = 2131099664;
-			
-			// aapt resource value: 0x7f060011
-			public const int space2 = 2131099665;
+			// aapt resource value: 0x7f06001f
+			public const int ImageChoosingExplanation = 2131099679;
 			
 			// aapt resource value: 0x7f060004
-			public const int spaceUp = 2131099652;
+			public const int ImagePart1 = 2131099652;
 			
-			// aapt resource value: 0x7f060018
-			public const int startButton = 2131099672;
+			// aapt resource value: 0x7f06002c
+			public const int LayoutCalendarNextBack = 2131099692;
 			
-			// aapt resource value: 0x7f060005
-			public const int takeIt = 2131099653;
+			// aapt resource value: 0x7f06001b
+			public const int LayoutNextBackButton = 2131099675;
 			
-			// aapt resource value: 0x7f060013
-			public const int textView1 = 2131099667;
+			// aapt resource value: 0x7f060000
+			public const int LinearLayoutPreviewMain = 2131099648;
+			
+			// aapt resource value: 0x7f06000e
+			public const int MainPreferences = 2131099662;
+			
+			// aapt resource value: 0x7f060006
+			public const int NewJourneyButton = 2131099654;
+			
+			// aapt resource value: 0x7f06000a
+			public const int NewMainPreferences = 2131099658;
+			
+			// aapt resource value: 0x7f06000b
+			public const int ResetExplanation = 2131099659;
+			
+			// aapt resource value: 0x7f060007
+			public const int UserDataButton = 2131099655;
+			
+			// aapt resource value: 0x7f060025
+			public const int autoCompleteTextView1 = 2131099685;
+			
+			// aapt resource value: 0x7f06001e
+			public const int backButton = 2131099678;
+			
+			// aapt resource value: 0x7f06002f
+			public const int backButtonCalendar = 2131099695;
+			
+			// aapt resource value: 0x7f060024
+			public const int backButtonChoosing = 2131099684;
+			
+			// aapt resource value: 0x7f060027
+			public const int backButtonName = 2131099687;
+			
+			// aapt resource value: 0x7f06000d
+			public const int backButtonUserData = 2131099661;
+			
+			// aapt resource value: 0x7f06000f
+			public const int fullScreenLayout = 2131099663;
+			
+			// aapt resource value: 0x7f060021
+			public const int gowlExplanation = 2131099681;
+			
+			// aapt resource value: 0x7f060008
+			public const int imageView1 = 2131099656;
 			
 			// aapt resource value: 0x7f060015
-			public const int textView2 = 2131099669;
+			public const int imageView2 = 2131099669;
+			
+			// aapt resource value: 0x7f060018
+			public const int imageView3 = 2131099672;
+			
+			// aapt resource value: 0x7f06001a
+			public const int imageView4 = 2131099674;
+			
+			// aapt resource value: 0x7f060013
+			public const int layoutFirstImage = 2131099667;
+			
+			// aapt resource value: 0x7f060019
+			public const int layoutFourthImage = 2131099673;
+			
+			// aapt resource value: 0x7f060016
+			public const int layoutLowerImageLine = 2131099670;
+			
+			// aapt resource value: 0x7f060014
+			public const int layoutSecondImage = 2131099668;
+			
+			// aapt resource value: 0x7f060017
+			public const int layoutThirdImage = 2131099671;
+			
+			// aapt resource value: 0x7f060012
+			public const int layoutUpperImageLine = 2131099666;
+			
+			// aapt resource value: 0x7f060002
+			public const int linearLayout1 = 2131099650;
+			
+			// aapt resource value: 0x7f060009
+			public const int linearLayout2 = 2131099657;
+			
+			// aapt resource value: 0x7f06000c
+			public const int linearLayout3 = 2131099660;
+			
+			// aapt resource value: 0x7f060005
+			public const int listView1 = 2131099653;
+			
+			// aapt resource value: 0x7f060035
+			public const int logo = 2131099701;
+			
+			// aapt resource value: 0x7f06001c
+			public const int nextButton = 2131099676;
+			
+			// aapt resource value: 0x7f060022
+			public const int nextButtonChoosing = 2131099682;
+			
+			// aapt resource value: 0x7f060033
+			public const int nextButtonDateEnd = 2131099699;
+			
+			// aapt resource value: 0x7f06002d
+			public const int nextButtonDateStart = 2131099693;
+			
+			// aapt resource value: 0x7f060026
+			public const int nextButtonName = 2131099686;
+			
+			// aapt resource value: 0x7f060003
+			public const int scrollView1 = 2131099651;
+			
+			// aapt resource value: 0x7f06001d
+			public const int space2 = 2131099677;
+			
+			// aapt resource value: 0x7f06002e
+			public const int spaceCalendar = 2131099694;
+			
+			// aapt resource value: 0x7f060023
+			public const int spaceChoosing = 2131099683;
+			
+			// aapt resource value: 0x7f060010
+			public const int spaceUp = 2131099664;
+			
+			// aapt resource value: 0x7f060036
+			public const int startButton = 2131099702;
+			
+			// aapt resource value: 0x7f060011
+			public const int takeIt = 2131099665;
+			
+			// aapt resource value: 0x7f060020
+			public const int textView1 = 2131099680;
+			
+			// aapt resource value: 0x7f060034
+			public const int textView2 = 2131099700;
+			
+			// aapt resource value: 0x7f060001
+			public const int viewFlipper1 = 2131099649;
 			
 			static Id()
 			{
@@ -155,13 +248,25 @@ namespace GOWL
 		{
 			
 			// aapt resource value: 0x7f040000
-			public const int Main = 2130968576;
+			public const int ExistingJourney = 2130968576;
 			
 			// aapt resource value: 0x7f040001
-			public const int MainPreferences = 2130968577;
+			public const int JourneyPreview = 2130968577;
 			
 			// aapt resource value: 0x7f040002
-			public const int WelcomeScreen = 2130968578;
+			public const int Main = 2130968578;
+			
+			// aapt resource value: 0x7f040003
+			public const int MainPreferences = 2130968579;
+			
+			// aapt resource value: 0x7f040004
+			public const int MainPreferencesName = 2130968580;
+			
+			// aapt resource value: 0x7f040005
+			public const int NewJourney = 2130968581;
+			
+			// aapt resource value: 0x7f040006
+			public const int WelcomeScreen = 2130968582;
 			
 			static Layout()
 			{
