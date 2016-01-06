@@ -56,3 +56,11 @@ C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\G
 C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\GOWL\obj\Debug\res\layout\existingjourney.xml
 C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\GOWL\obj\Debug\res\layout\newjourney.xml
 C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\GOWL\obj\Debug\res\layout\journeypreview.xml
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\gowl\resources\drawable\test_cym.png
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\test_test.png
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\layout\mainpreferencesname.xml
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\layout\existingjourney.xml
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\layout\newjourney.xml
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\layout\journeypreview.xml
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\gowl_animal.png
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\raw\ichbingowl.mp3

@@ -38,8 +38,44 @@
                     android:minHeight="25dp"
                     android:minWidth="40dp" />
                 <Button
-                    android:text="I Like"
-                    android:id="@+id/takeIt"
+                    android:text="Gefällt mir!"
+                    android:id="@+id/takeItFirst"
+                    android:background="#ff216877"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="135dp"
+                    android:layout_marginRight="135dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="40dp"
+                    android:minWidth="120dp"
+                    android:minHeight="50dp" />
+                <Button
+                    android:text="Gefällt mir!"
+                    android:id="@+id/takeItSecond"
+                    android:background="#ff216877"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="135dp"
+                    android:layout_marginRight="135dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="40dp"
+                    android:minWidth="120dp"
+                    android:minHeight="50dp" />
+                <Button
+                    android:text="Gefällt mir!"
+                    android:id="@+id/takeItThird"
+                    android:background="#ff216877"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="135dp"
+                    android:layout_marginRight="135dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="40dp"
+                    android:minWidth="120dp"
+                    android:minHeight="50dp" />
+                <Button
+                    android:text="Gefällt mir!"
+                    android:id="@+id/takeItFourth"
                     android:background="#ff216877"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -224,16 +260,21 @@
                     android:textSize="28dp"
                     android:layout_marginTop="100dp" />
                 <ImageView
-                    android:src="@android:drawable/ic_menu_gallery"
+                    android:src="@drawable/gowl_animal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/gowlExplanation"
-                    android:minWidth="150dp"
-                    android:minHeight="150dp"
+                    android:minWidth="145dp"
+                    android:minHeight="145dp"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="40dp"
-                    android:layout_marginRight="80dp"
-                    android:layout_marginBottom="10dp" />
+                    android:layout_marginTop="25dp"
+                    android:layout_marginRight="95dp"
+                    android:layout_marginBottom="25dp"
+                    android:maxWidth="150dp"
+                    android:maxHeight="150dp"
+                    android:scaleX="0.35"
+                    android:scaleY="0.35"
+                    android:adjustViewBounds="true" />
             </LinearLayout>
             <LinearLayout
                 android:orientation="vertical"
@@ -371,7 +412,8 @@
                     android:maxHeight="150dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="0dp"
-                    android:background="#216877" />
+                    android:background="#216877"
+                    android:paddingBottom="18dp" />
             </LinearLayout>
             <LinearLayout
                 android:orientation="vertical"

@@ -79,7 +79,6 @@
     <AndroidResource Include="Resources\layout\MainPreferences.axml" />
     <AndroidResource Include="Resources\layout\WelcomeScreen.axml" />
     <AndroidResource Include="Resources\mipmap-hdpi\GOwl_Logo.png" />
-    <AndroidResource Include="Resources\drawable\GOwl_Logo.png" />
     <AndroidResource Include="Resources\mipmap-hdpi\test.png" />
     <AndroidResource Include="Resources\drawable\test.png" />
     <AndroidResource Include="Resources\drawable\worldclear.jpg" />
@@ -89,9 +88,13 @@
     <AndroidResource Include="Resources\layout\ExistingJourney.axml" />
     <AndroidResource Include="Resources\layout\NewJourney.axml" />
     <AndroidResource Include="Resources\layout\JourneyPreview.axml" />
+    <AndroidResource Include="Resources\raw\IchBinGowl.mp3" />
+    <AndroidResource Include="Resources\drawable\gowl_logo.png" />
+    <AndroidResource Include="Resources\drawable\gowl_animal.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
+    <Folder Include="Resources\raw\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Insights.1.11.3\build\MonoAndroid10\Xamarin.Insights.targets" Condition="Exists('..\packages\Xamarin.Insights.1.11.3\build\MonoAndroid10\Xamarin.Insights.targets')" />

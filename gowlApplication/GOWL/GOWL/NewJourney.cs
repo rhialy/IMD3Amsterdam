@@ -34,6 +34,7 @@ namespace GOWL
 		private ImageView secondImage;
 		private ImageView thirdImage;
 		private ImageView fourthImage;
+		private ImageView choosenImage;
 
 		private LinearLayout layoutFirstImage;
 		private LinearLayout layoutSecondImage;
@@ -43,7 +44,10 @@ namespace GOWL
 		private LinearLayout mainPreferences;
 		private LinearLayout imageChoosingExplanation;
 
-		private Button takeIt;
+		private Button takeItFirst;
+		private Button takeItSecond;
+		private Button takeItThird;
+		private Button takeItFourth;
 		private Button nextButtonMoodboard;
 		private Button nextButtonChoosing;
 		private Button nextButtonDateStart;
@@ -115,7 +119,10 @@ namespace GOWL
 			imageChoosingExplanation = (LinearLayout)FindViewById (Resource.Id.ImageChoosingExplanation);
 
 			// Buttons - Moodboard
-			takeIt = (Button)FindViewById (Resource.Id.takeIt);
+			takeItFirst = (Button)FindViewById (Resource.Id.takeItFirst);
+			takeItSecond = (Button) FindViewById (Resource.Id.takeItSecond);
+			takeItThird = (Button)FindViewById (Resource.Id.takeItThird); 
+			takeItFourth = (Button)FindViewById (Resource.Id.takeItFourth);
 			// Buttons - Back Buttons
 			backButtonMoodboard = (Button)FindViewById (Resource.Id.backButton);
 			// Buttons - Next Buttons
@@ -123,7 +130,11 @@ namespace GOWL
 			nextButtonChoosing = (Button)FindViewById (Resource.Id.nextButtonChoosing);
 			nextButtonDateStart = (Button)FindViewById (Resource.Id.nextButtonDateStart);
 			nextButtonDateEnd = (Button)FindViewById (Resource.Id.nextButtonDateEnd);
-			fullScreen.RemoveView (takeIt);
+			// Remove Like Buttons from View (o t in Fullscreen View)
+			fullScreen.RemoveView (takeItFirst);
+			fullScreen.RemoveView (takeItSecond);
+			fullScreen.RemoveView (takeItThird);
+			fullScreen.RemoveView (takeItFourth);
 
 			// Flipper - Main Preferences Main
 			flipper = (ViewFlipper) FindViewById (Resource.Id.viewFlipper1);
@@ -158,10 +169,10 @@ namespace GOWL
 			next (Tag, nextButtonMoodboard);
 
 			// Zoom Methods - Interests
-			ImageZoom (firstImage, Tag, fullScreen, layoutFirstImage);
-			ImageZoom (secondImage, Tag, fullScreen, layoutSecondImage);
-			ImageZoom (thirdImage, Tag, fullScreen, layoutThirdImage);
-			ImageZoom (fourthImage, Tag, fullScreen, layoutFourthImage);
+			ImageZoom (firstImage, Tag, fullScreen, layoutFirstImage, takeItFirst);
+			ImageZoom (secondImage, Tag, fullScreen, layoutSecondImage, takeItSecond);
+			ImageZoom (thirdImage, Tag, fullScreen, layoutThirdImage, takeItThird);
+			ImageZoom (fourthImage, Tag, fullScreen, layoutFourthImage, takeItFourth);
 
 		}
 
@@ -222,10 +233,11 @@ namespace GOWL
 		}
 
 		//-----------clicking on images -> image on fullscreen---------//
-		protected void ImageZoom (ImageView imageView, string Tag, LinearLayout fullScreen, LinearLayout downScreen) {
+		protected void ImageZoom (ImageView imageView, string Tag, LinearLayout fullScreen, LinearLayout downScreen, Button takeIt) {
 
 			imageView.Click += ((object sender, System.EventArgs e) => {
 				if(phase == 1) {
+					Log.Info(Tag, "isImageFitToScreen: " + isImageFitToScreen.ToString());
 					if (isImageFitToScreen) {
 						downScreen.RemoveView(imageView);
 						imageView.SetMaxHeight (1500);
@@ -233,7 +245,7 @@ namespace GOWL
 						fullScreen.AddView(imageView);
 						fullScreen.AddView(takeIt);
 						Log.Info(Tag, "maximize");
-						clickingImage(imageView);
+						clickingImage(imageView, takeIt);
 						isImageFitToScreen = false;
 					} else {
 						fullScreen.RemoveView(takeIt);
@@ -243,6 +255,7 @@ namespace GOWL
 						downScreen.AddView(imageView);
 						Log.Info(Tag, "minimize");
 						isImageFitToScreen = true;
+						isSelected = true;
 					}
 				}
 				if(phase == 2) {
@@ -269,28 +282,63 @@ namespace GOWL
 		}
 
 		//----------image is clicked and color filter is set---------//
-		private void clickingImage(ImageView imageView) {
+		private void clickingImage(ImageView imageView, Button takeIt) {
+
+			// TODO: If one image is zoomed in multiple times, this function is also executed this amount of times.
+			//		 This function should only be executed one time no matter what. 
 
 			takeIt.Click += ((object sender, System.EventArgs e) => {
-				if(isSelected) {
+				Log.Info(Tag, "takeIt Button: " + takeIt.ToString());
+				if(isSelected && imagesSelected == 0 || isSelected && choosenImage == imageView) {
 					if(imagesSelected < 1) {
 						imagesSelected += 1;
 					}
-					imageView.SetImageResource(Resource.Drawable.test_test);
+					if (takeIt == takeItFirst) {
+						imageView.SetImageResource(Resource.Drawable.test_test);
+					}
+					if (takeIt == takeItSecond) {
+
+					}
+					if (takeIt == takeItThird) {
+						imageView.SetImageResource(Resource.Drawable.test_test);
+					}
+					if (takeIt == takeItFourth) {
+
+					}
 					Log.Info(Tag, "Images Selected: " + imagesSelected.ToString());
-					Log.Info(Tag, "set color filter");
+					if(choosenImage != imageView) {
+						choosenImage = imageView;
+					} else {
+						choosenImage = null;
+					}
 					definingTag(imageView, true);
 					isSelected = false;
-				} else {
+				} else if (!isSelected && imagesSelected == 1){
 					if(imagesSelected > 0) {
 						imagesSelected -= 1;
 					}
-					imageView.SetImageResource(Resource.Drawable.test);
+					if (takeIt == takeItFirst) {
+						imageView.SetImageResource(Resource.Drawable.test);
+					}
+					if (takeIt == takeItSecond) {
+
+					}
+					if (takeIt == takeItThird) {
+						imageView.SetImageResource(Resource.Drawable.test);
+					}
+					if (takeIt == takeItFourth) {
+
+					}
 					Log.Info(Tag, "Images Selected: " + imagesSelected.ToString());
-					Log.Info(Tag, "remove color filter");
 					definingTag(imageView, false);
 					isSelected = true;
 				}
+				if (choosenImage != null) {
+					Log.Info(Tag, "choosenImage: " + choosenImage.ToString());
+				} else {
+					Log.Info(Tag, "choosen Image: null");
+				}
+				Log.Info(Tag, "isSelected: " + isSelected.ToString());
 			});
 		}
 

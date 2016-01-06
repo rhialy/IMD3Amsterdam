@@ -30,7 +30,7 @@ namespace GOWL
 			situation = 1;
 
 			startButton.Click += delegate {
-				StartActivity(typeof(NewJourney));
+				StartActivity(typeof(GowlMain));
 			};
 		}
 	}

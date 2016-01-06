@@ -23,7 +23,8 @@
             android:paddingTop="60dp"
             android:textScaleX="1"
             android:textSize="35dp"
-            android:paddingBottom="0dp" />
+            android:paddingBottom="0dp"
+            android:layout_marginTop="15dp" />
     </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"
@@ -42,7 +43,8 @@
             android:paddingLeft="170dp"
             android:textSize="26dp"
             android:paddingBottom="0dp"
-            android:paddingTop="0dp" />
+            android:paddingTop="0dp"
+            android:layout_marginTop="25dp" />
     </LinearLayout>
     <LinearLayout
         android:orientation="vertical"
@@ -63,7 +65,9 @@
             android:paddingRight="0dp"
             android:maxHeight="250dp"
             android:adjustViewBounds="true"
-            android:maxWidth="250dp" />
+            android:maxWidth="250dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginBottom="60dp" />
         <Button
             android:text="Let's go"
             android:layout_width="wrap_content"
