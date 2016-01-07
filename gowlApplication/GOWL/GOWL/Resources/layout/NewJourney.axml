@@ -260,7 +260,7 @@
                     android:textSize="28dp"
                     android:layout_marginTop="100dp" />
                 <ImageView
-                    android:src="@drawable/gowl_animal"
+                    android:src="@drawable/viech_gowl_alleine_mini"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/gowlExplanation"
@@ -272,8 +272,6 @@
                     android:layout_marginBottom="25dp"
                     android:maxWidth="150dp"
                     android:maxHeight="150dp"
-                    android:scaleX="0.35"
-                    android:scaleY="0.35"
                     android:adjustViewBounds="true" />
             </LinearLayout>
             <LinearLayout

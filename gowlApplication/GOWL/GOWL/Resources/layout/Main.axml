@@ -42,7 +42,7 @@
                 android:layout_marginBottom="45dp"
                 android:textSize="20dp" />
             <ImageView
-                android:src="@drawable/gowl_animal"
+                android:src="@drawable/viech_gowl_alleine_mini"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/imageView1"
@@ -92,7 +92,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/linearLayout3">
                 <ImageView
-                    android:src="@drawable/gowl_animal"
+                    android:src="@drawable/viech_gowl_alleine_mini"
                     android:id="@+id/imageView1"
                     android:minWidth="90dp"
                     android:minHeight="90dp"

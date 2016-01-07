@@ -19,12 +19,14 @@ namespace GOWL
 	[Activity (Label = "GOWL")]			
 	public class GowlMain : Activity
 	{
-		MediaPlayer mediaplayer;
+		MediaPlayer mediaPlayer;
 
 		private const int VOICE = 10;
 
-		private string gowlVoiceTest = "Hallo";
-		private string gowlVoiceTest2 = "Test";
+		private string gowlVoiceHallo = "Hallo";
+		private string gowlVoiceStatus = "wie geht es dir";
+		private string gowlVoiceErleben = "alles zu erleben";
+		private string gowlVoiceStrand = "zum strand";
 	
 		private bool existingJourney = true;
 
@@ -47,7 +49,6 @@ namespace GOWL
 		protected override void OnCreate (Bundle savedInstanceState)
 		{
 			base.OnCreate (savedInstanceState);
-			MediaPlayer mediaPlayer = MediaPlayer.Create (this, Resource.Raw.IchBinGowl);
 			/*SetContentView (Resource.Layout.Main);
 
 			newJourneyBtn = (Button)FindViewById (Resource.Id.NewJourneyButton);
@@ -123,15 +124,18 @@ namespace GOWL
 					var matches = data.GetStringArrayListExtra(RecognizerIntent.ExtraResults);
 					var result = voiceResultText;
 					result.Text = matches[0].ToString();
-					if (result.Text == gowlVoiceTest) {
-						mediaplayer = MediaPlayer.Create (this, Resource.Raw.IchBinGowl);
-						//mediaPlayer.Prepare ();
-						mediaplayer.Start ();
-					}
-					if (result.Text == gowlVoiceTest2) {
-						mediaplayer = MediaPlayer.Create(
-						mediaplayer.Prepare ();
-						mediaplayer.Start ();
+					if (result.Text == gowlVoiceHallo) {
+						MediaPlayer mediaPlayer = MediaPlayer.Create (this, Resource.Raw.IchBinGowl);
+						mediaPlayer.Start ();
+					} else if (result.Text.Contains (gowlVoiceStatus)) {
+						MediaPlayer mediaPlayer = MediaPlayer.Create (this, Resource.Raw.AkkuAufladen2);
+						mediaPlayer.Start ();
+					} else if (result.Text.Contains (gowlVoiceErleben)) {
+						MediaPlayer mediaPlayer = MediaPlayer.Create (this, Resource.Raw.NationalparkUndSneglehuset);
+						mediaPlayer.Start ();
+					} else if (result.Text.Contains (gowlVoiceStrand)) {
+						MediaPlayer mediaPlayer = MediaPlayer.Create (this, Resource.Raw.StrandVonSkagen);
+						mediaPlayer.Start ();
 					}
 				}
 			}

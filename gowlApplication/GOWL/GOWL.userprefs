@@ -3,17 +3,18 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="GOWL\GowlMain.cs">
     <Files>
       <File FileName="gowl\WelcomeScreen.cs" Line="33" Column="34" />
-      <File FileName="GOWL\JourneyPreview.cs" Line="27" Column="40" />
-      <File FileName="GOWL\MainPreferences.cs" Line="1" Column="1" />
-      <File FileName="GOWL\NewJourney.cs" Line="288" Column="72" />
-      <File FileName="GOWL\GowlMain.cs" Line="35" Column="3" />
-      <File FileName="GOWL\UpdateDestinationDatabase.cs" Line="23" Column="101" />
+      <File FileName="GOWL\JourneyPreview.cs" Line="1" Column="1" />
+      <File FileName="GOWL\MainPreferences.cs" Line="280" Column="6" />
+      <File FileName="GOWL\NewJourney.cs" Line="102" Column="40" />
+      <File FileName="GOWL\GowlMain.cs" Line="132" Column="43" />
+      <File FileName="GOWL\UpdateDestinationDatabase.cs" Line="21" Column="1" />
       <File FileName="GOWL\Destination.cs" Line="1" Column="1" />
+      <File FileName="GOWL\Properties\AndroidManifest.xml" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.GOWL AndroidDesignerPreferredDevice="Nexus 4" AndroidDesignerPreferredTheme="Theme.Material" />
+  <MonoDevelop.Ide.ItemProperties.GOWL AndroidDesignerPreferredDevice="Nexus 5" AndroidDesignerPreferredTheme="Theme.Material" />
 </Properties>

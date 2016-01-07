@@ -89,8 +89,6 @@
     <AndroidResource Include="Resources\layout\NewJourney.axml" />
     <AndroidResource Include="Resources\layout\JourneyPreview.axml" />
     <AndroidResource Include="Resources\raw\IchBinGowl.mp3" />
-    <AndroidResource Include="Resources\drawable\gowl_logo.png" />
-    <AndroidResource Include="Resources\drawable\gowl_animal.png" />
     <AndroidResource Include="Resources\raw\AkkuAufladen2.mp3" />
     <AndroidResource Include="Resources\raw\BisBald.mp3" />
     <AndroidResource Include="Resources\raw\Fiskrestaurant.mp3" />
@@ -107,6 +105,8 @@
     <AndroidResource Include="Resources\raw\Warten.mp3" />
     <AndroidResource Include="Resources\raw\WirSehenUns.mp3" />
     <AndroidResource Include="Resources\raw\WirSindDa.mp3" />
+    <AndroidResource Include="Resources\drawable\Logo_komplett_Final_mini.png" />
+    <AndroidResource Include="Resources\drawable\Viech_GOwl_alleine_mini.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

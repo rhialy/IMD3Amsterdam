@@ -45,16 +45,16 @@ namespace GOWL
 		{
 			
 			// aapt resource value: 0x7f020000
-			public const int gowl_animal = 2130837504;
+			public const int Logo_komplett_Final_mini = 2130837504;
 			
 			// aapt resource value: 0x7f020001
-			public const int gowl_logo = 2130837505;
+			public const int test = 2130837505;
 			
 			// aapt resource value: 0x7f020002
-			public const int test = 2130837506;
+			public const int test_test = 2130837506;
 			
 			// aapt resource value: 0x7f020003
-			public const int test_test = 2130837507;
+			public const int Viech_GOwl_alleine_mini = 2130837507;
 			
 			// aapt resource value: 0x7f020004
 			public const int worldclear = 2130837508;
