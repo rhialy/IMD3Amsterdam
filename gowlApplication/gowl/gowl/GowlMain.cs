@@ -19,19 +19,18 @@ namespace GOWL
 	[Activity (Label = "GOWL")]			
 	public class GowlMain : Activity
 	{
-		MediaPlayer mediaPlayer;
+		MediaPlayer mp;
 
 		private const int VOICE = 10;
 
 		private string gowlVoiceTest = "Hallo";
 		private string gowlVoiceTest2 = "Test";
-		//private static string musicFolder = System.Environment.GetFolderPath (Resource.Raw.IchBinGowl);
+		private static string musicFolder = System.Environment.GetFolderPath (System.Environment.SpecialFolder.MyMusic);
 
 		//private static string IchBinGowl = System.IO.Path.Combine(musicFolder, "IchBinGowl.mp3");
 		private static string WirSehenUns = System.IO.Path.Combine(musicFolder, "WirSehenUns.mp3");
 		private static string AkkuAufladen = System.IO.Path.Combine(musicFolder, "AkkuAufladen.mp3");
 		private static string Recherchieren = System.IO.Path.Combine(musicFolder, "RecherchierenRestaurant.mp3");
-
 
 		private bool existingJourney = true;
 
@@ -54,7 +53,7 @@ namespace GOWL
 		protected override void OnCreate (Bundle savedInstanceState)
 		{
 			base.OnCreate (savedInstanceState);
-
+			MediaPlayer mediaPlayer = MediaPlayer.Create (this, Resource.Raw.IchBinGowl);
 			/*SetContentView (Resource.Layout.Main);
 
 			newJourneyBtn = (Button)FindViewById (Resource.Id.NewJourneyButton);
@@ -62,7 +61,6 @@ namespace GOWL
 			backUserDataBtn = (Button)FindViewById (Resource.Id.backButtonUserData);
 			resetBtn = (Button)FindViewById (Resource.Id.NewMainPreferences);
 			flipper = (ViewFlipper)FindViewById (Resource.Id.viewFlipper1);*/
-
 			// All Media Player Files
 
 
@@ -132,14 +130,14 @@ namespace GOWL
 					var result = voiceResultText;
 					result.Text = matches[0].ToString();
 					if (result.Text == gowlVoiceTest) {
-						//mediaPlayer.Create (this.ApplicationContext, Resource.Raw.IchBinGowl);
+						mp = MediaPlayer.Create (this, Resource.Raw.IchBinGowl);
 						//mediaPlayer.Prepare ();
-						//mediaPlayer.Start ();
+						mp.Start ();
 					}
 					if (result.Text == gowlVoiceTest2) {
-						mediaPlayer.SetDataSource (AkkuAufladen);
-						mediaPlayer.Prepare ();
-						mediaPlayer.Start ();
+						mp.SetDataSource (AkkuAufladen);
+						mp.Prepare ();
+						mp.Start ();
 					}
 				}
 			}
