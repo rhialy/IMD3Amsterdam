@@ -13,12 +13,16 @@ using Android.Widget;
 using Android.Util;
 using Android.Graphics;
 using Android.Media;
+using SQLite;
 
 namespace GOWL
 {
 	[Activity (Label = "GOWL")]			
 	public class GowlMain : Activity
 	{
+		private static string dbFolder = System.Environment.GetFolderPath (System.Environment.SpecialFolder.MyDocuments);
+		private static string dbPath = System.IO.Path.Combine(dbFolder, "gowl_user.db");
+
 		MediaPlayer mediaPlayer;
 
 		private const int VOICE = 10;
@@ -49,18 +53,19 @@ namespace GOWL
 		protected override void OnCreate (Bundle savedInstanceState)
 		{
 			base.OnCreate (savedInstanceState);
-			/*SetContentView (Resource.Layout.Main);
 
-			newJourneyBtn = (Button)FindViewById (Resource.Id.NewJourneyButton);
-			userDataBtn = (Button)FindViewById (Resource.Id.UserDataButton);
-			backUserDataBtn = (Button)FindViewById (Resource.Id.backButtonUserData);
-			resetBtn = (Button)FindViewById (Resource.Id.NewMainPreferences);
-			flipper = (ViewFlipper)FindViewById (Resource.Id.viewFlipper1);*/
-			// All Media Player Files
+			RetrieveDatafromDB ();
 
-
-
-			//existingJourney = false;
+			if (existingJourney == false) {
+				SetContentView (Resource.Layout.Main);
+				newJourneyBtn = (Button)FindViewById (Resource.Id.NewJourneyButton);
+				userDataBtn = (Button)FindViewById (Resource.Id.UserDataButton);
+				backUserDataBtn = (Button)FindViewById (Resource.Id.backButtonUserData);
+				resetBtn = (Button)FindViewById (Resource.Id.NewMainPreferences);
+				flipper = (ViewFlipper)FindViewById (Resource.Id.viewFlipper1);
+				Menu ();
+			}
+		
 
 			if (existingJourney == true) {
 				SetContentView (Resource.Layout.ExistingJourney);
@@ -69,18 +74,32 @@ namespace GOWL
 				speechListener = (Button)FindViewById (Resource.Id.voiceButton);
 				speechListener.Click += RecordVoice;
 			}
-
-			//Menu ();
-				
-
 		}
 
 
+		/************************************************|
+		* 				DEFINING METHODS				 |
+	 	* 												 |
+		* 												 |
+		*************************************************/
+
+		//--------------retrieving user data and storing in variables---------------//
+		private void RetrieveDatafromDB() {
+			using (var connection = new SQLiteConnection(dbPath)) {
+
+				var User = connection.Get<User> (1);
+
+				existingJourney = User.ExistingJourney;
+
+			}
+		}
+
+		//----------------Main Menu function----------------//
 		private void Menu() {
 			Log.Info (Tag, newJourneyBtn.ToString ());
 			newJourneyBtn.Click += ((object sender, System.EventArgs e) => {
 				Log.Info(Tag, "Clicked New Journey");
-				StartActivity(typeof(NewJourney));
+				StartActivity(typeof(NewJourneySpecificPreference));
 				existingJourney = true;
 			});
 
@@ -93,7 +112,7 @@ namespace GOWL
 			};
 
 			resetBtn.Click += (object sender, EventArgs e) => {
-				StartActivity(typeof(MainPreferences));
+				StartActivity(typeof(MainPreferencesPhaseOne));
 			};
 
 		}

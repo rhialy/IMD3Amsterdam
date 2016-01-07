@@ -34,6 +34,10 @@ namespace GOWL
 		private ImageView secondImage;
 		private ImageView thirdImage;
 		private ImageView fourthImage;
+		private ImageView firstPersonImage;
+		private ImageView secondPersonImage;
+		private ImageView thirdPersonImage;
+		private ImageView fourthPersonImage;
 		private ImageView choosenImage;
 
 		private LinearLayout layoutFirstImage;
@@ -52,22 +56,25 @@ namespace GOWL
 		private Button nextButtonChoosing;
 		private Button nextButtonDateStart;
 		private Button nextButtonDateEnd;
+		private Button nextButtonPersonCount;
 		private Button backButtonMoodboard;
+		private Button backButtonExplanation;
+		private Button backButtonDateStart;
+		private Button backButtonDateEnd;
+		private Button backButtonPersonCount;
 
 		private ViewFlipper flipper;
 
 		private bool isImageFitToScreen;
 		private bool isImageChoosen;
-		private bool hasStarted;
 		private bool isSelected;
-		private bool tagSet;
 
 		private static string Tag = "NewJourney";
 		private static string dbFolder = System.Environment.GetFolderPath (System.Environment.SpecialFolder.MyDocuments);
 		private static string dbPath = System.IO.Path.Combine(dbFolder, "gowl_user.db");
 
 		private int imagesSelected;
-		private int phase = 1;
+		private int phase;
 
 		protected ImageView [] imageArray;
 
@@ -102,14 +109,18 @@ namespace GOWL
 			SetContentView(Resource.Layout.NewJourney);
 
 			//--------Layout Variables---------//
-			// Images - Interests - Main Preferences
+			// Images - Interests - New Journey
 			firstImage = (ImageView)FindViewById (Resource.Id.imageView1);
 			secondImage = (ImageView)FindViewById (Resource.Id.imageView2);
 			thirdImage = (ImageView)FindViewById (Resource.Id.imageView3);
 			fourthImage = (ImageView)FindViewById (Resource.Id.imageView4);
-			//imageArray = {firstImage, secondImage, thirdImage, fourthImage}
+			// Images - Person Count Symbols
+			firstPersonImage = (ImageView) FindViewById (Resource.Id.imageView5);
+			secondPersonImage = (ImageView)FindViewById (Resource.Id.imageView6);
+			thirdPersonImage = (ImageView)FindViewById (Resource.Id.imageView7);
+			fourthPersonImage = (ImageView)FindViewById (Resource.Id.imageView8);
 
-			// Layout - MainPreferences - Main Preferences
+			// Layout - Special Preference - New Journey
 			layoutFirstImage = (LinearLayout)FindViewById (Resource.Id.layoutFirstImage);
 			layoutSecondImage = (LinearLayout)FindViewById (Resource.Id.layoutSecondImage);
 			layoutThirdImage = (LinearLayout)FindViewById (Resource.Id.layoutThirdImage);
@@ -125,11 +136,18 @@ namespace GOWL
 			takeItFourth = (Button)FindViewById (Resource.Id.takeItFourth);
 			// Buttons - Back Buttons
 			backButtonMoodboard = (Button)FindViewById (Resource.Id.backButton);
+			backButtonExplanation = (Button)FindViewById (Resource.Id.backButtonChoosing);
+			backButtonDateStart = (Button)FindViewById (Resource.Id.backButtonDateStart);
+			backButtonDateEnd = (Button)FindViewById (Resource.Id.backButtonDateEnd);
+			backButtonPersonCount = (Button)FindViewById (Resource.Id.backButtonPersonCount);
+
 			// Buttons - Next Buttons
 			nextButtonMoodboard = (Button) FindViewById (Resource.Id.nextButton);
 			nextButtonChoosing = (Button)FindViewById (Resource.Id.nextButtonChoosing);
 			nextButtonDateStart = (Button)FindViewById (Resource.Id.nextButtonDateStart);
 			nextButtonDateEnd = (Button)FindViewById (Resource.Id.nextButtonDateEnd);
+			nextButtonPersonCount = (Button)FindViewById (Resource.Id.nextButtonPersonCount);
+
 			// Remove Like Buttons from View (o t in Fullscreen View)
 			fullScreen.RemoveView (takeItFirst);
 			fullScreen.RemoveView (takeItSecond);
@@ -138,7 +156,6 @@ namespace GOWL
 
 			// Flipper - Main Preferences Main
 			flipper = (ViewFlipper) FindViewById (Resource.Id.viewFlipper1);
-			flipper.ShowNext ();
 
 			// Date Picker
 			dateStart = (DatePicker)FindViewById (Resource.Id.DatePickerStart);
@@ -149,7 +166,10 @@ namespace GOWL
 			isImageFitToScreen = true;
 			isImageChoosen = true;
 			isSelected = true;
-			hasStarted = true;
+
+			// ints
+			imagesSelected = 0;
+			phase = 1;
 
 			/************************************************|
 			* 				INVOKING METHODS				 |
@@ -158,7 +178,7 @@ namespace GOWL
 			*************************************************/
 
 			nextButtonChoosing.Click += delegate {
-				flipper.ShowPrevious();
+				flipper.ShowNext();
 			};
 			// Only for testing
 			// ONLY FOR TESTING - DELETED WHEN RELEASED
@@ -167,13 +187,23 @@ namespace GOWL
 
 			// Phase Handler
 			next (Tag, nextButtonMoodboard);
+			next (Tag, nextButtonPersonCount);
+			next (Tag, nextButtonDateStart);
+			next (Tag, nextButtonDateEnd);
+			back (backButtonMoodboard);
+			back (backButtonExplanation);
+			back (backButtonDateStart);
+			back (backButtonDateEnd);
 
 			// Zoom Methods - Interests
 			ImageZoom (firstImage, Tag, fullScreen, layoutFirstImage, takeItFirst);
 			ImageZoom (secondImage, Tag, fullScreen, layoutSecondImage, takeItSecond);
 			ImageZoom (thirdImage, Tag, fullScreen, layoutThirdImage, takeItThird);
 			ImageZoom (fourthImage, Tag, fullScreen, layoutFourthImage, takeItFourth);
-
+			ImageZoom (firstPersonImage, Tag, fullScreen, layoutFirstImage, takeItFirst);
+			ImageZoom (secondPersonImage, Tag, fullScreen, layoutFirstImage, takeItFirst);
+			ImageZoom (thirdPersonImage, Tag, fullScreen, layoutFirstImage, takeItFirst);
+			ImageZoom (fourthPersonImage, Tag, fullScreen, layoutFirstImage, takeItFirst);
 		}
 
 
@@ -260,20 +290,42 @@ namespace GOWL
 				}
 				if(phase == 2) {
 					if(isImageChoosen) {
-						downScreen.SetMinimumWidth(550);
-						downScreen.SetMinimumHeight(550);
+						if (imageView == firstPersonImage) {
+							imageView.SetImageResource(Resource.Drawable.test_test);
+						}
+						else if (imageView == secondPersonImage) {
+
+						}
+						else if (imageView == thirdPersonImage) {
+
+						} 
+						else if (imageView == fourthPersonImage) {
+
+						}
 						isImageChoosen = false;
 						if(imagesSelected < 1) {
 							imagesSelected += 1;
+							phase = 3;
 						}
 						Log.Info(Tag, "Image Choosen" + imagesSelected.ToString());
 						definingTag(imageView, true);
 					} else {
+						if (imageView == firstPersonImage) {
+							imageView.SetImageResource(Resource.Drawable.test);
+						}
+						else if (imageView == secondPersonImage) {
+
+						}
+						else if (imageView == thirdPersonImage) {
+
+						} 
+						else if (imageView == fourthPersonImage) {
+
+						}
 						if(imagesSelected > 0) {
 							imagesSelected -= 1;
+							phase = 2;
 						}
-						downScreen.SetMinimumWidth (450);
-						downScreen.SetMinimumHeight (450);
 						isImageChoosen = true;
 						Log.Info(Tag, "Image De-Choosen" + imagesSelected.ToString());
 					}
@@ -292,6 +344,7 @@ namespace GOWL
 				if(isSelected && imagesSelected == 0 || isSelected && choosenImage == imageView) {
 					if(imagesSelected < 1) {
 						imagesSelected += 1;
+						phase = 2;
 					}
 					if (takeIt == takeItFirst) {
 						imageView.SetImageResource(Resource.Drawable.test_test);
@@ -316,6 +369,7 @@ namespace GOWL
 				} else if (!isSelected && imagesSelected == 1){
 					if(imagesSelected > 0) {
 						imagesSelected -= 1;
+						phase = 1;
 					}
 					if (takeIt == takeItFirst) {
 						imageView.SetImageResource(Resource.Drawable.test);
@@ -408,36 +462,58 @@ namespace GOWL
 		private void next (string Tag, Button fNextButton) {
 
 			fNextButton.Click += (object sender, System.EventArgs e) => {
-				if (imagesSelected == 1) {
-					imagesSelected = 0;
-					phase += 1;
-					Log.Info(Tag, "Next Button Clicked");
-				}
-				if (phase == 1) {
+				if (phase == 1 && fNextButton == nextButtonChoosing) {
 					Log.Info(Tag, "Phase 1");
 				}
-				if (phase == 2) {
-					firstImage.SetImageResource(Resource.Drawable.test);
-					secondImage.SetImageResource(Resource.Drawable.test);
-					thirdImage.SetImageResource(Resource.Drawable.test);
-					fourthImage.SetImageResource(Resource.Drawable.test);
+				else if (phase == 2 && fNextButton == nextButtonMoodboard) {
 					Log.Info(Tag, "Phase 2");
+					flipper.ShowNext();
 				}
-				if (phase == 3) {
+				else if (phase == 3 && fNextButton == nextButtonPersonCount) {
 					flipper.ShowNext();
-					flipper.ShowNext();
-					onDateChanged(dateStart);
 					Log.Info(Tag, "Phase 3");
-					//phase += 1;
 				}
-				if (phase == 4) {
-					Log.Info(Tag, "Phase 4");
+				else if (phase == 4 && fNextButton == nextButtonDateStart) {
+					onDateChanged(dateStart);
+				}
+				else if (phase == 5) {
+					Log.Info(Tag, "Phase 5");
 					onDateChanged(dateEnd);
 				}
 			};
 
 		}
-			
+
+		//-----------one step back---------//
+		private void back (Button backButton) {
+
+			backButton.Click += delegate {
+				if(phase == 1 && backButton == backButtonExplanation) {
+					StartActivity(typeof(GowlMain));
+					Finish();
+				}
+				else if(phase == 1 && backButton == backButtonMoodboard) {
+					flipper.ShowPrevious();
+				}
+				else if(phase == 2 && backButton == backButtonPersonCount) {
+					flipper.ShowPrevious();
+					phase -= 1;
+				}
+				else if(phase==3 && backButton == backButtonDateStart) {
+					flipper.ShowPrevious();
+					phase -= 1;
+				}
+				else if(phase == 4 && backButton == backButtonDateEnd) {
+					flipper.ShowPrevious();
+					phase -= 1;
+				}
+				Log.Info (Tag, "Phase: " + phase.ToString());
+			};
+
+
+		}
+
+
 		protected void onDateChanged(DatePicker view) {	
 			
 			nextButtonDateStart.Click += delegate {

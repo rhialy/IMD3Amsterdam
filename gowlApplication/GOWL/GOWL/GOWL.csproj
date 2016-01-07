@@ -60,6 +60,12 @@
     <Compile Include="..\gowl\WelcomeScreen.cs" />
     <Compile Include="JourneyPreview.cs" />
     <Compile Include="UpdateDestinationDatabase.cs" />
+    <Compile Include="NewJourneySpecificPreference.cs" />
+    <Compile Include="NewJourneyPersonCount.cs" />
+    <Compile Include="NewJourneyCalendar.cs" />
+    <Compile Include="MainPreferencesPhaseOne.cs" />
+    <Compile Include="MainPreferencesPhaseTwo.cs" />
+    <Compile Include="MainPreferencesPhaseThree.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -107,6 +113,13 @@
     <AndroidResource Include="Resources\raw\WirSindDa.mp3" />
     <AndroidResource Include="Resources\drawable\Logo_komplett_Final_mini.png" />
     <AndroidResource Include="Resources\drawable\Viech_GOwl_alleine_mini.png" />
+    <AndroidResource Include="Resources\drawable\Logo_komplett_Final_mini_alt.png" />
+    <AndroidResource Include="Resources\layout\NewJourneySpecificPreferences.axml" />
+    <AndroidResource Include="Resources\layout\NewJourneyPersonCount.axml" />
+    <AndroidResource Include="Resources\layout\NewJourneyCalendar.axml" />
+    <AndroidResource Include="Resources\layout\MainPreferencesPhaseOne.axml" />
+    <AndroidResource Include="Resources\layout\MainPreferencesPhaseTwo.axml" />
+    <AndroidResource Include="Resources\layout\MainPreferencesPhaseThree.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

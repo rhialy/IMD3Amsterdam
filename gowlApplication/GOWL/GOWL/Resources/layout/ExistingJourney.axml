@@ -23,18 +23,72 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/voiceButton"
-                android:layout_marginTop="150dp"
+                android:layout_marginTop="135dp"
+                android:background="#ff216877"
+                android:minHeight="65dp" />
+            <TextView
+                android:text="Speech to Text:"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/VoiceResultText"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="50dp"
+                android:textSize="24dp"
+                android:textColor="#414141"
+                android:gravity="center_horizontal" />
+            <Button
+                android:text="Neue Reise Planen!"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ExistingNewJourney"
+                android:layout_marginTop="105dp"
+                android:minHeight="65dp"
                 android:background="#ff216877" />
         </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/linearLayout2">
+            <TextView
+                android:text="Bist du sicher, dass du eine neue Reise planen willst? Deine jetzige wird dann überschrieben."
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView1"
+                android:textSize="28dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:textColor="#ff414141"
+                android:layout_marginTop="40dp" />
+            <ImageView
+                android:src="@drawable/viech_gowl_alleine_mini"
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:maxWidth="150dp"
+                android:maxHeight="150dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="25dp"
+                android:layout_marginLeft="20dp" />
+            <Button
+                android:text="Ja, ich will eine neue Reise!"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ExistingNewJourneyYes"
+                android:background="#216877"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="15dp" />
+            <Button
+                android:text="Nein, ich will zurück!"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/NewExistingJourneyBack"
+                android:background="#216877" />
+        </LinearLayout>
     </ViewFlipper>
-    <TextView
-        android:text="Speech to Text:"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/VoiceResultText"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="50dp"
-        android:textSize="24dp"
-        android:textColor="#414141" />
 </LinearLayout>

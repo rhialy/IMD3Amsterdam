@@ -18,7 +18,6 @@ F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\mipmap-xxxhdp
 F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\layout\mainpreferences.xml
 F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\layout\welcomescreen.xml
 F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\mipmap-hdpi\gowl_logo.png
-F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\gowl_logo.png
 F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\R.cs.flag
 F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\uploadflags.txt
 F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\test.png
@@ -62,7 +61,6 @@ F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\layout\mainpr
 F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\layout\existingjourney.xml
 F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\layout\newjourney.xml
 F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\layout\journeypreview.xml
-F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\gowl_animal.png
 F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\raw\ichbingowl.mp3
 C:\Users\Daniel Stehlik\Documents\IMD3Amsterdam\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\GOWL.csprojResolveAssemblyReference.cache
 C:\Users\Daniel Stehlik\Documents\IMD3Amsterdam\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\GOWL.dll
@@ -114,3 +112,28 @@ C:\Users\Daniel Stehlik\Documents\IMD3Amsterdam\GitHub\gowlApplication\GOWL\GOWL
 C:\Users\Daniel Stehlik\Documents\IMD3Amsterdam\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\raw\wirsindda.mp3
 C:\Users\Daniel Stehlik\Documents\IMD3Amsterdam\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\logo_komplett_final_mini.png
 C:\Users\Daniel Stehlik\Documents\IMD3Amsterdam\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\viech_gowl_alleine_mini.png
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\raw\akkuaufladen2.mp3
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\raw\bisbald.mp3
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\raw\fiskrestaurant.mp3
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\raw\heywasgibts.mp3
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\raw\hiersindwir.mp3
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\raw\informationnationalparktys.mp3
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\raw\kommtmit.mp3
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\raw\museumskagen.mp3
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\raw\nationalparkundsneglehuset.mp3
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\raw\recherchierenrestaurant.mp3
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\raw\richtigverstanden.mp3
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\raw\strandvonskagen.mp3
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\raw\vogelartenort.mp3
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\raw\warten.mp3
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\raw\wirsehenuns.mp3
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\raw\wirsindda.mp3
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\logo_komplett_final_mini.png
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\viech_gowl_alleine_mini.png
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\logo_komplett_final_mini_alt.png
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\layout\newjourneyspecificpreferences.xml
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\layout\newjourneypersoncount.xml
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\layout\newjourneycalendar.xml
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\layout\mainpreferencesphaseone.xml
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\layout\mainpreferencesphasetwo.xml
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\layout\mainpreferencesphasethree.xml

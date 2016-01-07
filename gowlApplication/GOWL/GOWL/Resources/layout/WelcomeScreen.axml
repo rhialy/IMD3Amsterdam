@@ -53,9 +53,10 @@
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout2"
         android:minHeight="400dp"
-        android:gravity="center_horizontal">
-        <ImageView
-            android:src="@drawable/logo_komplett_final_mini"
+        android:gravity="center_horizontal"
+        android:backgroundTint="#ff7c5151">
+        <ImageView xmlns:tools="http://schemas.android.com/tools"
+            android:src="@drawable/logo_komplett_final_mini_alt"
             android:id="@+id/logo"
             android:minHeight="145px"
             android:minWidth="145px"
@@ -65,7 +66,11 @@
             android:adjustViewBounds="true"
             android:maxWidth="800px"
             android:layout_marginTop="45dp"
-            android:layout_marginBottom="50dp" />
+            android:layout_marginBottom="50dp"
+            android:contextClickable="true"
+            android:backgroundTint="#ffff0000"
+            tools:visibility="visible"
+            android:scaleType="fitCenter" />
         <Button
             android:text="Los geht's!"
             android:layout_width="wrap_content"
