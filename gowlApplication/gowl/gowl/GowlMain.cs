@@ -19,19 +19,13 @@ namespace GOWL
 	[Activity (Label = "GOWL")]			
 	public class GowlMain : Activity
 	{
-		MediaPlayer mp;
+		MediaPlayer mediaplayer;
 
 		private const int VOICE = 10;
 
 		private string gowlVoiceTest = "Hallo";
 		private string gowlVoiceTest2 = "Test";
-		private static string musicFolder = System.Environment.GetFolderPath (System.Environment.SpecialFolder.MyMusic);
-
-		//private static string IchBinGowl = System.IO.Path.Combine(musicFolder, "IchBinGowl.mp3");
-		private static string WirSehenUns = System.IO.Path.Combine(musicFolder, "WirSehenUns.mp3");
-		private static string AkkuAufladen = System.IO.Path.Combine(musicFolder, "AkkuAufladen.mp3");
-		private static string Recherchieren = System.IO.Path.Combine(musicFolder, "RecherchierenRestaurant.mp3");
-
+	
 		private bool existingJourney = true;
 
 		private int phase;
@@ -130,14 +124,14 @@ namespace GOWL
 					var result = voiceResultText;
 					result.Text = matches[0].ToString();
 					if (result.Text == gowlVoiceTest) {
-						mp = MediaPlayer.Create (this, Resource.Raw.IchBinGowl);
+						mediaplayer = MediaPlayer.Create (this, Resource.Raw.IchBinGowl);
 						//mediaPlayer.Prepare ();
-						mp.Start ();
+						mediaplayer.Start ();
 					}
 					if (result.Text == gowlVoiceTest2) {
-						mp.SetDataSource (AkkuAufladen);
-						mp.Prepare ();
-						mp.Start ();
+						mediaplayer = MediaPlayer.Create(
+						mediaplayer.Prepare ();
+						mediaplayer.Start ();
 					}
 				}
 			}

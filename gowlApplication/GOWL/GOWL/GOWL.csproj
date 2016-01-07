@@ -91,6 +91,22 @@
     <AndroidResource Include="Resources\raw\IchBinGowl.mp3" />
     <AndroidResource Include="Resources\drawable\gowl_logo.png" />
     <AndroidResource Include="Resources\drawable\gowl_animal.png" />
+    <AndroidResource Include="Resources\raw\AkkuAufladen2.mp3" />
+    <AndroidResource Include="Resources\raw\BisBald.mp3" />
+    <AndroidResource Include="Resources\raw\Fiskrestaurant.mp3" />
+    <AndroidResource Include="Resources\raw\HeyWasGibts.mp3" />
+    <AndroidResource Include="Resources\raw\HierSindWir.mp3" />
+    <AndroidResource Include="Resources\raw\InformationNationalparkTys.mp3" />
+    <AndroidResource Include="Resources\raw\KommtMit.mp3" />
+    <AndroidResource Include="Resources\raw\MuseumSkagen.mp3" />
+    <AndroidResource Include="Resources\raw\NationalparkUndSneglehuset.mp3" />
+    <AndroidResource Include="Resources\raw\RecherchierenRestaurant.mp3" />
+    <AndroidResource Include="Resources\raw\RichtigVerstanden.mp3" />
+    <AndroidResource Include="Resources\raw\StrandVonSkagen.mp3" />
+    <AndroidResource Include="Resources\raw\VogelArtenOrt.mp3" />
+    <AndroidResource Include="Resources\raw\Warten.mp3" />
+    <AndroidResource Include="Resources\raw\WirSehenUns.mp3" />
+    <AndroidResource Include="Resources\raw\WirSindDa.mp3" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
