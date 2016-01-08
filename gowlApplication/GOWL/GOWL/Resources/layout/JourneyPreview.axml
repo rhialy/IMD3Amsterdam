@@ -8,37 +8,108 @@
     <ViewFlipper
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/viewFlipper1">
-        <LinearLayout
-            android:orientation="vertical"
-            android:minWidth="25px"
-            android:minHeight="25px"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/linearLayout1">
-            <ScrollView
-                android:minWidth="25px"
-                android:minHeight="25px"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/scrollView1">
-                <ImageView
-                    android:src="@drawable/test"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/ImagePart1"
-                    android:maxWidth="50dp"
-                    android:maxHeight="1000dp"
-                    android:scaleType="fitCenter"
-                    android:minWidth="50dp"
-                    android:minHeight="1000dp" />
-            </ScrollView>
-        </LinearLayout>
-        <ListView
+        android:id="@+id/viewFlipper1"
+        android:minWidth="25px"
+        android:minHeight="25px">
+        <ScrollView
             android:minWidth="25px"
             android:minHeight="25px"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/listView1" />
+            android:id="@+id/scrollView1">
+            <LinearLayout
+                android:orientation="vertical"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/linearLayout1">
+                <ImageButton
+                    android:src="@drawable/journeytest"
+                    android:background="@drawable/roundedbutton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageButton1"
+                    android:layout_gravity="center_horizontal"
+                    android:minWidth="70dp"
+                    android:minHeight="70dp"
+                    android:maxWidth="125dp"
+                    android:maxHeight="125dp"
+                    android:scaleType="fitCenter"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="20dp"
+                    android:adjustViewBounds="true"
+                    android:paddingRight="20dp"
+                    android:paddingTop="20dp"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="5dp" />
+                <ImageView
+                    android:src="@drawable/previewrnl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView2"
+                    android:adjustViewBounds="true"
+                    android:scaleX="1"
+                    android:scaleY="1"
+                    android:maxWidth="100dp"
+                    android:maxHeight="150dp"
+                    android:layout_marginRight="5dp" />
+                <ImageButton
+                    android:src="@drawable/journeytest"
+                    android:background="@drawable/roundedbutton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageButton1"
+                    android:layout_gravity="center_horizontal"
+                    android:minWidth="70dp"
+                    android:minHeight="70dp"
+                    android:maxWidth="125dp"
+                    android:maxHeight="125dp"
+                    android:scaleType="fitCenter"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="20dp"
+                    android:adjustViewBounds="true"
+                    android:paddingRight="20dp"
+                    android:paddingTop="20dp"
+                    android:layout_marginRight="65dp" />
+                <ImageView
+                    android:src="@drawable/previewlnr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView4"
+                    android:adjustViewBounds="true"
+                    android:maxWidth="150dp"
+                    android:maxHeight="150dp" />
+                <ImageButton
+                    android:src="@drawable/journeytest"
+                    android:background="@drawable/roundedbutton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageButton1"
+                    android:layout_gravity="center_horizontal"
+                    android:minWidth="70dp"
+                    android:minHeight="70dp"
+                    android:maxWidth="125dp"
+                    android:maxHeight="125dp"
+                    android:scaleType="fitCenter"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="20dp"
+                    android:adjustViewBounds="true"
+                    android:paddingRight="20dp"
+                    android:paddingTop="20dp"
+                    android:layout_marginLeft="65dp" />
+                <ImageView
+                    android:src="@drawable/previewrnl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView2"
+                    android:adjustViewBounds="true"
+                    android:scaleX="1"
+                    android:scaleY="1"
+                    android:maxWidth="100dp"
+                    android:maxHeight="150dp"
+                    android:layout_marginRight="5dp" />
+            </LinearLayout>
+        </ScrollView>
     </ViewFlipper>
 </LinearLayout>

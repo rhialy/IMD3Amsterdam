@@ -120,6 +120,10 @@
     <AndroidResource Include="Resources\layout\MainPreferencesPhaseOne.axml" />
     <AndroidResource Include="Resources\layout\MainPreferencesPhaseTwo.axml" />
     <AndroidResource Include="Resources\layout\MainPreferencesPhaseThree.axml" />
+    <AndroidResource Include="Resources\drawable\PreviewLnR.png" />
+    <AndroidResource Include="Resources\drawable\PreviewRnL.png" />
+    <AndroidResource Include="Resources\drawable\journeyTest.png" />
+    <AndroidResource Include="Resources\drawable\roundedbutton.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
