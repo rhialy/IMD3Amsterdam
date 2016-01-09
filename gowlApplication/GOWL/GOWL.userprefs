@@ -1,24 +1,18 @@
 ﻿<Properties StartupItem="GOWL\GOWL.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.CB5A20V78W" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="GOWL\NewJourneyCalendar.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus 5 (Lollipop) 5.1.0" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="GOWL\JourneyPreview.cs">
     <Files>
       <File FileName="GOWL\WelcomeScreen.cs" Line="74" Column="28" />
-      <File FileName="GOWL\GowlMain.cs" Line="115" Column="49" />
-      <File FileName="GOWL\MainPreferencesPhaseOne.cs" Line="313" Column="26" />
-      <File FileName="GOWL\MainPreferencesPhaseTwo.cs" Line="252" Column="5" />
-      <File FileName="GOWL\MainPreferencesPhaseThree.cs" Line="299" Column="1" />
-      <File FileName="GOWL\User.cs" Line="38" Column="169" />
-      <File FileName="GOWL\NewJourneySpecificPreference.cs" Line="273" Column="21" />
-      <File FileName="GOWL\JourneyPreview.cs" Line="58" Column="1" />
-      <File FileName="f:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\SQLite.cs" Line="2977" Column="1" />
-      <File FileName="GOWL\NewJourneyPersonCount.cs" Line="138" Column="18" />
-      <File FileName="GOWL\NewJourneyCalendar.cs" Line="100" Column="38" />
-      <File FileName="GOWL\Properties\AndroidManifest.xml" Line="6" Column="12" />
+      <File FileName="GOWL\JourneyPreview.cs" Line="170" Column="41" />
+      <File FileName="GOWL\Resources\drawable\roundedbutton.xml" Line="2" Column="66" />
+      <File FileName="GOWL\Resources\drawable\PreviewRtoLTemplate.xml" Line="15" Column="60" />
+      <File FileName="GOWL\Resources\drawable\JourneyPreviewUnfold.xml" Line="3" Column="18" />
+      <File FileName="GOWL\Resources\drawable\PreviewLtoRTemplate.xml" Line="15" Column="60" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.GOWL AndroidDesignerPreferredDevice="Nexus 4" AndroidDesignerPreferredTheme="Theme.Material" />
+  <MonoDevelop.Ide.ItemProperties.GOWL AndroidDesignerPreferredDevice="Nexus 5" AndroidDesignerPreferredTheme="Theme.Material" />
 </Properties>

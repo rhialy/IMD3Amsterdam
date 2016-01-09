@@ -65,9 +65,9 @@ namespace GOWL
 			// View Flipper
 			flipper = (ViewFlipper) FindViewById (Resource.Id.viewFlipper1);
 
-			backButtonDateEnd.Click += delegate {
+			/*backButtonDateEnd.Click += delegate {
 				flipper.ShowPrevious();
-			};
+			};*/
 
 
 			/************************************************|
@@ -81,14 +81,15 @@ namespace GOWL
 			onDateChanged (dateEnd);
 
 			// Transitions
-			Transitions (nextButtonDateEnd);
+			Transitions (backButtonDateEnd);
 			Transitions (backButtonDateStart);
 		}
 
 		//-----------sets the tag in the user.cs for further utilization in the application---------//
 		protected void settingTags() {
 
-			string startingDate = startDay.ToString () + "." + startMonth.ToString () + "." + startDay.ToString ();
+			string startingDate = startDay.ToString () + "." + startMonth.ToString () + "." + startYear.ToString ();
+			string endDate = endDay.ToString () + "." + endMonth.ToString () + "." + endYear.ToString ();
 
 			using (var connection = new SQLiteConnection (dbPath)) {
 
@@ -97,7 +98,8 @@ namespace GOWL
 				var presentUser = connection.Get<User> (1);
 
 				if (rowCount <= 2) {
-					presentUser.Date = startingDate;
+					presentUser.StartingDate = startingDate;
+					presentUser.EndDate = endDate;
 					connection.Update (presentUser);
 					Log.Info (Tag, "User Data Updated");
 				}
@@ -109,28 +111,32 @@ namespace GOWL
 		protected void onDateChanged(DatePicker view) {	
 
 			nextButtonDateStart.Click += delegate {
-				startYear = dateStart.Year;
-				startMonth = dateStart.Month;
-				startDay = dateStart.DayOfMonth;
-				Log.Info(Tag, "Current Day: " + startDay.ToString());	
-				flipper.ShowNext();
+				if(view == dateStart) {
+					startYear = view.Year;
+					startMonth = view.Month;
+					startDay = view.DayOfMonth;
+					Log.Info(Tag, "Current Day: " + startDay.ToString());	
+					flipper.ShowNext();
+				}
 			};
 
 			nextButtonDateEnd.Click += delegate {
-				endYear = dateEnd.Year;
-				endMonth = dateEnd.Month;
-				endDay = dateEnd.DayOfMonth;
-				Log.Info(Tag, "Current Day - End: " + endDay.ToString());	
-				settingTags();
-				StartActivity(typeof(JourneyPreview));
+				if(view == dateEnd) {
+					endYear = view.Year;
+					endMonth = view.Month;
+					endDay = view.DayOfMonth;
+					Log.Info(Tag, "Current Day - End: " + endDay.ToString());	
+					settingTags();
+					StartActivity(typeof(JourneyPreview));
+				}
 			};
 		}
 
+		//-----------transitions without need to save data in db----------------//
 		private void Transitions (Button transitionButton) {
 			transitionButton.Click += delegate {
-				if (transitionButton == nextButtonDateEnd) {
-					settingTags();
-					StartActivity(typeof(JourneyPreview));
+				if (transitionButton == backButtonDateEnd) {
+					flipper.ShowPrevious();
 				} else if (transitionButton == backButtonDateStart) {
 					StartActivity(typeof(NewJourneyPersonCount));
 					Finish();

@@ -55,6 +55,8 @@ namespace GOWL
 			nextButton = (Button)FindViewById (Resource.Id.nextButtonPersonCount);
 			backButton = (Button)FindViewById (Resource.Id.backButtonPersonCount);
 
+			isImageChoosen = true;
+
 			/************************************************|
 			* 				INVOKING METHODS				 |
 		 	* 												 |

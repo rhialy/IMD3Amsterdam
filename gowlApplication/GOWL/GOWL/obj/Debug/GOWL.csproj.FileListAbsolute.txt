@@ -137,3 +137,11 @@ F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\layout\newjou
 F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\layout\mainpreferencesphaseone.xml
 F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\layout\mainpreferencesphasetwo.xml
 F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\layout\mainpreferencesphasethree.xml
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\previewlnr.png
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\previewrnl.png
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\journeytest.png
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\roundedbutton.xml
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\framepreview.png
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\journeypreviewunfold.xml
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\previewrtoltemplate.xml
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\previewltortemplate.xml

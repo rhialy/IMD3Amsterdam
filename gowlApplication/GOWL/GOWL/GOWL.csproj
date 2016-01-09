@@ -124,6 +124,10 @@
     <AndroidResource Include="Resources\drawable\PreviewRnL.png" />
     <AndroidResource Include="Resources\drawable\journeyTest.png" />
     <AndroidResource Include="Resources\drawable\roundedbutton.xml" />
+    <AndroidResource Include="Resources\drawable\framePreview.png" />
+    <AndroidResource Include="Resources\drawable\JourneyPreviewUnfold.xml" />
+    <AndroidResource Include="Resources\drawable\PreviewRtoLTemplate.xml" />
+    <AndroidResource Include="Resources\drawable\PreviewLtoRTemplate.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
