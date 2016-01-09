@@ -1,18 +1,13 @@
 ﻿<Properties StartupItem="GOWL\GOWL.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus 5 (Lollipop) 5.1.0" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="GOWL\JourneyPreview.cs">
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="GOWL\WelcomeScreen.cs" Line="74" Column="28" />
-      <File FileName="GOWL\JourneyPreview.cs" Line="170" Column="41" />
-      <File FileName="GOWL\Resources\drawable\roundedbutton.xml" Line="2" Column="66" />
-      <File FileName="GOWL\Resources\drawable\PreviewRtoLTemplate.xml" Line="15" Column="60" />
-      <File FileName="GOWL\Resources\drawable\JourneyPreviewUnfold.xml" Line="3" Column="18" />
-      <File FileName="GOWL\Resources\drawable\PreviewLtoRTemplate.xml" Line="15" Column="60" />
+      <File FileName="GOWL\JourneyPreview.cs" Line="88" Column="14" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.GOWL AndroidDesignerPreferredDevice="Nexus 5" AndroidDesignerPreferredTheme="Theme.Material" />
+  <MonoDevelop.Ide.ItemProperties.GOWL AndroidDesignerPreferredDevice="Nexus 4" AndroidDesignerPreferredTheme="Theme.Material" />
 </Properties>

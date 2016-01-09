@@ -28,34 +28,14 @@ namespace GOWL
 		private TextView unfoldDurationText;
 		private SeekBar unfoldDurationBar;
 
-		//private string LinearLayout = {
-
-		// Variables for journey preview layouts
-		/*private LinearLayout partOne;
-		private LinearLayout partTwo;
-		private LinearLayout partThree;
-		private LinearLayout partFour;
-		private LinearLayout partFive;
-		private LinearLayout partSix;
-		private LinearLayout partSeven;
-		private LinearLayout partEight;*/
-
-
-		private ImageButton buttonOne;
-		private ImageButton buttonTwo;
-		private ImageButton buttonThree;
-		private ImageButton buttonFour;
-		private ImageButton buttonFive;
-		private ImageButton buttonSix;
-		private ImageButton buttonSeven;
-		private ImageButton buttonEight;
-
 		private TextView TstartingDate;
 		private TextView TendDate;
 
 		private LinearLayout scrollViewMain;
 		private LinearLayout journeyPartLtoR;
 		private LinearLayout journeyPartRtoL;
+
+		private Button newSearchButton;
 
 		private static string Tag = "Journey Preview";
 		private static string dbFolder = System.Environment.GetFolderPath (System.Environment.SpecialFolder.MyDocuments);
@@ -72,9 +52,12 @@ namespace GOWL
 		private int interestCulture;
 		private int interestSportActivities;
 		private int interestEvents;
+		private int vacationTarget;
 
 		private string startingDate;
 		private string endDate;
+
+		private string description;
 
 		private bool isClicked = false;
 
@@ -90,7 +73,7 @@ namespace GOWL
 
 			TstartingDate = (TextView)FindViewById (Resource.Id.StartingDate);
 			TendDate = (TextView)FindViewById (Resource.Id.EndDate);
-
+			newSearchButton = (Button)FindViewById (Resource.Id.NewSearchButton);
 			scrollViewMain = (LinearLayout)FindViewById (Resource.Id.ScrollViewMain);
 			RetrieveDatafromDB ();
 
@@ -99,7 +82,11 @@ namespace GOWL
 
 			// drawing the necessary amount of destinations
 			draw ();
-			findDestinationFoldPreview();
+
+			newSearchButton.Click += delegate {
+				StartActivity(typeof(JourneyPreview));
+				Finish();
+			};
 
 		}
 
@@ -125,9 +112,10 @@ namespace GOWL
 				isActive = User.IsActive;
 				interestCity = User.InterestCity;
 				interestCulture = User.InterestCulture;
-				interestNature = User.InterestNature;
+				interestNature = 1;
 				interestSportActivities = User.InterestSportActivities;
 				interestEvents = User.InterestEvents;
+				vacationTarget = 1;
 				startingDate = User.StartingDate;
 				endDate = User.EndDate;
 				Log.Info (Tag, "Query - Result: " + persons.ToString ());
@@ -136,11 +124,124 @@ namespace GOWL
 		}
 
 		//-----------Searching for right destination---------//
-		private void findDestinationFoldPreview() {
+		private int findDestinationFoldPreview(int _rightOder) {
 
+			int exception = 0;
+			string command = "SELECT * FROM Destination";
+			int rightOder = _rightOder;
 
+			Random random = new Random ();
+			int whichReturn = random.Next (1, 7);
 
+			using (var db = new SQLiteConnection (destinationDBPath)) {
+
+				var rowCount = db.Table<Destination> ().Count ();
+
+				switch (whichReturn) {
+
+				case 1:
+					command = "SELECT * FROM Destination WHERE VacationTarget = ? AND InterestSportActivities = ? AND InterestEvents = ?";
+					var imageResIdOne = db.Query<Destination> (command, vacationTarget, interestSportActivities, interestEvents);
+					foreach (var s in  imageResIdOne) {
+						int imageResourceId = s.ImageResID;
+						if (s.Order == rightOder) {
+							return imageResourceId;
+						} else {
+							findDestinationFoldPreview (rightOder);
+						}
+					}
+					break;
+
+				case 2:
+					command = "SELECT * FROM Destination WHERE Standards = ? AND InterestCulture = ? AND InterestCity = ?";
+					var imageResIdTwo = db.Query<Destination> (command, standards, interestCulture, interestCity);
+					foreach (var s in  imageResIdTwo) {
+						int imageResourceId = s.ImageResID;
+						if (s.Order == rightOder) {
+							return imageResourceId;
+						} else {
+							findDestinationFoldPreview (rightOder);
+						}
+					}
+					break;
+
+				case 3:
+					command = "SELECT * FROM Destination WHERE VacationTarget = ? AND InterestCity = ? AND InterestNature = ?";
+					var imageResIdThree = db.Query<Destination> (command, vacationTarget, interestCity, interestNature);
+					foreach (var s in  imageResIdThree) {
+						int imageResourceId = s.ImageResID;
+						if (s.Order == rightOder) {
+							return imageResourceId;
+						} else {
+							findDestinationFoldPreview (rightOder);
+						}
+					}
+					break;
+
+				case 4:
+					command = "SELECT * FROM Destination WHERE IsActive = ? AND InterestCity = ? AND InterestNature = ?";
+					var imageResIdFour = db.Query<Destination> (command, isActive, interestCity, interestNature);
+					foreach (var s in  imageResIdFour) {
+						int imageResourceId = s.ImageResID;
+						if (s.Order == rightOder) {
+							return imageResourceId;
+						} else {
+							findDestinationFoldPreview (rightOder);
+						}
+					}
+					break;
+
+				case 5:
+					command = "SELECT * FROM Destination WHERE InterestNature = ? AND InterestCity = ? AND InterestCulture = ?";
+					var imageResIdFive= db.Query<Destination> (command, interestNature, interestCity, interestCulture);
+					foreach (var s in  imageResIdFive) {
+						int imageResourceId = s.ImageResID;
+						if (s.Order == rightOder) {
+							return imageResourceId;
+						} else {
+							findDestinationFoldPreview (rightOder);
+						}
+					}
+					break;
+
+				case 6:
+					command = "SELECT * FROM Destination WHERE VacationTarget = ? AND InterestEvents = ? AND InterestCulture = ?";
+					var imageResIdSix= db.Query<Destination> (command, vacationTarget, interestEvents, interestCulture);
+					foreach (var s in  imageResIdSix) {
+						int imageResourceId = s.ImageResID;
+						if (s.Order == rightOder) {
+							return imageResourceId;
+						} else {
+							findDestinationFoldPreview (rightOder);
+						}
+					}
+					break;
+
+				case 7:
+					command = "SELECT * FROM Destination WHERE Standards = ? AND InterestCulture = ?";
+					var imageResIdSeven= db.Query<Destination> (command, standards, interestCulture);
+					foreach (var s in  imageResIdSeven) {
+						int imageResourceId = s.ImageResID;
+						if (s.Order == rightOder) {
+							return imageResourceId;
+						} else {
+							findDestinationFoldPreview (rightOder);
+						}
+					}
+					break;
+
+				}
+
+			}
+
+			return exception;
 		}
+
+		private string getDescription (string _description) {
+			string description = _description;
+			return description;
+		}
+
 
 		//----------drawing journey preview----------//
 		private void draw() {
@@ -148,11 +249,11 @@ namespace GOWL
 			// how long will the journey last?
 			int tempStringStartDay = Convert.ToInt32(startingDate.Split('.')[0]);
 			int tempStringStartMonth = Convert.ToInt32(startingDate.Split('.')[1]);
-			int tempStringStartYear = Convert.ToInt32(startingDate.Split('.')[2]);
+			//int tempStringStartYear = Convert.ToInt32(startingDate.Split('.')[2]);
 
 			int tempStringEndDay = Convert.ToInt32(endDate.Split('.')[0]);
 			int tempStringEndMonth = Convert.ToInt32(endDate.Split('.')[1]);
-			int tempStringEndYear = Convert.ToInt32(endDate.Split('.')[2]);
+			//int tempStringEndYear = Convert.ToInt32(endDate.Split('.')[2]);
 
 			if (tempStringStartMonth != tempStringEndMonth) {
 				duration = (30 - tempStringStartDay) + tempStringEndDay;
@@ -179,17 +280,20 @@ namespace GOWL
 					scrollViewMain.AddView (partOne, i);
 					Log.Info (Tag, "executed: " + i.ToString());
 					ImageButton buttonOne = (ImageButton)partOne.FindViewById (Resource.Id.ImageButtonPreviewRtoL);
+					buttonOne.SetImageResource (findDestinationFoldPreview(i));
 					clickingFoldImage (buttonOne, partOne);
 				} else if (i % 2 == 1) {
 					LinearLayout partTwo = (LinearLayout)inflater.Inflate (Resource.Drawable.PreviewLtoRTemplate, null);
 					scrollViewMain.AddView (partTwo, i);
 					Log.Info (Tag, "executed: " + i.ToString());
 					ImageButton buttonTwo = (ImageButton)partTwo.FindViewById (Resource.Id.ImageButtonPreviewLtoR);
+					buttonTwo.SetImageResource (findDestinationFoldPreview(i));
 					clickingFoldImage (buttonTwo, partTwo);
 				}
 				 
 			}
 		}
+
 
 		// clicking round imagebutton for getting unfolded preview about specific destination
 		private void clickingFoldImage(ImageButton button, LinearLayout currentPart) {
@@ -199,7 +303,7 @@ namespace GOWL
 					unfoldPreviewScreen = inflater.Inflate(Resource.Drawable.JourneyPreviewUnfold, null);
 					unfoldImage = (ImageView) unfoldPreviewScreen.FindViewById(Resource.Id.UnfoldImage);
 					unfoldDescription = (TextView) unfoldPreviewScreen.FindViewById (Resource.Id.UnfoldDescription);
-					unfoldDescription.Text = "Hullu Hullu Hullu";
+					unfoldDescription.Text = description;
 					currentPart.AddView(unfoldPreviewScreen, 0);
 					isClicked = true;
 				} else {

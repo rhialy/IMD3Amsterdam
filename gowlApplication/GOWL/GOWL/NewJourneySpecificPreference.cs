@@ -47,6 +47,7 @@ namespace GOWL
 		private static string dbPath = System.IO.Path.Combine(dbFolder, "gowl_user.db");
 
 		private int imagesSelected;
+		private int vacationTarget;
 
 		private bool isImageFitToScreen;
 		private bool isSelected;
@@ -237,23 +238,23 @@ namespace GOWL
 			// 		 when isSet is false clear the preparation
 			if (isSet == true) {
 				if (imageView == firstImage) {
-					//hasStandards = 1;
+					vacationTarget = 1;
 				} else if (imageView == secondImage) {
-					//hasStandards = 2;
+					vacationTarget = 2;
 				} else if (imageView == thirdImage) {
-					//hasStandards = 3;
+					vacationTarget = 3;
 				} else if (imageView == fourthImage) {
-					//hasStandards = 4;
+					vacationTarget = 4;
 				}
 			} else {
 				if (imageView == firstImage) {
-					//hasStandards = 0;
+					vacationTarget = 0;
 				} else if (imageView == secondImage) {
-					//hasStandards = 0;
+					vacationTarget = 0;
 				} else if (imageView == thirdImage) {
-					//hasStandards = 0;
+					vacationTarget = 0;
 				} else if (imageView == fourthImage) {
-					//hasStandards = 0;
+					vacationTarget = 0;
 				}
 			}
 		}
@@ -283,7 +284,7 @@ namespace GOWL
 				rowCount = connection.Table<User> ().Count ();
 
 				if (rowCount <= 2) {
-					//presentUser.Persons = persons;
+					presentUser.VacationTarget = vacationTarget;
 					connection.Update (presentUser);
 					//var Users = connection.Query<User>("UPDATE User SET Persons = ? WHERE ID = 1", persons);
 					Log.Info (Tag, "User Data Updated");

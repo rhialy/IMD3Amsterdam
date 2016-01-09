@@ -21,6 +21,7 @@ namespace GOWL
 		private static string Tag = "WelcomeScreen";
 		private static string dbFolder = System.Environment.GetFolderPath (System.Environment.SpecialFolder.MyDocuments);
 		private static string dbPath = System.IO.Path.Combine(dbFolder, "gowl_user.db");
+		private static string destinationDBPath = System.IO.Path.Combine(dbFolder, "gowl_destination.db");
 
 		private Button startButton;
 
@@ -47,8 +48,10 @@ namespace GOWL
 			* 												 |
 			*************************************************/
 			// Create Databse
-			createDatabase(dbPath);
+			createUserDatabase (dbPath);
+			createDestinationDatabase (destinationDBPath);
 			createSystemUser ();
+			UpdateDestinationDB ();
 			RetrieveDatafromDB ();
 
 			if (existingUser == true) {
@@ -66,7 +69,7 @@ namespace GOWL
 		*************************************************/
 
 		//-----------Database is created---------//
-		private string createDatabase(string path)
+		private string createUserDatabase(string path)
 		{
 			try
 			{
@@ -81,8 +84,40 @@ namespace GOWL
 			}
 		}
 
-		//-----------Update one insert for the Database---------//
+		//-----------Database is created---------//
+		private string createDestinationDatabase(string path)
+		{
+			try
+			{
+				var connection = new SQLiteConnection(path);{
+					connection.CreateTable<Destination>();
+					return "Database created";
+				}
+			}
+			catch (SQLiteException ex)
+			{
+				return ex.Message;
+			}
+		}
+
+		//-----------Update one insert for the Database (USER)---------//
 		private string insertUpdateData(User data, SQLiteConnection conn)
+		{
+			try
+			{
+				var db = conn;
+				if (db.Insert(data) != 0)
+					db.Update(data);
+				return "Single data file inserted or updated";
+			}
+			catch (SQLiteException ex)
+			{
+				return ex.Message;
+			}
+		}
+
+		//-----------Update one insert for the Database (DESTINATION)---------//
+		private string insertUpdateDestinationData(Destination data, SQLiteConnection conn)
 		{
 			try
 			{
@@ -145,6 +180,43 @@ namespace GOWL
 				existingUser = User.ExistingJourney;
 
 			}
+		}
+
+		//--------------retrieving user data and storing in variables---------------//
+		private void UpdateDestinationDB() {
+
+			using (var db = new SQLiteConnection (destinationDBPath)) {
+
+				db.DeleteAll<Destination> ();
+
+				var rowZero = insertUpdateDestinationData(new Destination{ ID = 1, Name = string.Format("SystemUser", System.DateTime.Now.Ticks), 
+					Standards = 1,
+					IsActive = 1,
+					InterestNature = 1,
+					InterestCity = 1,
+					InterestCulture = 1,
+					InterestEvents = 1,
+					InterestSportActivities = 1,
+					VacationTarget = 1,
+					Description = " Ein kleiner Testi mesti eintrag",
+					ImageResID = Resource.Drawable.journeyTest
+				}, db);
+
+				var rowOne = insertUpdateDestinationData(new Destination{ ID = 1, Name = string.Format("SystemUser", System.DateTime.Now.Ticks), 
+					Standards = 2,
+					IsActive = 2,
+					InterestNature = 2,
+					InterestCity = 2,
+					InterestCulture = 2,
+					InterestEvents = 2,
+					InterestSportActivities = 2,
+					VacationTarget = 2,
+					Description = "Zweiter Test test eintrag",
+					ImageResID = Resource.Drawable.test
+				}, db);
+
+			}
+
 		}
 	}
 }
