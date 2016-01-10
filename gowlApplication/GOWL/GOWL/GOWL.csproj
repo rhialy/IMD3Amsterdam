@@ -148,6 +148,20 @@
     <AndroidResource Include="Resources\drawable\personTwo.png" />
     <AndroidResource Include="Resources\drawable\personOneConfirmed.png" />
     <AndroidResource Include="Resources\drawable\Moodboards_Standards_02.png" />
+    <AndroidResource Include="Resources\drawable\Moodboards_Interessen_01.png" />
+    <AndroidResource Include="Resources\drawable\Moodboards_Interessen_02.png" />
+    <AndroidResource Include="Resources\drawable\Moodboards_Interessen_03.png" />
+    <AndroidResource Include="Resources\drawable\Moodboards_Interessen_04.png" />
+    <AndroidResource Include="Resources\drawable\Moodboards_Standards_03.png" />
+    <AndroidResource Include="Resources\drawable\Moodboards_Standards_04.png" />
+    <AndroidResource Include="Resources\drawable\Moodboards_Interessen_01_confirmed.png" />
+    <AndroidResource Include="Resources\drawable\Moodboards_Interessen_02_confirmed.png" />
+    <AndroidResource Include="Resources\drawable\Moodboards_Interessen_03_confirmed.png" />
+    <AndroidResource Include="Resources\drawable\Moodboards_Interessen_04_confirmed.png" />
+    <AndroidResource Include="Resources\drawable\moodboards_Standards_01_confirmed.png" />
+    <AndroidResource Include="Resources\drawable\Moodboards_Standards_02_confirmed.png" />
+    <AndroidResource Include="Resources\drawable\Moodboards_Standards_03_confirmed.png" />
+    <AndroidResource Include="Resources\drawable\Moodboards_Standards_04_confirmed.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

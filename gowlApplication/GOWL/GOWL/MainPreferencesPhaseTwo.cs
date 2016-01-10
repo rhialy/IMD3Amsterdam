@@ -167,16 +167,16 @@ namespace GOWL
 						imagesSelected += 1;
 					}
 					if (takeIt == takeItFirst) {
-						imageView.SetImageResource(Resource.Drawable.moodboards_Standards_01);
+						imageView.SetImageResource(Resource.Drawable.Moodboards_Interessen_01_confirmed);
 					}
 					if (takeIt == takeItSecond) {
-
+						imageView.SetImageResource(Resource.Drawable.Moodboards_Interessen_02_confirmed);
 					}
 					if (takeIt == takeItThird) {
-						imageView.SetImageResource(Resource.Drawable.moodboards_Standards_01);
+						imageView.SetImageResource(Resource.Drawable.Moodboards_Interessen_03_confirmed);
 					}
 					if (takeIt == takeItFourth) {
-
+						imageView.SetImageResource(Resource.Drawable.Moodboards_Interessen_04_confirmed);
 					}
 					Log.Info(Tag, "Images Selected: " + imagesSelected.ToString());
 					if(choosenImage != imageView) {
@@ -199,16 +199,16 @@ namespace GOWL
 						imagesSelected -= 1;
 					}
 					if (takeIt == takeItFirst) {
-						imageView.SetImageResource(Resource.Drawable.moodboards_Standards_01);
+						imageView.SetImageResource(Resource.Drawable.Moodboards_Interessen_01);
 					}
 					if (takeIt == takeItSecond) {
-
+						imageView.SetImageResource(Resource.Drawable.Moodboards_Interessen_02);
 					}
 					if (takeIt == takeItThird) {
-						imageView.SetImageResource(Resource.Drawable.moodboards_Standards_01);
+						imageView.SetImageResource(Resource.Drawable.Moodboards_Interessen_03);
 					}
 					if (takeIt == takeItFourth) {
-
+						imageView.SetImageResource(Resource.Drawable.Moodboards_Interessen_04);
 					}
 					Log.Info(Tag, "Images Selected: " + imagesSelected.ToString());
 					definingTag(imageView, false);
