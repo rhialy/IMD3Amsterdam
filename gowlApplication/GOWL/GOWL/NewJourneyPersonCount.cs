@@ -82,7 +82,7 @@ namespace GOWL
 			imageView.Click += ((object sender, System.EventArgs e) => {
 				if(isImageChoosen) {
 					if (imageView == firstPersonImage) {
-						imageView.SetImageResource(Resource.Drawable.test_test);
+						imageView.SetImageResource(Resource.Drawable.personOneConfirmed);
 					}
 					else if (imageView == secondPersonImage) {
 
@@ -101,7 +101,7 @@ namespace GOWL
 					definingTag(imageView, true);
 				} else {
 					if (imageView == firstPersonImage) {
-						imageView.SetImageResource(Resource.Drawable.test);
+						imageView.SetImageResource(Resource.Drawable.personOne);
 					}
 					else if (imageView == secondPersonImage) {
 

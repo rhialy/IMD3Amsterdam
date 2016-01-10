@@ -7,8 +7,6 @@
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
   <application android:allowBackup="true" android:icon="@mipmap/icon" android:label="@string/app_name" android:theme="@android:style/Theme.Material" android:name="mono.android.app.Application" android:debuggable="true">
     <activity android:label="GOWL" android:name="md54107e72d59fade0a1e39897504ab4bab.GowlMain" />
-    <activity android:label="GOWL" android:name="md54107e72d59fade0a1e39897504ab4bab.MainPreferences" />
-    <activity android:label="GOWL" android:name="md54107e72d59fade0a1e39897504ab4bab.NewJourney" />
     <activity android:icon="@mipmap/icon" android:label="GOWL" android:name="md54107e72d59fade0a1e39897504ab4bab.WelcomeScreen">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />

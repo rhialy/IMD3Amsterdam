@@ -125,11 +125,12 @@ namespace GOWL
 			ImageZoom (thirdImage, Tag, fullScreen, layoutThirdImage, takeItThird);
 			ImageZoom (fourthImage, Tag, fullScreen, layoutFourthImage, takeItFourth);
 
+
 			// Like Methods - Interests
-			clickingImage (firstImage, takeItFirst);
-			clickingImage (secondImage, takeItSecond);
-			clickingImage (thirdImage, takeItThird);
-			clickingImage (fourthImage, takeItFourth);
+			clickingImage (firstImage, takeItFirst, fullScreen, layoutFirstImage);
+			clickingImage (secondImage, takeItSecond, fullScreen, layoutSecondImage);
+			clickingImage (thirdImage, takeItThird, fullScreen, layoutThirdImage);
+			clickingImage (fourthImage, takeItFourth, fullScreen, layoutFourthImage);
 
 			// Transition Methods
 			Transition (backButton);
@@ -171,7 +172,7 @@ namespace GOWL
 
 
 		//----------image is clicked and color filter is set---------//
-		private void clickingImage(ImageView imageView, Button takeIt) {
+		private void clickingImage(ImageView imageView, Button takeIt, LinearLayout fullScreen, LinearLayout downScreen) {
 
 			// TODO: If one image is zoomed in multiple times, this function is also executed this amount of times.
 			//		 This function should only be executed one time no matter what. 
@@ -183,13 +184,13 @@ namespace GOWL
 						imagesSelected += 1;
 					}
 					if (takeIt == takeItFirst) {
-						imageView.SetImageResource(Resource.Drawable.test_test);
+						imageView.SetImageResource(Resource.Drawable.moodboards_Standards_01);
 					}
 					if (takeIt == takeItSecond) {
 
 					}
 					if (takeIt == takeItThird) {
-						imageView.SetImageResource(Resource.Drawable.test_test);
+						imageView.SetImageResource(Resource.Drawable.moodboards_Standards_01);
 					}
 					if (takeIt == takeItFourth) {
 
@@ -202,18 +203,26 @@ namespace GOWL
 					}
 					definingTag(imageView, true);
 					isSelected = false;
+					fullScreen.RemoveView(takeIt);
+					fullScreen.RemoveView(imageView);
+					imageView.SetMaxHeight (450);
+					imageView.SetMaxWidth (450);
+					downScreen.AddView(imageView);
+					Log.Info(Tag, "minimize");
+					canBeSelected = false;
+					isImageFitToScreen = true;
 				} else if (!isSelected && canBeSelected){
 					if(imagesSelected > 0) {
 						imagesSelected -= 1;
 					}
 					if (takeIt == takeItFirst) {
-						imageView.SetImageResource(Resource.Drawable.test);
+						imageView.SetImageResource(Resource.Drawable.moodboards_Standards_01);
 					}
 					if (takeIt == takeItSecond) {
 
 					}
 					if (takeIt == takeItThird) {
-						imageView.SetImageResource(Resource.Drawable.test);
+						imageView.SetImageResource(Resource.Drawable.moodboards_Standards_01);
 					}
 					if (takeIt == takeItFourth) {
 

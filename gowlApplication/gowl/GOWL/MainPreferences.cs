@@ -84,7 +84,7 @@ namespace GOWL
 			*************************************************/
 
 			Log.Info (Tag, "Choosing Phase began");
-			SetContentView(Resource.Layout.MainPreferences);
+			SetContentView(Resource.Layout.MainPreferencesPhaseOne);
 
 			//--------Layout Variables---------//
 			// Images - Interests - Main Preferences
@@ -104,7 +104,7 @@ namespace GOWL
 			imageChoosingExplanation = (LinearLayout)FindViewById (Resource.Id.ImageChoosingExplanation);
 
 			// Buttons - Main Preferences
-			takeIt = (Button)FindViewById (Resource.Id.takeIt);
+			takeIt = (Button)FindViewById (Resource.Id.takeItFirst);
 			backButton = (Button)FindViewById (Resource.Id.backButton);
 			nextButton = (Button) FindViewById (Resource.Id.nextButton);
 			nextButtonChoosing = (Button)FindViewById (Resource.Id.nextButtonChoosing);
@@ -232,7 +232,7 @@ namespace GOWL
 					if(imagesSelected < 1) {
 						imagesSelected += 1;
 					}
-					imageView.SetImageResource(Resource.Drawable.test_test);
+					imageView.SetImageResource(Resource.Drawable.moodboards_Standards_01);
 					Log.Info(Tag, "Images Selected: " + imagesSelected.ToString());
 					Log.Info(Tag, "set color filter");
 					definingTag(imageView, true);
@@ -241,7 +241,7 @@ namespace GOWL
 					if(imagesSelected > 0) {
 						imagesSelected -= 1;
 					}
-					imageView.SetImageResource(Resource.Drawable.test);
+					imageView.SetImageResource(Resource.Drawable.moodboards_Standards_01);
 					Log.Info(Tag, "Images Selected: " + imagesSelected.ToString());
 					Log.Info(Tag, "remove color filter");
 					definingTag(imageView, false);
@@ -329,17 +329,17 @@ namespace GOWL
 					Log.Info(Tag, nextButton.ToString());
 				}
 				if (phase == 2) {
-					firstImage.SetImageResource(Resource.Drawable.test_test);
-					secondImage.SetImageResource(Resource.Drawable.test_test);
-					thirdImage.SetImageResource(Resource.Drawable.test_test);
-					fourthImage.SetImageResource(Resource.Drawable.test_test);
+					firstImage.SetImageResource(Resource.Drawable.moodboards_Standards_01);
+					secondImage.SetImageResource(Resource.Drawable.moodboards_Standards_01);
+					thirdImage.SetImageResource(Resource.Drawable.moodboards_Standards_01);
+					fourthImage.SetImageResource(Resource.Drawable.moodboards_Standards_01);
 					Log.Info(Tag, "Phase 2");
 				}
 				if (phase == 3) {
-					firstImage.SetImageResource(Resource.Drawable.test);
-					secondImage.SetImageResource(Resource.Drawable.test);
-					thirdImage.SetImageResource(Resource.Drawable.test);
-					fourthImage.SetImageResource(Resource.Drawable.test);
+					firstImage.SetImageResource(Resource.Drawable.moodboards_Standards_01);
+					secondImage.SetImageResource(Resource.Drawable.moodboards_Standards_01);
+					thirdImage.SetImageResource(Resource.Drawable.moodboards_Standards_01);
+					fourthImage.SetImageResource(Resource.Drawable.moodboards_Standards_01;
 					Log.Info(Tag, "Phase 3");
 				}
 				if (phase == 4) {

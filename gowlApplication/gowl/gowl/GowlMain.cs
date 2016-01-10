@@ -31,6 +31,11 @@ namespace GOWL
 		private string gowlVoiceStatus = "wie geht es dir";
 		private string gowlVoiceErleben = "alles zu erleben";
 		private string gowlVoiceStrand = "zum strand";
+		private string gowlVoiceRestaurant = "lust auf das restaurant";
+		private string gowlVoiceBegleiten = "begleite uns zu";
+		private string gowlVoiceNationalpark = "erzähl uns doch mal";
+		private string gowlVoiceVogelarten = "mehr über die Vogelarten";
+		private string gowlVoiceFoto = "kannst du ein foto";
 	
 		private bool existingJourney = true;
 
@@ -47,8 +52,6 @@ namespace GOWL
 		private TextView voiceResultText;
 
 		private static string Tag = "GowlMain";
-
-		public NewJourney newJourney;
 
 		protected override void OnCreate (Bundle savedInstanceState)
 		{
@@ -154,6 +157,21 @@ namespace GOWL
 						mediaPlayer.Start ();
 					} else if (result.Text.Contains (gowlVoiceStrand)) {
 						MediaPlayer mediaPlayer = MediaPlayer.Create (this, Resource.Raw.StrandVonSkagen);
+						mediaPlayer.Start ();
+					} else if (result.Text.Contains (gowlVoiceRestaurant)) {
+						MediaPlayer mediaPlayer = MediaPlayer.Create (this, Resource.Raw.Fiskrestaurant);
+						mediaPlayer.Start ();
+					} else if (result.Text.Contains (gowlVoiceBegleiten)) {
+						MediaPlayer mediaPlayer = MediaPlayer.Create (this, Resource.Raw.KommtMit);
+						mediaPlayer.Start ();
+					} else if (result.Text.Contains (gowlVoiceNationalpark)) {
+						MediaPlayer mediaPlayer = MediaPlayer.Create (this, Resource.Raw.InformationNationalparkTys);
+						mediaPlayer.Start ();
+					} else if (result.Text.Contains (gowlVoiceVogelarten)) {
+						MediaPlayer mediaPlayer = MediaPlayer.Create (this, Resource.Raw.VogelArtenOrt);
+						mediaPlayer.Start ();
+					} else if (result.Text.Contains (gowlVoiceFoto)) {
+						MediaPlayer mediaPlayer = MediaPlayer.Create (this, Resource.Raw.SehrGerne);
 						mediaPlayer.Start ();
 					}
 				}

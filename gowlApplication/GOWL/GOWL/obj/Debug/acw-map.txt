@@ -2,14 +2,6 @@ GOWL.GowlMain, GOWL;md54107e72d59fade0a1e39897504ab4bab.GowlMain
 GOWL.GowlMain, GOWL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md54107e72d59fade0a1e39897504ab4bab.GowlMain
 GOWL.GowlMain;md54107e72d59fade0a1e39897504ab4bab.GowlMain
 gowl.GowlMain;md54107e72d59fade0a1e39897504ab4bab.GowlMain
-GOWL.MainPreferences, GOWL;md54107e72d59fade0a1e39897504ab4bab.MainPreferences
-GOWL.MainPreferences, GOWL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md54107e72d59fade0a1e39897504ab4bab.MainPreferences
-GOWL.MainPreferences;md54107e72d59fade0a1e39897504ab4bab.MainPreferences
-gowl.MainPreferences;md54107e72d59fade0a1e39897504ab4bab.MainPreferences
-GOWL.NewJourney, GOWL;md54107e72d59fade0a1e39897504ab4bab.NewJourney
-GOWL.NewJourney, GOWL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md54107e72d59fade0a1e39897504ab4bab.NewJourney
-GOWL.NewJourney;md54107e72d59fade0a1e39897504ab4bab.NewJourney
-gowl.NewJourney;md54107e72d59fade0a1e39897504ab4bab.NewJourney
 GOWL.WelcomeScreen, GOWL;md54107e72d59fade0a1e39897504ab4bab.WelcomeScreen
 GOWL.WelcomeScreen, GOWL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md54107e72d59fade0a1e39897504ab4bab.WelcomeScreen
 GOWL.WelcomeScreen;md54107e72d59fade0a1e39897504ab4bab.WelcomeScreen

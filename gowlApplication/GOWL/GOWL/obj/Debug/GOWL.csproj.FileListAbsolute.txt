@@ -15,14 +15,11 @@ F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\mipmap-mdpi\i
 F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\mipmap-xhdpi\icon.png
 F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\mipmap-xxhdpi\icon.png
 F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\mipmap-xxxhdpi\icon.png
-F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\layout\mainpreferences.xml
 F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\layout\welcomescreen.xml
 F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\mipmap-hdpi\gowl_logo.png
 F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\R.cs.flag
 F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\uploadflags.txt
-F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\test.png
 F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\mipmap-hdpi\test.png
-F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\worldclear.jpg
 C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\GOWL\bin\Debug\GOWL.dll
 C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\GOWL\bin\Debug\GOWL.pdb
 C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\GOWL\bin\Debug\imd.amsterdam.gowl.apk
@@ -56,10 +53,8 @@ C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\G
 C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\GOWL\obj\Debug\res\layout\newjourney.xml
 C:\Users\Daniel Stehlik\Documents\Semester3Projekt\GitHub\gowlApplication\gowl\GOWL\obj\Debug\res\layout\journeypreview.xml
 F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\gowl\resources\drawable\test_cym.png
-F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\test_test.png
 F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\layout\mainpreferencesname.xml
 F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\layout\existingjourney.xml
-F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\layout\newjourney.xml
 F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\layout\journeypreview.xml
 F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\raw\ichbingowl.mp3
 C:\Users\Daniel Stehlik\Documents\IMD3Amsterdam\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\GOWL.csprojResolveAssemblyReference.cache
@@ -139,9 +134,35 @@ F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\layout\mainpr
 F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\layout\mainpreferencesphasethree.xml
 F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\previewlnr.png
 F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\previewrnl.png
-F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\journeytest.png
 F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\roundedbutton.xml
 F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\framepreview.png
 F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\journeypreviewunfold.xml
 F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\previewrtoltemplate.xml
 F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\previewltortemplate.xml
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\moodboards_standards_01.png
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\raw\sehrgerne.mp3
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\blavandshukfyr.png
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\breezanddijk.png
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\bunkermuseum.png
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\dengemleby.png
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\fiskrestaurant.png
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\hamburghafen.png
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\kleinemeerjungfrau.png
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\molsbjerge.png
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\nationalparkthy.png
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\naturgewaltensylt.png
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\piocountryclub.png
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\romo.png
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\schlosskronborg.png
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\schlossrosenborg.png
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\skagensmuseum.png
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\skagenstrand.png
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\sneglehuset.png
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\ufomonument.png
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\wikingermuseum.png
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\kabelpark.png
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\personfour.png
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\personone.png
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\personthree.png
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\persontwo.png
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\persononeconfirmed.png
