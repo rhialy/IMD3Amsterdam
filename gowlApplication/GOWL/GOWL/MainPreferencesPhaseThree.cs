@@ -52,6 +52,12 @@ namespace GOWL
 		private bool isSelected;
 		private bool canBeSelected;
 
+		private int interestNature;
+		private int interestCulture;
+		private int interestCity;
+		private int interestSportActivities;
+		private int interestEvents;
+
 		protected override void OnCreate (Bundle savedInstanceState)
 		{
 			base.OnCreate (savedInstanceState);
@@ -184,16 +190,16 @@ namespace GOWL
 						imagesSelected += 1;
 					}
 					if (takeIt == takeItFirst) {
-						imageView.SetImageResource(Resource.Drawable.moodboards_Standards_01);
+						imageView.SetImageResource(Resource.Drawable.Moodboards_Interessen_01_confirmed);
 					}
 					if (takeIt == takeItSecond) {
-
+						imageView.SetImageResource(Resource.Drawable.Moodboards_Interessen_02_confirmed);
 					}
 					if (takeIt == takeItThird) {
-						imageView.SetImageResource(Resource.Drawable.moodboards_Standards_01);
+						imageView.SetImageResource(Resource.Drawable.Moodboards_Interessen_03_confirmed);
 					}
 					if (takeIt == takeItFourth) {
-
+						imageView.SetImageResource(Resource.Drawable.Moodboards_Interessen_04_confirmed);
 					}
 					Log.Info(Tag, "Images Selected: " + imagesSelected.ToString());
 					if(choosenImage != imageView) {
@@ -216,16 +222,16 @@ namespace GOWL
 						imagesSelected -= 1;
 					}
 					if (takeIt == takeItFirst) {
-						imageView.SetImageResource(Resource.Drawable.moodboards_Standards_01);
+						imageView.SetImageResource(Resource.Drawable.Moodboards_Interessen_01);
 					}
 					if (takeIt == takeItSecond) {
-
+						imageView.SetImageResource(Resource.Drawable.Moodboards_Interessen_02);
 					}
 					if (takeIt == takeItThird) {
-						imageView.SetImageResource(Resource.Drawable.moodboards_Standards_01);
+						imageView.SetImageResource(Resource.Drawable.Moodboards_Interessen_03);
 					}
 					if (takeIt == takeItFourth) {
-
+						imageView.SetImageResource(Resource.Drawable.Moodboards_Interessen_04);
 					}
 					Log.Info(Tag, "Images Selected: " + imagesSelected.ToString());
 					definingTag(imageView, false);
@@ -249,23 +255,55 @@ namespace GOWL
 			// 		 when isSet is false clear the preparation
 			if (isSet == true) {
 				if (imageView == firstImage) {
-					//hasStandards = 1;
+					interestCulture = 4;
+					interestCity = 3;
+					interestEvents = 2;
+					interestNature = 1;
+					interestSportActivities = 1;
 				} else if (imageView == secondImage) {
-					//hasStandards = 2;
+					interestNature = 4;
+					interestCulture = 2;
+					interestCity = 1;
+					interestSportActivities = 3;
+					interestEvents = 1;
 				} else if (imageView == thirdImage) {
-					//hasStandards = 3;
+					interestSportActivities = 4;
+					interestNature = 2;
+					interestCulture = 2;
+					interestCity = 2;
+					interestEvents = 3;
 				} else if (imageView == fourthImage) {
-					//hasStandards = 4;
+					interestSportActivities = 1;
+					interestEvents = 1;
+					interestCity = 3;
+					interestCulture = 2;
+					interestNature = 2;
 				}
 			} else {
 				if (imageView == firstImage) {
-					//hasStandards = 0;
+					interestSportActivities = 0;
+					interestEvents = 0;
+					interestCity = 0;
+					interestCulture = 0;
+					interestNature = 0;
 				} else if (imageView == secondImage) {
-					//hasStandards = 0;
+					interestSportActivities = 0;
+					interestEvents = 0;
+					interestCity = 0;
+					interestCulture = 0;
+					interestNature = 0;
 				} else if (imageView == thirdImage) {
-					//hasStandards = 0;
+					interestSportActivities = 0;
+					interestEvents = 0;
+					interestCity = 0;
+					interestCulture = 0;
+					interestNature = 0;
 				} else if (imageView == fourthImage) {
-					//hasStandards = 0;
+					interestSportActivities = 0;
+					interestEvents = 0;
+					interestCity = 0;
+					interestCulture = 0;
+					interestNature = 0;
 				}
 			}
 		}
@@ -280,7 +318,11 @@ namespace GOWL
 				var presentUser = connection.Get<User> (1);
 
 				if (rowCount <= 2) {
-					//presentUser.Persons = persons;
+					presentUser.InterestSportActivities = interestSportActivities;
+					presentUser.InterestCity = interestCity;
+					presentUser.InterestCulture = interestCulture;
+					presentUser.InterestEvents = interestEvents;
+					presentUser.InterestNature = interestNature;
 					connection.Update (presentUser);
 					//var Users = connection.Query<User>("UPDATE User SET Persons = ? WHERE ID = 1", persons);
 					Log.Info (Tag, "User Data Updated");

@@ -70,7 +70,7 @@ public final class R {
         public static final int CalendarSubLayout=0x7f070035;
         public static final int ChooseEndDateText=0x7f07003c;
         public static final int ChooseStartDateText=0x7f070034;
-        public static final int ConnectionLineOne=0x7f070054;
+        public static final int ConnectionLineOne=0x7f070055;
         public static final int ConnectionLineTwo=0x7f070051;
         public static final int DatePickerEnd=0x7f07003d;
         public static final int DatePickerStart=0x7f070036;
@@ -108,6 +108,7 @@ public final class R {
         public static final int backButtonName=0x7f07001b;
         public static final int backButtonPersonCount=0x7f070045;
         public static final int backButtonUserData=0x7f070016;
+        public static final int date=0x7f070054;
         public static final int fullScreenLayout=0x7f070022;
         public static final int gowlExplanation=0x7f07001d;
         public static final int imageView1=0x7f070008;

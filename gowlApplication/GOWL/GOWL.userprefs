@@ -1,15 +1,9 @@
 ﻿<Properties StartupItem="GOWL\GOWL.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus 5 (Lollipop) 5.1.0" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="GOWL\MainPreferencesPhaseThree.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.CB5A20V78W" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="GOWL\Resources\drawable\PreviewRtoLTemplate.xml">
     <Files>
-      <File FileName="GOWL\JourneyPreview.cs" Line="1" Column="1" />
-      <File FileName="GOWL\MainPreferencesPhaseOne.cs" Line="231" Column="75" />
-      <File FileName="GOWL\NewJourneySpecificPreference.cs" Line="1" Column="1" />
-      <File FileName="GOWL\WelcomeScreen.cs" Line="1" Column="1" />
-      <File FileName="GOWL\GowlMain.cs" Line="1" Column="1" />
-      <File FileName="GOWL\NewJourneyPersonCount.cs" Line="1" Column="1" />
-      <File FileName="GOWL\MainPreferencesPhaseTwo.cs" Line="211" Column="76" />
-      <File FileName="GOWL\MainPreferencesPhaseThree.cs" Line="236" Column="64" />
+      <File FileName="GOWL\JourneyPreview.cs" Line="301" Column="6" />
+      <File FileName="GOWL\Resources\drawable\PreviewRtoLTemplate.xml" Line="39" Column="59" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

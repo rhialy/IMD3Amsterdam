@@ -53,6 +53,8 @@ namespace GOWL
 		private bool canBeSelected;
 		private bool hasInserted;
 
+		private int hasStandards;
+
 		protected override void OnCreate (Bundle savedInstanceState)
 		{
 			base.OnCreate (savedInstanceState);
@@ -284,23 +286,23 @@ namespace GOWL
 			// 		 when isSet is false clear the preparation
 			if (isSet == true) {
 				if (imageView == firstImage) {
-					//hasStandards = 1;
+					hasStandards = 1;
 				} else if (imageView == secondImage) {
-					//hasStandards = 2;
+					hasStandards = 2;
 				} else if (imageView == thirdImage) {
-					//hasStandards = 3;
+					hasStandards = 3;
 				} else if (imageView == fourthImage) {
-					//hasStandards = 4;
+					hasStandards = 4;
 				}
 			} else {
 				if (imageView == firstImage) {
-					//hasStandards = 0;
+					hasStandards = 0;
 				} else if (imageView == secondImage) {
-					//hasStandards = 0;
+					hasStandards = 0;
 				} else if (imageView == thirdImage) {
-					//hasStandards = 0;
+					hasStandards = 0;
 				} else if (imageView == fourthImage) {
-					//hasStandards = 0;
+					hasStandards = 0;
 				}
 			}
 		}
@@ -319,13 +321,7 @@ namespace GOWL
 				Log.Info (Tag, "libber");
 				var result = insertUpdateData(new User{ ID = 1, FirstName = string.Format("xxxxx", System.DateTime.Now.Ticks), 
 					LastName = "Smith", 
-					/*Standards = hasStandards,
-					IsActive = isActive,
-					InterestNature = interestNature,
-					InterestCity = interestCity,
-					InterestCulture = interestCulture,
-					InterestSportActivities = interestSportActivities,
-					InterestEvents = interestEvents*/
+					Standards = hasStandards,
 				}, db);
 				hasInserted = true;
 			} else {
@@ -343,7 +339,7 @@ namespace GOWL
 				} else if (transitionButton == nextButton) {
 					if(imagesSelected > 0) {
 						settingTags();
-						StartActivity(typeof(MainPreferencesPhaseTwo));
+						StartActivity(typeof(MainPreferencesPhaseThree));
 					}
 				}
 			};

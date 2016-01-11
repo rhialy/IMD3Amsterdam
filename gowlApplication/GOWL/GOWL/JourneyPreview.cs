@@ -22,18 +22,20 @@ namespace GOWL
 		LayoutInflater inflater;
 
 		// Variables for the unfold preview screen
-		private View unfoldPreviewScreen;
-		private ImageView unfoldImage;
-		private TextView unfoldDescription;
-		private TextView unfoldDurationText;
-		private SeekBar unfoldDurationBar;
+		private View[] unfoldPreviewScreen = new View[8];
+		private ImageView[] unfoldImage = new ImageView[8];
+		private TextView[] unfoldDescription = new TextView[8];
+		private TextView[] unfoldDurationText = new TextView[8];
+		private SeekBar[] unfoldDurationBar = new SeekBar[8];
 
 		private TextView TstartingDate;
 		private TextView TendDate;
 
 		private LinearLayout scrollViewMain;
-		private LinearLayout journeyPartLtoR;
-		private LinearLayout journeyPartRtoL;
+		private LinearLayout[] journeyPartLtoR = new LinearLayout[8];
+		private LinearLayout[] journeyPartRtoL = new LinearLayout[8];
+		private ImageButton[] buttonOne = new ImageButton[8];
+		private ImageButton[] buttonTwo = new ImageButton[8];
 
 		private Button newSearchButton;
 
@@ -57,11 +59,13 @@ namespace GOWL
 		private string startingDate;
 		private string endDate;
 
-		private string description;
-
+		private string[] description = new string[8];
+		private int[] imageUnfoldId = new int[8];
+		private bool[] isUnfold = new bool[8];
 		private bool isClicked = false;
 
 		private int duration;
+		private int specDuration;
 		private int partsCount;
 
 		protected override void OnCreate (Bundle savedInstanceState)
@@ -70,6 +74,10 @@ namespace GOWL
 			SetContentView (Resource.Layout.JourneyPreview);
 
 			inflater = (LayoutInflater)this.GetSystemService (Context.LayoutInflaterService);
+
+			for (int i = 0; i < isUnfold.Length; i++) {
+				isUnfold [i] = false;
+			}
 
 			TstartingDate = (TextView)FindViewById (Resource.Id.StartingDate);
 			TendDate = (TextView)FindViewById (Resource.Id.EndDate);
@@ -103,19 +111,15 @@ namespace GOWL
 
 				var User = connection.Get<User> (1);
 
-				/*foreach (var x in newUser) {
-					Log.Info (Tag, "List of Users: " + x.Persons.ToString ());
-				}*/
-
 				persons = User.Persons;
 				standards = User.Standards;
 				isActive = User.IsActive;
 				interestCity = User.InterestCity;
 				interestCulture = User.InterestCulture;
-				interestNature = 1;
+				interestNature = User.InterestNature;
 				interestSportActivities = User.InterestSportActivities;
 				interestEvents = User.InterestEvents;
-				vacationTarget = 1;
+				vacationTarget = User.VacationTarget;
 				startingDate = User.StartingDate;
 				endDate = User.EndDate;
 				Log.Info (Tag, "Query - Result: " + persons.ToString ());
@@ -140,108 +144,113 @@ namespace GOWL
 				switch (whichReturn) {
 
 				case 1:
-					command = "SELECT * FROM Destination WHERE VacationTarget = ? AND InterestSportActivities = ? AND InterestEvents = ?";
-					var imageResIdOne = db.Query<Destination> (command, vacationTarget, interestSportActivities, interestEvents);
+					command = "SELECT * FROM Destination WHERE VacationTarget = ?";
+					var imageResIdOne = db.Query<Destination> (command, vacationTarget);
 					foreach (var s in  imageResIdOne) {
 						int imageResourceId = s.ImageResID;
 						if (s.Order == rightOder) {
+							description[rightOder] = s.Description;
+							imageUnfoldId [rightOder] = s.ImageResID;
 							return imageResourceId;
 						} else {
-							findDestinationFoldPreview (rightOder);
+							//findDestinationFoldPreview (rightOder);
 						}
 					}
 					break;
 
 				case 2:
-					command = "SELECT * FROM Destination WHERE Standards = ? AND InterestCulture = ? AND InterestCity = ?";
-					var imageResIdTwo = db.Query<Destination> (command, standards, interestCulture, interestCity);
+					command = "SELECT * FROM Destination WHERE InterestCulture = ?";
+					var imageResIdTwo = db.Query<Destination> (command, interestCulture);
 					foreach (var s in  imageResIdTwo) {
 						int imageResourceId = s.ImageResID;
 						if (s.Order == rightOder) {
+							description[rightOder] = s.Description;
+							imageUnfoldId [rightOder] = s.ImageResID;
 							return imageResourceId;
 						} else {
-							findDestinationFoldPreview (rightOder);
+							//findDestinationFoldPreview (rightOder);
 						}
 					}
 					break;
 
 				case 3:
-					command = "SELECT * FROM Destination WHERE VacationTarget = ? AND InterestCity = ? AND InterestNature = ?";
-					var imageResIdThree = db.Query<Destination> (command, vacationTarget, interestCity, interestNature);
+					command = "SELECT * FROM Destination WHERE InterestCity = ?";
+					var imageResIdThree = db.Query<Destination> (command, interestCity);
 					foreach (var s in  imageResIdThree) {
 						int imageResourceId = s.ImageResID;
 						if (s.Order == rightOder) {
+							description[rightOder] = s.Description;
+							imageUnfoldId [rightOder] = s.ImageResID;
 							return imageResourceId;
 						} else {
-							findDestinationFoldPreview (rightOder);
+							//findDestinationFoldPreview (rightOder);
 						}
 					}
 					break;
 
 				case 4:
-					command = "SELECT * FROM Destination WHERE IsActive = ? AND InterestCity = ? AND InterestNature = ?";
-					var imageResIdFour = db.Query<Destination> (command, isActive, interestCity, interestNature);
+					command = "SELECT * FROM Destination WHERE InterestNature = ?";
+					var imageResIdFour = db.Query<Destination> (command, interestNature);
 					foreach (var s in  imageResIdFour) {
 						int imageResourceId = s.ImageResID;
 						if (s.Order == rightOder) {
+							description[rightOder] = s.Description;
+							imageUnfoldId [rightOder] = s.ImageResID;
 							return imageResourceId;
 						} else {
-							findDestinationFoldPreview (rightOder);
+							//findDestinationFoldPreview (rightOder);
 						}
 					}
 					break;
 
 				case 5:
-					command = "SELECT * FROM Destination WHERE InterestNature = ? AND InterestCity = ? AND InterestCulture = ?";
-					var imageResIdFive= db.Query<Destination> (command, interestNature, interestCity, interestCulture);
+					command = "SELECT * FROM Destination WHERE InterestCulture = ?";
+					var imageResIdFive= db.Query<Destination> (command, interestCulture);
 					foreach (var s in  imageResIdFive) {
 						int imageResourceId = s.ImageResID;
 						if (s.Order == rightOder) {
+							description[rightOder] = s.Description;
+							imageUnfoldId [rightOder] = s.ImageResID;
 							return imageResourceId;
 						} else {
-							findDestinationFoldPreview (rightOder);
+							//findDestinationFoldPreview (rightOder);
 						}
 					}
 					break;
 
 				case 6:
-					command = "SELECT * FROM Destination WHERE VacationTarget = ? AND InterestEvents = ? AND InterestCulture = ?";
-					var imageResIdSix= db.Query<Destination> (command, vacationTarget, interestEvents, interestCulture);
+					command = "SELECT * FROM Destination WHERE InterestEvents = ?";
+					var imageResIdSix= db.Query<Destination> (command, interestEvents);
 					foreach (var s in  imageResIdSix) {
 						int imageResourceId = s.ImageResID;
 						if (s.Order == rightOder) {
+							description[rightOder] = s.Description;
+							imageUnfoldId [rightOder] = s.ImageResID;
 							return imageResourceId;
 						} else {
-							findDestinationFoldPreview (rightOder);
+							//findDestinationFoldPreview (rightOder);
 						}
 					}
 					break;
 
 				case 7:
-					command = "SELECT * FROM Destination WHERE Standards = ? AND InterestCulture = ?";
-					var imageResIdSeven= db.Query<Destination> (command, standards, interestCulture);
+					command = "SELECT * FROM Destination WHERE Standards = ?";
+					var imageResIdSeven= db.Query<Destination> (command, standards);
 					foreach (var s in  imageResIdSeven) {
 						int imageResourceId = s.ImageResID;
 						if (s.Order == rightOder) {
+							description[rightOder] = s.Description;
+							imageUnfoldId [rightOder] = s.ImageResID;
 							return imageResourceId;
 						} else {
-							findDestinationFoldPreview (rightOder);
+							//findDestinationFoldPreview (rightOder);
 						}
 					}
 					break;
-
 				}
-
 			}
-
 			return exception;
 		}
-
-		private string getDescription (string _description) {
-			string description = _description;
-			return description;
-		}
-
 
 		//----------drawing journey preview----------//
 		private void draw() {
@@ -276,19 +285,19 @@ namespace GOWL
 			for (int i = 1; i < partsCount; i++) {
 
 				if (i % 2 == 0) {
-					LinearLayout partOne = (LinearLayout)inflater.Inflate (Resource.Drawable.PreviewRtoLTemplate, null);
-					scrollViewMain.AddView (partOne, i);
+					journeyPartLtoR[i] = (LinearLayout)inflater.Inflate (Resource.Drawable.PreviewLtoRTemplate, null);
+					scrollViewMain.AddView (journeyPartLtoR[i], i);
 					Log.Info (Tag, "executed: " + i.ToString());
-					ImageButton buttonOne = (ImageButton)partOne.FindViewById (Resource.Id.ImageButtonPreviewRtoL);
-					buttonOne.SetImageResource (findDestinationFoldPreview(i));
-					clickingFoldImage (buttonOne, partOne);
+					buttonTwo[i] = (ImageButton)journeyPartLtoR[i].FindViewById (Resource.Id.ImageButtonPreviewLtoR);
+					buttonTwo[i].SetImageResource (findDestinationFoldPreview(i));
+					clickingFoldImage (buttonTwo[i], journeyPartLtoR[i], i);
 				} else if (i % 2 == 1) {
-					LinearLayout partTwo = (LinearLayout)inflater.Inflate (Resource.Drawable.PreviewLtoRTemplate, null);
-					scrollViewMain.AddView (partTwo, i);
+					journeyPartRtoL[i] = (LinearLayout)inflater.Inflate (Resource.Drawable.PreviewRtoLTemplate, null);
+					scrollViewMain.AddView (journeyPartRtoL[i], i);
 					Log.Info (Tag, "executed: " + i.ToString());
-					ImageButton buttonTwo = (ImageButton)partTwo.FindViewById (Resource.Id.ImageButtonPreviewLtoR);
-					buttonTwo.SetImageResource (findDestinationFoldPreview(i));
-					clickingFoldImage (buttonTwo, partTwo);
+					buttonOne[i] = (ImageButton)journeyPartRtoL[i].FindViewById (Resource.Id.ImageButtonPreviewRtoL);
+					buttonOne[i].SetImageResource (findDestinationFoldPreview(i));
+					clickingFoldImage (buttonOne[i], journeyPartRtoL[i], i);
 				}
 				 
 			}
@@ -296,19 +305,44 @@ namespace GOWL
 
 
 		// clicking round imagebutton for getting unfolded preview about specific destination
-		private void clickingFoldImage(ImageButton button, LinearLayout currentPart) {
+		private void clickingFoldImage(ImageButton button, LinearLayout currentPart, int _rightOrder) {
+
+			int rightOrder = _rightOrder;
 
 			button.Click += delegate {
 				if(!isClicked) {
-					unfoldPreviewScreen = inflater.Inflate(Resource.Drawable.JourneyPreviewUnfold, null);
-					unfoldImage = (ImageView) unfoldPreviewScreen.FindViewById(Resource.Id.UnfoldImage);
-					unfoldDescription = (TextView) unfoldPreviewScreen.FindViewById (Resource.Id.UnfoldDescription);
-					unfoldDescription.Text = description;
-					currentPart.AddView(unfoldPreviewScreen, 0);
+
+					if (isUnfold[rightOrder] == false) {
+						unfoldPreviewScreen[rightOrder] = inflater.Inflate(Resource.Drawable.JourneyPreviewUnfold, null);
+						unfoldImage[rightOrder] = (ImageView) unfoldPreviewScreen[rightOrder].FindViewById(Resource.Id.imageView1);
+						unfoldDescription[rightOrder] = (TextView) unfoldPreviewScreen[rightOrder].FindViewById (Resource.Id.UnfoldDescription);
+						unfoldDurationText[rightOrder] = (TextView) unfoldPreviewScreen[rightOrder].FindViewById (Resource.Id.UnfoldDuration);
+						unfoldDurationBar[rightOrder] = (SeekBar) unfoldPreviewScreen[rightOrder].FindViewById(Resource.Id.UnfoldSeeker);
+						unfoldDescription[rightOrder].Text = description[rightOrder];
+						unfoldImage[rightOrder].SetImageResource(imageUnfoldId[rightOrder]);						
+						currentPart.AddView(unfoldPreviewScreen[rightOrder], 0);
+						isUnfold [rightOrder] = true;
+					} else {
+
+						unfoldPreviewScreen[rightOrder].Visibility = ViewStates.Visible;
+					}
+
+					unfoldDurationBar[rightOrder].ProgressChanged += (object sender, SeekBar.ProgressChangedEventArgs e) => {
+						if(e.FromUser && duration > 0) {
+							unfoldDurationText[rightOrder].Text = string.Format("{0} Tage", e.Progress);
+							specDuration += 1;
+							Log.Info(Tag,"specduration: " + specDuration.ToString());
+						}
+					};
+	
 					isClicked = true;
 				} else {
-					currentPart.RemoveView(unfoldPreviewScreen);
+					unfoldPreviewScreen[rightOrder].Visibility = ViewStates.Gone;
+					//currentPart.RemoveView(unfoldPreviewScreen);
 					isClicked = false;
+					duration = duration - specDuration;
+					specDuration = 0;
+					Log.Info(Tag, "duration: " + duration.ToString());
 				}
 			};
 
