@@ -231,8 +231,8 @@ namespace GOWL
 			// aapt resource value: 0x7f070055
 			public const int ConnectionLineOne = 2131165269;
 			
-			// aapt resource value: 0x7f070051
-			public const int ConnectionLineTwo = 2131165265;
+			// aapt resource value: 0x7f070053
+			public const int ConnectionLineTwo = 2131165267;
 			
 			// aapt resource value: 0x7f07003d
 			public const int DatePickerEnd = 2131165245;
@@ -249,11 +249,11 @@ namespace GOWL
 			// aapt resource value: 0x7f070009
 			public const int ExistingNewJourneyYes = 2131165193;
 			
-			// aapt resource value: 0x7f070050
-			public const int ImageButtonPreviewLtoR = 2131165264;
+			// aapt resource value: 0x7f070051
+			public const int ImageButtonPreviewLtoR = 2131165265;
 			
-			// aapt resource value: 0x7f070053
-			public const int ImageButtonPreviewRtoL = 2131165267;
+			// aapt resource value: 0x7f070054
+			public const int ImageButtonPreviewRtoL = 2131165268;
 			
 			// aapt resource value: 0x7f07001c
 			public const int ImageChoosingExplanation = 2131165212;
@@ -261,8 +261,8 @@ namespace GOWL
 			// aapt resource value: 0x7f07004f
 			public const int JourneyPartLtoR = 2131165263;
 			
-			// aapt resource value: 0x7f070052
-			public const int JourneyPartRtoL = 2131165266;
+			// aapt resource value: 0x7f070050
+			public const int JourneyPartRtoL = 2131165264;
 			
 			// aapt resource value: 0x7f070037
 			public const int LayoutCalendarNextBack = 2131165239;
@@ -342,8 +342,8 @@ namespace GOWL
 			// aapt resource value: 0x7f070016
 			public const int backButtonUserData = 2131165206;
 			
-			// aapt resource value: 0x7f070054
-			public const int date = 2131165268;
+			// aapt resource value: 0x7f070052
+			public const int date = 2131165266;
 			
 			// aapt resource value: 0x7f070022
 			public const int fullScreenLayout = 2131165218;

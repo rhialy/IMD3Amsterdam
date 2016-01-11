@@ -1,9 +1,10 @@
 ﻿<Properties StartupItem="GOWL\GOWL.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.CB5A20V78W" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="GOWL\Resources\drawable\PreviewRtoLTemplate.xml">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus 5 (Lollipop) 5.1.0" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="GOWL\JourneyPreview.cs">
     <Files>
-      <File FileName="GOWL\JourneyPreview.cs" Line="301" Column="6" />
-      <File FileName="GOWL\Resources\drawable\PreviewRtoLTemplate.xml" Line="39" Column="59" />
+      <File FileName="GOWL\JourneyPreview.cs" Line="303" Column="59" />
+      <File FileName="GOWL\Resources\drawable\PreviewRtoLTemplate.xml" Line="51" Column="53" />
+      <File FileName="GOWL\Resources\drawable\PreviewLtoRTemplate.xml" Line="49" Column="46" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

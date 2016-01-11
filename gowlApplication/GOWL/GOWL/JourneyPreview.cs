@@ -36,6 +36,7 @@ namespace GOWL
 		private LinearLayout[] journeyPartRtoL = new LinearLayout[8];
 		private ImageButton[] buttonOne = new ImageButton[8];
 		private ImageButton[] buttonTwo = new ImageButton[8];
+		private TextView[] specDate = new TextView[8];
 
 		private Button newSearchButton;
 
@@ -45,6 +46,13 @@ namespace GOWL
 		private static string destinationDBPath = System.IO.Path.Combine(dbFolder, "gowl_destination.db");
 
 		protected SQLiteConnection db;
+
+		private int intStartDay;
+		private int intStartMonth;
+		private int intStartYear;
+		private int intEndDay;
+		private int intEndMonth;
+		private int intEndYear;
 
 		private int persons;
 		private int standards;
@@ -62,9 +70,14 @@ namespace GOWL
 		private string[] description = new string[8];
 		private int[] imageUnfoldId = new int[8];
 		private bool[] isUnfold = new bool[8];
+		private int[] tempDateDay = new int[8];
+		private int[] tempDateMonth = new int[8];
+		private int[] tempDateYear = new int[8];
+		private string[] newDate = new string[8];
 		private bool isClicked = false;
 
 		private int duration;
+		private int durationPerDestination;
 		private int specDuration;
 		private int partsCount;
 
@@ -85,8 +98,8 @@ namespace GOWL
 			scrollViewMain = (LinearLayout)FindViewById (Resource.Id.ScrollViewMain);
 			RetrieveDatafromDB ();
 
-			TstartingDate.Text = startingDate;
-			TendDate.Text = endDate;
+			TstartingDate.Text = "Start: " + startingDate;
+			TendDate.Text = "Ende: " + endDate;
 
 			// drawing the necessary amount of destinations
 			draw ();
@@ -135,7 +148,9 @@ namespace GOWL
 			int rightOder = _rightOder;
 
 			Random random = new Random ();
-			int whichReturn = random.Next (1, 7);
+			//int whichReturn = random.Next (1, 7);
+			//for testing
+			int whichReturn = 1;
 
 			using (var db = new SQLiteConnection (destinationDBPath)) {
 
@@ -145,7 +160,7 @@ namespace GOWL
 
 				case 1:
 					command = "SELECT * FROM Destination WHERE VacationTarget = ?";
-					var imageResIdOne = db.Query<Destination> (command, vacationTarget);
+					var imageResIdOne = db.Query<Destination> (command, whichReturn);
 					foreach (var s in  imageResIdOne) {
 						int imageResourceId = s.ImageResID;
 						if (s.Order == rightOder) {
@@ -256,18 +271,18 @@ namespace GOWL
 		private void draw() {
 
 			// how long will the journey last?
-			int tempStringStartDay = Convert.ToInt32(startingDate.Split('.')[0]);
-			int tempStringStartMonth = Convert.ToInt32(startingDate.Split('.')[1]);
-			//int tempStringStartYear = Convert.ToInt32(startingDate.Split('.')[2]);
+			intStartDay = Convert.ToInt32(startingDate.Split('.')[0]);
+			intStartMonth = Convert.ToInt32(startingDate.Split('.')[1]);
+			intStartYear = Convert.ToInt32(startingDate.Split('.')[2]);
 
-			int tempStringEndDay = Convert.ToInt32(endDate.Split('.')[0]);
-			int tempStringEndMonth = Convert.ToInt32(endDate.Split('.')[1]);
-			//int tempStringEndYear = Convert.ToInt32(endDate.Split('.')[2]);
+			intEndDay = Convert.ToInt32(endDate.Split('.')[0]);
+			intEndMonth = Convert.ToInt32(endDate.Split('.')[1]);
+			intEndYear = Convert.ToInt32(endDate.Split('.')[2]);
 
-			if (tempStringStartMonth != tempStringEndMonth) {
-				duration = (30 - tempStringStartDay) + tempStringEndDay;
+			if (intStartMonth != intEndMonth) {
+				duration = (30 - intStartDay) + intEndDay;
 			} else {
-				duration = tempStringEndDay - tempStringStartDay;
+				duration = intEndDay - intStartDay;
 			}
 
 			if (duration <= 10) {
@@ -280,22 +295,41 @@ namespace GOWL
 				partsCount = duration / 5;
 			}
 
-
+			durationPerDestination = duration / partsCount;
+				
 			// fill layout with destinations
-			for (int i = 1; i < partsCount; i++) {
+			for (int i = 1; i <= partsCount; i++) {
+
+				if ((intStartDay + durationPerDestination * i) > 30) {
+					tempDateDay [i] = (30 - intStartDay) + durationPerDestination;
+					tempDateMonth [i] = intEndMonth;
+					tempDateYear [i] = intEndYear;
+					newDate [i] = tempDateDay [i].ToString () + "." + tempDateMonth [i].ToString () + "." + tempDateYear [i].ToString (); 
+				} else {
+					tempDateDay[i] = intStartDay + durationPerDestination;
+					tempDateMonth[i] = intStartMonth;
+					tempDateYear[i] = intStartYear;
+					newDate [i] = tempDateDay [i].ToString () + "." + tempDateMonth [i].ToString () + "." + tempDateYear [i].ToString (); 
+				}
+
+				durationPerDestination *= i;
 
 				if (i % 2 == 0) {
 					journeyPartLtoR[i] = (LinearLayout)inflater.Inflate (Resource.Drawable.PreviewLtoRTemplate, null);
-					scrollViewMain.AddView (journeyPartLtoR[i], i);
+					scrollViewMain.AddView (journeyPartLtoR[i], i+1);
 					Log.Info (Tag, "executed: " + i.ToString());
 					buttonTwo[i] = (ImageButton)journeyPartLtoR[i].FindViewById (Resource.Id.ImageButtonPreviewLtoR);
+					specDate [i] = (TextView)journeyPartLtoR[i].FindViewById (Resource.Id.date);
+					specDate [i].Text = newDate [i];
 					buttonTwo[i].SetImageResource (findDestinationFoldPreview(i));
 					clickingFoldImage (buttonTwo[i], journeyPartLtoR[i], i);
 				} else if (i % 2 == 1) {
 					journeyPartRtoL[i] = (LinearLayout)inflater.Inflate (Resource.Drawable.PreviewRtoLTemplate, null);
-					scrollViewMain.AddView (journeyPartRtoL[i], i);
+					scrollViewMain.AddView (journeyPartRtoL[i], i+1);
 					Log.Info (Tag, "executed: " + i.ToString());
 					buttonOne[i] = (ImageButton)journeyPartRtoL[i].FindViewById (Resource.Id.ImageButtonPreviewRtoL);
+					specDate [i] = (TextView)journeyPartRtoL[i].FindViewById (Resource.Id.date);
+					specDate [i].Text = newDate [i];
 					buttonOne[i].SetImageResource (findDestinationFoldPreview(i));
 					clickingFoldImage (buttonOne[i], journeyPartRtoL[i], i);
 				}
@@ -323,16 +357,42 @@ namespace GOWL
 						currentPart.AddView(unfoldPreviewScreen[rightOrder], 0);
 						isUnfold [rightOrder] = true;
 					} else {
-
 						unfoldPreviewScreen[rightOrder].Visibility = ViewStates.Visible;
 					}
 
 					unfoldDurationBar[rightOrder].ProgressChanged += (object sender, SeekBar.ProgressChangedEventArgs e) => {
 						if(e.FromUser && duration > 0) {
+
 							unfoldDurationText[rightOrder].Text = string.Format("{0} Tage", e.Progress);
 							specDuration += 1;
-							Log.Info(Tag,"specduration: " + specDuration.ToString());
+
+							int tempDateDayCurr = tempDateDay[rightOrder];
+							int tempDateDayNext = tempDateDay[rightOrder + 1];
+							int tempDateMonthCurr = tempDateMonth[rightOrder];
+							int tempDateMonthNext = tempDateMonth[rightOrder + 1];
+
+							if(tempDateDay[rightOrder] < 30) {
+								tempDateDayCurr += e.Progress;
+								tempDateDayNext += tempDateDayCurr + duration / partsCount;
+								if(tempDateDayCurr > 30) {
+									tempDateDayCurr = (0 + e.Progress);
+									tempDateDayNext = 0 + tempDateDayCurr + duration / partsCount;
+									tempDateMonthCurr = tempDateMonth[rightOrder] + 1;
+									tempDateMonthNext = tempDateMonth[rightOrder] + 1;
+								} else if (tempDateDayNext > 30) {
+									tempDateDayNext = (0 + e.Progress);
+									tempDateMonthNext = tempDateMonth[rightOrder] + 1;
+								}
+							}
+
+							newDate [rightOrder] = "Bis zum " + tempDateDayCurr.ToString () + "." + tempDateMonthCurr.ToString () + "." + tempDateYear [rightOrder].ToString ();
+							newDate [rightOrder+1] = "Bis zum " + tempDateDayNext.ToString () + "." + tempDateMonthNext.ToString () + "." + tempDateYear [rightOrder].ToString ();
+							specDate[rightOrder].Text = newDate[rightOrder];
+							specDate[rightOrder+1].Text = newDate[rightOrder+1];
+							TendDate.Text = newDate[partsCount];
 						}
+							Log.Info(Tag,"specduration: " + specDuration.ToString());
+
 					};
 	
 					isClicked = true;

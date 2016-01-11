@@ -33,6 +33,14 @@
                     android:gravity="center_horizontal"
                     android:textSize="26dp"
                     android:textColor="#ff414141" />
+                <ImageView
+                    android:src="@drawable/previewlnr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView1"
+                    android:adjustViewBounds="true"
+                    android:maxWidth="150dp"
+                    android:maxHeight="150dp" />
                 <TextView
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:layout_width="match_parent"
