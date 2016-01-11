@@ -162,6 +162,17 @@
     <AndroidResource Include="Resources\drawable\Moodboards_Standards_02_confirmed.png" />
     <AndroidResource Include="Resources\drawable\Moodboards_Standards_03_confirmed.png" />
     <AndroidResource Include="Resources\drawable\Moodboards_Standards_04_confirmed.png" />
+    <AndroidResource Include="Resources\drawable\separator.png" />
+    <AndroidResource Include="Resources\layout\Test.axml" />
+    <AndroidResource Include="Resources\drawable\babyblueLnR.png" />
+    <AndroidResource Include="Resources\drawable\babyblueRnL.png" />
+    <AndroidResource Include="Resources\drawable\greyLnR.png" />
+    <AndroidResource Include="Resources\drawable\greyRnL.png" />
+    <AndroidResource Include="Resources\drawable\orangeLnR.png" />
+    <AndroidResource Include="Resources\drawable\orangeRnL.png" />
+    <AndroidResource Include="Resources\drawable\accomodationBabyblue.png" />
+    <AndroidResource Include="Resources\drawable\accomodationGrey.png" />
+    <AndroidResource Include="Resources\drawable\accomodationOrange.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
