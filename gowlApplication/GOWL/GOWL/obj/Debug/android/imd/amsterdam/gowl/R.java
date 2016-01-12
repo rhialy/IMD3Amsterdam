@@ -120,7 +120,7 @@ public final class R {
         public static final int ResetExplanation=0x7f070018;
         public static final int ScrollViewMain=0x7f07000d;
         public static final int Separator=0x7f070057;
-        public static final int StartingDate=0x7f07000f;
+        public static final int StartingDate=0x7f07000e;
         public static final int UnfoldDescription=0x7f07004b;
         public static final int UnfoldDuration=0x7f07004e;
         public static final int UnfoldImage=0x7f07004a;
@@ -140,7 +140,7 @@ public final class R {
         public static final int fullScreenLayout=0x7f070026;
         public static final int gowlExplanation=0x7f070021;
         public static final int imageView1=0x7f070008;
-        public static final int imageView2=0x7f07000e;
+        public static final int imageView2=0x7f07000f;
         public static final int imageView3=0x7f070031;
         public static final int imageView4=0x7f070033;
         public static final int imageView5=0x7f070043;

@@ -378,8 +378,8 @@ namespace GOWL
 			// aapt resource value: 0x7f070057
 			public const int Separator = 2131165271;
 			
-			// aapt resource value: 0x7f07000f
-			public const int StartingDate = 2131165199;
+			// aapt resource value: 0x7f07000e
+			public const int StartingDate = 2131165198;
 			
 			// aapt resource value: 0x7f07004b
 			public const int UnfoldDescription = 2131165259;
@@ -438,8 +438,8 @@ namespace GOWL
 			// aapt resource value: 0x7f070008
 			public const int imageView1 = 2131165192;
 			
-			// aapt resource value: 0x7f07000e
-			public const int imageView2 = 2131165198;
+			// aapt resource value: 0x7f07000f
+			public const int imageView2 = 2131165199;
 			
 			// aapt resource value: 0x7f070031
 			public const int imageView3 = 2131165233;

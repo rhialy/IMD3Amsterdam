@@ -341,7 +341,7 @@ namespace GOWL
 						settingTags();
 						StartActivity(typeof(GowlMain));
 						Finish();
-						FinishActivity(MainPreferencesPhaseOne);
+						//FinishActivity(MainPreferencesPhaseOne);
 					}
 				}
 			};

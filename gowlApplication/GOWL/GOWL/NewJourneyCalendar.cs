@@ -135,6 +135,7 @@ namespace GOWL
 
 		//-----------transitions without need to save data in db----------------//
 		private void Transitions (Button transitionButton) {
+															
 			transitionButton.Click += delegate {
 				if (transitionButton == backButtonDateEnd) {
 					flipper.ShowPrevious();

@@ -142,6 +142,8 @@ namespace GOWL
 					var currUser = connection.Get<User> (1);
 
 					currUser.ExistingJourney = true;
+
+					connection.Update(currUser);
 				}
 				StartActivity(typeof(GowlMain));
 				Finish();
@@ -367,7 +369,7 @@ namespace GOWL
 				if (i % 2 == 0) {
 					
 					journeyPartLtoR[i] = (LinearLayout)inflater.Inflate (Resource.Drawable.PreviewLtoRTemplate, null);
-					scrollViewMain.AddView (journeyPartLtoR[i], i+1);
+					scrollViewMain.AddView (journeyPartLtoR[i], i+2);
 					Log.Info (Tag, "executed: " + i.ToString());
 
 					buttonTwo[i] = (ImageButton)journeyPartLtoR[i].FindViewById (Resource.Id.ImageButtonPreviewLtoR);
@@ -396,7 +398,7 @@ namespace GOWL
 				} else if (i % 2 == 1) {
 					
 					journeyPartRtoL[i] = (LinearLayout)inflater.Inflate (Resource.Drawable.PreviewRtoLTemplate, null);
-					scrollViewMain.AddView (journeyPartRtoL[i], i+1);
+					scrollViewMain.AddView (journeyPartRtoL[i], i+2);
 					Log.Info (Tag, "executed: " + i.ToString());
 
 					buttonOne[i] = (ImageButton)journeyPartRtoL[i].FindViewById (Resource.Id.ImageButtonPreviewRtoL);
