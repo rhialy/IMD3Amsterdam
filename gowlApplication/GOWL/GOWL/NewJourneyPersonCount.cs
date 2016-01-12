@@ -85,13 +85,13 @@ namespace GOWL
 						imageView.SetImageResource(Resource.Drawable.personOneConfirmed);
 					}
 					else if (imageView == secondPersonImage) {
-
+						imageView.SetImageResource(Resource.Drawable.personTwo_confirmed);
 					}
 					else if (imageView == thirdPersonImage) {
-
+						imageView.SetImageResource(Resource.Drawable.personThree_confirmed);
 					} 
 					else if (imageView == fourthPersonImage) {
-
+						imageView.SetImageResource(Resource.Drawable.personFour_confirmed);
 					}
 					isImageChoosen = false;
 					if(imagesSelected < 1) {
@@ -104,13 +104,13 @@ namespace GOWL
 						imageView.SetImageResource(Resource.Drawable.personOne);
 					}
 					else if (imageView == secondPersonImage) {
-
+						imageView.SetImageResource(Resource.Drawable.personTwo);
 					}
 					else if (imageView == thirdPersonImage) {
-
+						imageView.SetImageResource(Resource.Drawable.personThree);
 					} 
 					else if (imageView == fourthPersonImage) {
-
+						imageView.SetImageResource(Resource.Drawable.personFour);
 					}
 					if(imagesSelected > 0) {
 						imagesSelected -= 1;
@@ -175,7 +175,6 @@ namespace GOWL
 				if (transitionButton == nextButton) {
 					settingTags();
 					StartActivity(typeof(NewJourneyCalendar));
-					Finish();
 				} else if (transitionButton == backButton) {
 					StartActivity(typeof(NewJourneySpecificPreference));
 					Finish();

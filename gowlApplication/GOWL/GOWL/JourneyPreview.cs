@@ -42,6 +42,9 @@ namespace GOWL
 		private TextView[] specDate = new TextView[12];
 
 		private Button newSearchButton;
+		private Button backToMenuBtn;
+		private Button finishPreviewBtn;
+		private Button backToNewJourneyBtn;
 
 		private static string Tag = "Journey Preview";
 		private static string dbFolder = System.Environment.GetFolderPath (System.Environment.SpecialFolder.MyDocuments);
@@ -103,6 +106,9 @@ namespace GOWL
 			TstartingDate = (TextView)FindViewById (Resource.Id.StartingDate);
 			TendDate = (TextView)FindViewById (Resource.Id.EndDate);
 			newSearchButton = (Button)FindViewById (Resource.Id.NewSearchButton);
+			backToMenuBtn = (Button)FindViewById (Resource.Id.BackToMenu);
+			backToNewJourneyBtn = (Button)FindViewById (Resource.Id.BackToNewJourney);
+			finishPreviewBtn = (Button)FindViewById (Resource.Id.FinishPreviewButton);
 			scrollViewMain = (LinearLayout)FindViewById (Resource.Id.ScrollViewMain);
 			RetrieveDatafromDB ();
 
@@ -120,6 +126,26 @@ namespace GOWL
 				Finish();
 			};
 
+			backToMenuBtn.Click += delegate {
+				StartActivity(typeof(GowlMain));
+				Finish();
+			};
+
+			backToNewJourneyBtn.Click += delegate {
+				StartActivity(typeof(NewJourneySpecificPreference));
+				Finish();
+			};
+
+			finishPreviewBtn.Click += delegate {
+				using (var connection = new SQLiteConnection(dbPath)) {
+
+					var currUser = connection.Get<User> (1);
+
+					currUser.ExistingJourney = true;
+				}
+				StartActivity(typeof(GowlMain));
+				Finish();
+			};
 		}
 
 

@@ -181,16 +181,16 @@ namespace GOWL
 						imagesSelected += 1;
 					}
 					if (takeIt == takeItFirst) {
-						imageView.SetImageResource(Resource.Drawable.moodboards_Standards_01);
+						imageView.SetImageResource(Resource.Drawable.InDieBerge_confirmed);
 					}
 					if (takeIt == takeItSecond) {
-
+						imageView.SetImageResource(Resource.Drawable.InDenBusch_confirmed);
 					}
 					if (takeIt == takeItThird) {
-						imageView.SetImageResource(Resource.Drawable.moodboards_Standards_01);
+						imageView.SetImageResource(Resource.Drawable.InDieCity_confirmed);
 					}
 					if (takeIt == takeItFourth) {
-
+						imageView.SetImageResource(Resource.Drawable.AnDenStrand_confirmed);
 					}
 					Log.Info(Tag, "Images Selected: " + imagesSelected.ToString());
 					if(choosenImage != imageView) {
@@ -213,16 +213,16 @@ namespace GOWL
 						imagesSelected -= 1;
 					}
 					if (takeIt == takeItFirst) {
-						imageView.SetImageResource(Resource.Drawable.moodboards_Standards_01);
+						imageView.SetImageResource(Resource.Drawable.InDieBerge);
 					}
 					if (takeIt == takeItSecond) {
-
+						imageView.SetImageResource(Resource.Drawable.InDenBusch);
 					}
 					if (takeIt == takeItThird) {
-						imageView.SetImageResource(Resource.Drawable.moodboards_Standards_01);
+						imageView.SetImageResource(Resource.Drawable.InDieCity);
 					}
 					if (takeIt == takeItFourth) {
-
+						imageView.SetImageResource(Resource.Drawable.AnDenStrand);
 					}
 					Log.Info(Tag, "Images Selected: " + imagesSelected.ToString());
 					definingTag(imageView, false);
@@ -309,7 +309,6 @@ namespace GOWL
 				} else if (transitionButton == nextButton) {
 					settingTags();
 					StartActivity(typeof(NewJourneyPersonCount));
-					Finish();
 				}
 			};
 		}

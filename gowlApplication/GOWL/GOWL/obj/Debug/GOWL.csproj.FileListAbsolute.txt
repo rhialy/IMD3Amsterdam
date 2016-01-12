@@ -255,3 +255,16 @@ C:\Users\Daniel Stehlik\Documents\IMD3Amsterdam\GitHub\gowlApplication\GOWL\GOWL
 C:\Users\Daniel Stehlik\Documents\IMD3Amsterdam\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\accomodationgrey.png
 C:\Users\Daniel Stehlik\Documents\IMD3Amsterdam\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\accomodationorange.png
 C:\Users\Daniel Stehlik\Documents\IMD3Amsterdam\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\unfoldaccomodationview.xml
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\unfoldaccomodationview.xml
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\topandbottomseparator.png
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\andenstrand.png
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\andenstrand_confirmed.png
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\indenbusch.png
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\indenbusch_confirmed.png
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\indieberge.png
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\indieberge_confirmed.png
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\indiecity.png
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\indiecity_confirmed.png
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\personfour_confirmed.png
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\personthree_confirmed.png
+F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\persontwo_confirmed.png

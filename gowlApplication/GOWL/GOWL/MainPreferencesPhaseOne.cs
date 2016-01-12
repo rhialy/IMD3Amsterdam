@@ -221,7 +221,7 @@ namespace GOWL
 						imagesSelected += 1;
 					}
 					if (takeIt == takeItFirst) {
-						imageView.SetImageResource(Resource.Drawable.moodboards_Standards_01_confirmed);
+						imageView.SetImageResource(Resource.Drawable.Moodboards_Standards_01_confirmed);
 					}
 					if (takeIt == takeItSecond) {
 						imageView.SetImageResource(Resource.Drawable.Moodboards_Standards_02_confirmed);

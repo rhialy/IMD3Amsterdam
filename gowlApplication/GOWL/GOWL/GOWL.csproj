@@ -154,14 +154,6 @@
     <AndroidResource Include="Resources\drawable\Moodboards_Interessen_04.png" />
     <AndroidResource Include="Resources\drawable\Moodboards_Standards_03.png" />
     <AndroidResource Include="Resources\drawable\Moodboards_Standards_04.png" />
-    <AndroidResource Include="Resources\drawable\Moodboards_Interessen_01_confirmed.png" />
-    <AndroidResource Include="Resources\drawable\Moodboards_Interessen_02_confirmed.png" />
-    <AndroidResource Include="Resources\drawable\Moodboards_Interessen_03_confirmed.png" />
-    <AndroidResource Include="Resources\drawable\Moodboards_Interessen_04_confirmed.png" />
-    <AndroidResource Include="Resources\drawable\moodboards_Standards_01_confirmed.png" />
-    <AndroidResource Include="Resources\drawable\Moodboards_Standards_02_confirmed.png" />
-    <AndroidResource Include="Resources\drawable\Moodboards_Standards_03_confirmed.png" />
-    <AndroidResource Include="Resources\drawable\Moodboards_Standards_04_confirmed.png" />
     <AndroidResource Include="Resources\drawable\separator.png" />
     <AndroidResource Include="Resources\layout\Test.axml" />
     <AndroidResource Include="Resources\drawable\babyblueLnR.png" />
@@ -174,6 +166,26 @@
     <AndroidResource Include="Resources\drawable\accomodationGrey.png" />
     <AndroidResource Include="Resources\drawable\accomodationOrange.png" />
     <AndroidResource Include="Resources\drawable\UnfoldAccomodationView.xml" />
+    <AndroidResource Include="Resources\drawable\topandbottomseparator.png" />
+    <AndroidResource Include="Resources\drawable\Moodboards_Interessen_01_confirmed.png" />
+    <AndroidResource Include="Resources\drawable\Moodboards_Interessen_02_confirmed.png" />
+    <AndroidResource Include="Resources\drawable\Moodboards_Interessen_03_confirmed.png" />
+    <AndroidResource Include="Resources\drawable\Moodboards_Interessen_04_confirmed.png" />
+    <AndroidResource Include="Resources\drawable\Moodboards_Standards_01_confirmed.png" />
+    <AndroidResource Include="Resources\drawable\Moodboards_Standards_02_confirmed.png" />
+    <AndroidResource Include="Resources\drawable\Moodboards_Standards_03_confirmed.png" />
+    <AndroidResource Include="Resources\drawable\Moodboards_Standards_04_confirmed.png" />
+    <AndroidResource Include="Resources\drawable\AnDenStrand.png" />
+    <AndroidResource Include="Resources\drawable\AnDenStrand_confirmed.png" />
+    <AndroidResource Include="Resources\drawable\InDenBusch.png" />
+    <AndroidResource Include="Resources\drawable\InDenBusch_confirmed.png" />
+    <AndroidResource Include="Resources\drawable\InDieBerge.png" />
+    <AndroidResource Include="Resources\drawable\InDieBerge_confirmed.png" />
+    <AndroidResource Include="Resources\drawable\InDieCity.png" />
+    <AndroidResource Include="Resources\drawable\InDieCity_confirmed.png" />
+    <AndroidResource Include="Resources\drawable\personFour_confirmed.png" />
+    <AndroidResource Include="Resources\drawable\personThree_confirmed.png" />
+    <AndroidResource Include="Resources\drawable\personTwo_confirmed.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

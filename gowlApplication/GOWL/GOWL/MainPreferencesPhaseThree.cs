@@ -340,6 +340,8 @@ namespace GOWL
 					if(imagesSelected > 0) {
 						settingTags();
 						StartActivity(typeof(GowlMain));
+						Finish();
+						FinishActivity(MainPreferencesPhaseOne);
 					}
 				}
 			};

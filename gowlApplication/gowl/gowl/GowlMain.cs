@@ -48,6 +48,7 @@ namespace GOWL
 		private Button backUserDataBtn;
 		private Button resetBtn;
 		private Button speechListener;
+		private Button newComJourneyBtn;
 
 		private TextView voiceResultText;
 
@@ -78,6 +79,11 @@ namespace GOWL
 				voiceResultText = (TextView)FindViewById (Resource.Id.VoiceResultText);
 				speechListener = (Button)FindViewById (Resource.Id.voiceButton);
 				speechListener.Click += RecordVoice;
+				newComJourneyBtn = (Button)FindViewById (Resource.Id.ExistingNewJourney);
+				newComJourneyBtn.Click += delegate {
+					StartActivity(typeof(NewJourneySpecificPreference));
+					Finish();
+				};
 			}
 		}
 
