@@ -175,6 +175,7 @@ namespace GOWL
 				if (transitionButton == nextButton) {
 					settingTags();
 					StartActivity(typeof(NewJourneyCalendar));
+					Finish();
 				} else if (transitionButton == backButton) {
 					StartActivity(typeof(NewJourneySpecificPreference));
 					Finish();

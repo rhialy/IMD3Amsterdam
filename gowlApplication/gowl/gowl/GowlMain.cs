@@ -59,6 +59,8 @@ namespace GOWL
 
 			RetrieveDatafromDB ();
 
+			//existingJourney = true;
+
 			if (existingJourney == false) {
 				SetContentView (Resource.Layout.Main);
 				newJourneyBtn = (Button)FindViewById (Resource.Id.NewJourneyButton);

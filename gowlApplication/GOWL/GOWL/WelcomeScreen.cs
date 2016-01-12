@@ -55,7 +55,7 @@ namespace GOWL
 			RetrieveDatafromDB ();
 
 			if (existingUser == true) {
-				StartActivity (typeof(JourneyPreview));
+				StartActivity (typeof(GowlMain));
 			}
 
 		}

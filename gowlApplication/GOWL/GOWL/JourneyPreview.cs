@@ -22,24 +22,24 @@ namespace GOWL
 		LayoutInflater inflater;
 
 		// Variables for the unfold preview screen
-		private View[] unfoldPreviewScreen = new View[20];
-		private ImageView[] unfoldImage = new ImageView[20];
-		private TextView[] unfoldDescription = new TextView[20];
-		private TextView[] unfoldDurationText = new TextView[20];
-		private SeekBar[] unfoldDurationBar = new SeekBar[20];
+		private View[] unfoldPreviewScreen = new View[12];
+		private ImageView[] unfoldImage = new ImageView[12];
+		private TextView[] unfoldDescription = new TextView[12];
+		private TextView[] unfoldDurationText = new TextView[12];
+		private SeekBar[] unfoldDurationBar = new SeekBar[12];
 
 		private TextView TstartingDate;
 		private TextView TendDate;
 
 		private LinearLayout scrollViewMain;
-		private LinearLayout[] journeyPartLtoR = new LinearLayout[20];
-		private LinearLayout[] journeyPartRtoL = new LinearLayout[20];
+		private LinearLayout[] journeyPartLtoR = new LinearLayout[12];
+		private LinearLayout[] journeyPartRtoL = new LinearLayout[12];
 		//private ImageView[] connectionLineLtoR = new ImageView[20];
-		private ImageView[] connectionLine = new ImageView[20];
-		private ImageView[] accomodationView = new ImageView[20];
-		private ImageButton[] buttonOne = new ImageButton[20];
-		private ImageButton[] buttonTwo = new ImageButton[20];
-		private TextView[] specDate = new TextView[20];
+		private ImageView[] connectionLine = new ImageView[12];
+		private ImageView[] accomodationView = new ImageView[12];
+		private ImageButton[] buttonOne = new ImageButton[12];
+		private ImageButton[] buttonTwo = new ImageButton[12];
+		private TextView[] specDate = new TextView[12];
 
 		private Button newSearchButton;
 
@@ -70,15 +70,17 @@ namespace GOWL
 		private string startingDate;
 		private string endDate;
 
-		private string[] description = new string[20];
-		private int[] imageUnfoldId = new int[20];
-		private bool[] isUnfold = new bool[20];
-		private int[] tempDateDay = new int[20];
-		private int[] tempDateMonth = new int[20];
-		private int[] tempDateYear = new int[20];
-		private int[] progress = new int[20];
-		private string[] newDate = new string[20];
+		private string[] description = new string[12];
+		private int[] imageUnfoldId = new int[12];
+		private bool[] isUnfold = new bool[12];
+		private int[] tempDateDay = new int[12];
+		private int[] tempDateMonth = new int[12];
+		private int[] tempDateYear = new int[12];
+		private int[] progress = new int[12];
+		private string[] newDate = new string[12];
+
 		private bool isClicked = false;
+		private bool hasStarted = false;
 
 		private int duration;
 		private int durationPerDestination;
@@ -108,7 +110,10 @@ namespace GOWL
 			TendDate.Text = "Ende: " + endDate;
 
 			// drawing the necessary amount of destinations
-			draw ();
+			if (!hasStarted) {
+				draw ();
+				hasStarted = true;
+			}
 
 			newSearchButton.Click += delegate {
 				StartActivity(typeof(JourneyPreview));
@@ -489,13 +494,13 @@ namespace GOWL
 
 		}
 
-		/*private void unfoldAccomodation(ImageView accomodation) {
+		private void unfoldAccomodation(ImageView accomodation) {
 
 			accomodation.Click += delegate {
 				
 			};
 
-		}*/
+		}
 
 		private void accomodation(int _order) {
 
@@ -504,14 +509,17 @@ namespace GOWL
 			switch (order) {
 			case 1:
 				accomodationView [order].SetImageResource (Resource.Drawable.accomodationOrange);
+				unfoldAccomodation(accomodationView[order]);
 				connectionLineColor = 1;
 				break;
 			case 3:
 				accomodationView [order].SetImageResource (Resource.Drawable.accomodationGrey);
+				unfoldAccomodation(accomodationView[order]);
 				connectionLineColor = 2;
 				break;
 			case 7:
 				accomodationView [order].SetImageResource (Resource.Drawable.accomodationBabyblue);
+				unfoldAccomodation(accomodationView[order]);
 				connectionLineColor = 3;
 				break;
 			case 9:
@@ -520,10 +528,12 @@ namespace GOWL
 				break;
 			case 11:
 				accomodationView [order].SetImageResource (Resource.Drawable.accomodationGrey);
+				unfoldAccomodation(accomodationView[order]);
 				connectionLineColor = 2;
 				break;
 			case 15:
 				accomodationView [order].SetImageResource (Resource.Drawable.accomodationBabyblue);
+				unfoldAccomodation(accomodationView[order]);
 				connectionLineColor = 3;
 				break;
 			default:

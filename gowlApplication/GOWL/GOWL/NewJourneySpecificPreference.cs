@@ -309,6 +309,7 @@ namespace GOWL
 				} else if (transitionButton == nextButton) {
 					settingTags();
 					StartActivity(typeof(NewJourneyPersonCount));
+					Finish();
 				}
 			};
 		}

@@ -128,6 +128,9 @@ namespace GOWL
 					Log.Info(Tag, "Current Day - End: " + endDay.ToString());	
 					settingTags();
 					StartActivity(typeof(JourneyPreview));
+					/*Intent intent = new Intent(this, typeof(JourneyPreview));
+					intent.AddFlags(ActivityFlags.ClearTop);
+					StartActivity(intent);*/
 				}
 			};
 		}

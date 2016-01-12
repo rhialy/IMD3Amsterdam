@@ -173,6 +173,7 @@
     <AndroidResource Include="Resources\drawable\accomodationBabyblue.png" />
     <AndroidResource Include="Resources\drawable\accomodationGrey.png" />
     <AndroidResource Include="Resources\drawable\accomodationOrange.png" />
+    <AndroidResource Include="Resources\drawable\UnfoldAccomodationView.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

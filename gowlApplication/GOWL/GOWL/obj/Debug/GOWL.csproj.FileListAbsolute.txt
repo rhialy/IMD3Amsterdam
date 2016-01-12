@@ -243,3 +243,15 @@ F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\oran
 F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\accomodationbabyblue.png
 F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\accomodationgrey.png
 F:\SemesterProjekt3\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\accomodationorange.png
+C:\Users\Daniel Stehlik\Documents\IMD3Amsterdam\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\separator.png
+C:\Users\Daniel Stehlik\Documents\IMD3Amsterdam\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\layout\test.xml
+C:\Users\Daniel Stehlik\Documents\IMD3Amsterdam\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\babybluelnr.png
+C:\Users\Daniel Stehlik\Documents\IMD3Amsterdam\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\babybluernl.png
+C:\Users\Daniel Stehlik\Documents\IMD3Amsterdam\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\greylnr.png
+C:\Users\Daniel Stehlik\Documents\IMD3Amsterdam\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\greyrnl.png
+C:\Users\Daniel Stehlik\Documents\IMD3Amsterdam\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\orangelnr.png
+C:\Users\Daniel Stehlik\Documents\IMD3Amsterdam\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\orangernl.png
+C:\Users\Daniel Stehlik\Documents\IMD3Amsterdam\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\accomodationbabyblue.png
+C:\Users\Daniel Stehlik\Documents\IMD3Amsterdam\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\accomodationgrey.png
+C:\Users\Daniel Stehlik\Documents\IMD3Amsterdam\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\accomodationorange.png
+C:\Users\Daniel Stehlik\Documents\IMD3Amsterdam\GitHub\gowlApplication\GOWL\GOWL\obj\Debug\res\drawable\unfoldaccomodationview.xml
