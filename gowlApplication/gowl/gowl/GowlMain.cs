@@ -49,6 +49,7 @@ namespace GOWL
 		private Button resetBtn;
 		private Button speechListener;
 		private Button newComJourneyBtn;
+		private Button existingMainMenu;
 
 		private TextView voiceResultText;
 
@@ -80,6 +81,16 @@ namespace GOWL
 				speechListener = (Button)FindViewById (Resource.Id.voiceButton);
 				speechListener.Click += RecordVoice;
 				newComJourneyBtn = (Button)FindViewById (Resource.Id.ExistingNewJourney);
+				existingMainMenu = (Button)FindViewById (Resource.Id.ExistingMainMenu);
+				existingMainMenu.Click += delegate {
+					using (var connection = new SQLiteConnection(dbPath)) {
+						var User = connection.Get<User> (1);
+						User.ExistingJourney = false;
+						connection.Update(User);
+						StartActivity (typeof(GowlMain));
+						Finish();
+					}
+				};
 				newComJourneyBtn.Click += delegate {
 					StartActivity(typeof(NewJourneySpecificPreference));
 					Finish();

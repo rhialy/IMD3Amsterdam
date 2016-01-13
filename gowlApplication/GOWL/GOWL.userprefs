@@ -1,11 +1,16 @@
 ﻿<Properties StartupItem="GOWL\GOWL.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus 5 (Lollipop) 5.1.0" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="GOWL\MainPreferencesPhaseOne.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="GOWL\JourneyPreview.cs">
     <Files>
-      <File FileName="GOWL\JourneyPreview.cs" Line="498" Column="6" />
-      <File FileName="GOWL\Resources\drawable\PreviewRtoLTemplate.xml" Line="51" Column="50" />
-      <File FileName="GOWL\Resources\drawable\PreviewLtoRTemplate.xml" Line="26" Column="42" />
-      <File FileName="GOWL\MainPreferencesPhaseOne.cs" Line="1" Column="1" />
+      <File FileName="GOWL\JourneyPreview.cs" Line="383" Column="6" />
+      <File FileName="GOWL\Resources\drawable\PreviewRtoLTemplate.xml" Line="1" Column="1" />
+      <File FileName="GOWL\Resources\drawable\PreviewLtoRTemplate.xml" Line="1" Column="1" />
+      <File FileName="GOWL\Resources\drawable\JourneyPreviewUnfold.xml" Line="1" Column="1" />
+      <File FileName="GOWL\Resources\drawable\UnfoldAccomodationView.xml" Line="1" Column="1" />
+      <File FileName="GOWL\NewJourneySpecificPreference.cs" Line="1" Column="1" />
+      <File FileName="GOWL\NewJourneyCalendar.cs" Line="130" Column="6" />
+      <File FileName="GOWL\GowlMain.cs" Line="89" Column="31" />
+      <File FileName="GOWL\WelcomeScreen.cs" Line="58" Column="35" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

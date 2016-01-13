@@ -19,7 +19,7 @@
             android:layout_height="match_parent"
             android:id="@+id/linearLayout1">
             <Button
-                android:text="Gowl Voice Test"
+                android:text="Sprechen"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/voiceButton"
@@ -42,7 +42,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/ExistingNewJourney"
-                android:layout_marginTop="105dp"
+                android:layout_marginTop="80dp"
+                android:minHeight="65dp"
+                android:background="#ff216877" />
+            <Button
+                android:text="Zurück zum Hauptmenü"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ExistingMainMenu"
+                android:layout_marginTop="20dp"
                 android:minHeight="65dp"
                 android:background="#ff216877" />
         </LinearLayout>
