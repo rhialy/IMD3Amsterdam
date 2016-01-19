@@ -134,7 +134,8 @@ namespace GOWL
 			};
 
 			resetBtn.Click += (object sender, EventArgs e) => {
-				StartActivity(typeof(MainPreferencesPhaseOne));
+				// WIEDER ZURÜCKÄNDERN!!!
+				StartActivity(typeof(WelcomeScreen));
 			};
 
 		}

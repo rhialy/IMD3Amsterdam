@@ -54,9 +54,10 @@ namespace GOWL
 			UpdateDestinationDB ();
 			RetrieveDatafromDB ();
 
-			if (existingUser == true) {
+			//TODO: WIEDER AUSKLAMMERN!!!
+			/*if (existingUser == true) {
 				StartActivity (typeof(GowlMain));
-			}
+			}*/
 
 		}
 
