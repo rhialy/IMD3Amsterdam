@@ -20,6 +20,12 @@ namespace GOWL
 	[Activity (Label = "GOWL")]			
 	public class GowlMain : Activity
 	{
+		/************************************************|
+		* 				DECLARING VARIABLES				 |
+		* 					for global class use		 |
+		* 												 |
+		*************************************************/
+
 		private static string dbFolder = System.Environment.GetFolderPath (System.Environment.SpecialFolder.MyDocuments);
 		private static string dbPath = System.IO.Path.Combine(dbFolder, "gowl_user.db");
 

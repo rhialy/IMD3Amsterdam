@@ -18,7 +18,7 @@
             android:layout_height="match_parent"
             android:id="@+id/CalendarLayoutStart">
             <TextView
-                android:text="Wann soll die Reise beginnen?"
+                android:text="Wann soll die Reise starten?"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -37,20 +37,19 @@
                 android:maxWidth="150dp"
                 android:maxHeight="150dp"
                 android:id="@+id/CalendarSubLayout"
-                android:layout_marginBottom="5dp"
-                android:layout_marginTop="5dp">
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="25dp">
                 <DatePicker
                     android:layout_width="match_parent"
                     android:layout_height="300dp"
                     android:id="@+id/DatePickerStart"
-                    android:minWidth="120dp"
-                    android:minHeight="120dp"
                     android:maxHeight="150dp"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="0dp"
                     android:background="#216877"
                     android:layout_marginBottom="5dp"
-                    android:paddingBottom="20dp" />
+                    android:paddingBottom="0dp"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="0dp" />
             </LinearLayout>
             <LinearLayout
                 android:orientation="vertical"
@@ -112,13 +111,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="300dp"
                     android:id="@+id/DatePickerEnd"
-                    android:minWidth="120dp"
-                    android:minHeight="120dp"
                     android:maxHeight="150dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="0dp"
                     android:background="#216877"
-                    android:paddingBottom="18dp" />
+                    android:layout_marginBottom="5dp" />
             </LinearLayout>
             <LinearLayout
                 android:orientation="vertical"

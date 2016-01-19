@@ -18,6 +18,13 @@ namespace GOWL
 	[Activity (Label = "GOWL", MainLauncher = true, Icon = "@mipmap/icon")]			
 	public class WelcomeScreen : Activity
 	{
+		
+		/************************************************|
+		* 				DECLARING VARIABLES				 |
+		* 					for global class use		 |
+		* 												 |
+		*************************************************/
+
 		private static string Tag = "WelcomeScreen";
 		private static string dbFolder = System.Environment.GetFolderPath (System.Environment.SpecialFolder.MyDocuments);
 		private static string dbPath = System.IO.Path.Combine(dbFolder, "gowl_user.db");
@@ -42,22 +49,22 @@ namespace GOWL
 				StartActivity(typeof(MainPreferencesPhaseOne));
 			};
 
+
 			/************************************************|
 			* 				INVOKING METHODS				 |
 		 	* 												 |
 			* 												 |
 			*************************************************/
-			// Create Databse
+			// Create Database
 			createUserDatabase (dbPath);
 			createDestinationDatabase (destinationDBPath);
 			createSystemUser ();
 			UpdateDestinationDB ();
 			RetrieveDatafromDB ();
 
-			//TODO: WIEDER AUSKLAMMERN!!!
-			/*if (existingUser == true) {
+			if (existingUser == true) {
 				StartActivity (typeof(GowlMain));
-			}*/
+			}
 
 		}
 

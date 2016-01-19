@@ -19,40 +19,55 @@ namespace GOWL
 	[Activity (Label = "JourneyPreview")]			
 	public class JourneyPreview : Activity
 	{
+
+		/************************************************|
+		* 				DECLARING VARIABLES				 |
+		* 					for global class use		 |
+		* 												 |
+		*************************************************/
+
 		LayoutInflater inflater;
 
 		// Variables for the unfold preview screen
-		private View[] unfoldPreviewScreen = new View[12];
-		private ImageView[] unfoldImage = new ImageView[12];
-		private TextView[] unfoldDescription = new TextView[12];
-		private TextView[] unfoldDurationText = new TextView[12];
-		private SeekBar[] unfoldDurationBar = new SeekBar[12];
+		// we're using array for assigning every "thumbnail" image the appropriate "unfold image"
+		// as this part is already lagging heavily, it doesn't matter if the array is 20 or 100 
+		// as the application can't show such a big preview scroll view
+		private View[] unfoldPreviewScreen = new View[20];
+		private ImageView[] unfoldImage = new ImageView[20];
+		private TextView[] unfoldDescription = new TextView[20];
+		private TextView[] unfoldDurationText = new TextView[20];
+		private SeekBar[] unfoldDurationBar = new SeekBar[20];
 
 		private TextView TstartingDate;
 		private TextView TendDate;
 
+		// variables for the preview line ( all the thumbnails )
 		private LinearLayout scrollViewMain;
-		private LinearLayout[] journeyPartLtoR = new LinearLayout[12];
-		private LinearLayout[] journeyPartRtoL = new LinearLayout[12];
+		private LinearLayout[] journeyPartLtoR = new LinearLayout[20];
+		private LinearLayout[] journeyPartRtoL = new LinearLayout[20];
 		//private ImageView[] connectionLineLtoR = new ImageView[20];
-		private ImageView[] connectionLine = new ImageView[12];
-		private ImageView[] accomodationView = new ImageView[12];
-		private ImageButton[] buttonOne = new ImageButton[12];
-		private ImageButton[] buttonTwo = new ImageButton[12];
-		private TextView[] specDate = new TextView[12];
+		private TextView[] previewName = new TextView[20];
+		private ImageView[] connectionLine = new ImageView[20];
+		private ImageView[] accomodationView = new ImageView[20];
+		private ImageButton[] buttonOne = new ImageButton[20];
+		private ImageButton[] buttonTwo = new ImageButton[20];
+		private TextView[] specDate = new TextView[20];
 
+		// the buttons on the end of the screen
 		private Button newSearchButton;
 		private Button backToMenuBtn;
 		private Button finishPreviewBtn;
 		private Button backToNewJourneyBtn;
 
 		private static string Tag = "Journey Preview";
+		// paths for the databases
 		private static string dbFolder = System.Environment.GetFolderPath (System.Environment.SpecialFolder.MyDocuments);
 		private static string dbPath = System.IO.Path.Combine(dbFolder, "gowl_user.db");
 		private static string destinationDBPath = System.IO.Path.Combine(dbFolder, "gowl_destination.db");
 
 		protected SQLiteConnection db;
 
+		// variables for calculating appropriate dates
 		private int intStartDay;
 		private int intStartMonth;
 		private int intStartYear;
@@ -60,6 +75,7 @@ namespace GOWL
 		private int intEndMonth;
 		private int intEndYear;
 
+		// variables for storing databses information and using it in methods
 		private int persons;
 		private int standards;
 		private int isActive;
@@ -73,24 +89,27 @@ namespace GOWL
 		private string startingDate;
 		private string endDate;
 
-		private string[] description = new string[12];
-		private int[] imageUnfoldId = new int[12];
-		private bool[] isUnfold = new bool[12];
-		private int[] tempDateDay = new int[12];
-		private int[] tempDateMonth = new int[12];
-		private int[] tempDateYear = new int[12];
-		private int[] progress = new int[12];
-		private string[] newDate = new string[12];
+		// variables for assigning to the various thumbnail layouts or unfold layouts
+		private string[] description = new string[20];
+		private int[] imageUnfoldId = new int[20];
+		private bool[] isUnfold = new bool[20];
+		private int[] tempDateDay = new int[20];
+		private int[] tempDateMonth = new int[20];
+		private int[] tempDateYear = new int[20];
+		private int[] progress = new int[20];
+		private string[] newDate = new string[20];
 
 		private bool isClicked = false;
 		private bool hasStarted = false;
 
+		// variables for calculation how long the journey will last and how many stops there are
 		private int duration;
 		private int durationPerDestination;
 		private int specDuration;
 		private int partsCount;
 
 		private int connectionLineColor;
+
 
 		protected override void OnCreate (Bundle savedInstanceState)
 		{
@@ -115,7 +134,14 @@ namespace GOWL
 			TstartingDate.Text = "Start: " + startingDate;
 			TendDate.Text = "Ende: " + endDate;
 
+
+			/************************************************|
+			* 				INVOKING METHODS				 |
+		 	* 												 |
+			* 												 |
+			*************************************************/
 			// drawing the necessary amount of destinations
+			// draw also sets the event listeners for every button
 			if (!hasStarted) {
 				draw ();
 				hasStarted = true;
@@ -186,10 +212,15 @@ namespace GOWL
 			string command = "SELECT * FROM Destination";
 			int rightOder = _rightOder;
 
+			// there are 7 different cases which are used to calculate the 
+			// suitable destinations (so that not the same method is used every time)
+			// This could be far more complex, but our prototype databse is far too small
+			// which would lead to empty stops, because some cases would not find
+			// a suitable destination with the right variables
 			Random random = new Random ();
-			//int whichReturn = random.Next (1, 7);
-			//for testing
-			int whichReturn = 1;
+			int whichReturn = random.Next (1, 7);
+			//for testing!!
+			//int whichReturn = 1;
 
 			using (var db = new SQLiteConnection (destinationDBPath)) {
 
@@ -205,9 +236,10 @@ namespace GOWL
 						if (s.Order == rightOder) {
 							description[rightOder] = s.Description;
 							imageUnfoldId [rightOder] = s.ImageResID;
+							previewName [rightOder].Text = s.Name;
 							return imageResourceId;
 						} else {
-							//findDestinationFoldPreview (rightOder);
+							//findDestinationFoldPreview (rightOder); -- y no recursive functions, dunald?!?! ;( ;( ;(
 						}
 					}
 					break;
@@ -220,6 +252,7 @@ namespace GOWL
 						if (s.Order == rightOder) {
 							description[rightOder] = s.Description;
 							imageUnfoldId [rightOder] = s.ImageResID;
+							previewName [rightOder].Text = s.Name;
 							return imageResourceId;
 						} else {
 							//findDestinationFoldPreview (rightOder);
@@ -235,6 +268,7 @@ namespace GOWL
 						if (s.Order == rightOder) {
 							description[rightOder] = s.Description;
 							imageUnfoldId [rightOder] = s.ImageResID;
+							previewName [rightOder].Text = s.Name;
 							return imageResourceId;
 						} else {
 							//findDestinationFoldPreview (rightOder);
@@ -250,6 +284,7 @@ namespace GOWL
 						if (s.Order == rightOder) {
 							description[rightOder] = s.Description;
 							imageUnfoldId [rightOder] = s.ImageResID;
+							previewName [rightOder].Text = s.Name;
 							return imageResourceId;
 						} else {
 							//findDestinationFoldPreview (rightOder);
@@ -265,6 +300,7 @@ namespace GOWL
 						if (s.Order == rightOder) {
 							description[rightOder] = s.Description;
 							imageUnfoldId [rightOder] = s.ImageResID;
+							previewName [rightOder].Text = s.Name;
 							return imageResourceId;
 						} else {
 							//findDestinationFoldPreview (rightOder);
@@ -280,6 +316,7 @@ namespace GOWL
 						if (s.Order == rightOder) {
 							description[rightOder] = s.Description;
 							imageUnfoldId [rightOder] = s.ImageResID;
+							previewName [rightOder].Text = s.Name;
 							return imageResourceId;
 						} else {
 							//findDestinationFoldPreview (rightOder);
@@ -295,6 +332,7 @@ namespace GOWL
 						if (s.Order == rightOder) {
 							description[rightOder] = s.Description;
 							imageUnfoldId [rightOder] = s.ImageResID;
+							previewName [rightOder].Text = s.Name;
 							return imageResourceId;
 						} else {
 							//findDestinationFoldPreview (rightOder);
@@ -376,6 +414,7 @@ namespace GOWL
 					specDate [i] = (TextView)journeyPartLtoR[i].FindViewById (Resource.Id.date);
 					connectionLine [i] = (ImageView)journeyPartLtoR [i].FindViewById (Resource.Id.ConnectionLineLtoR);
 					accomodationView [i] = (ImageView)journeyPartLtoR [i].FindViewById (Resource.Id.AccomodationView);
+					previewName [i] = (TextView)journeyPartLtoR [i].FindViewById (Resource.Id.name);
 
 					specDate [i].Text = newDate [i];
 					buttonTwo[i].SetImageResource (findDestinationFoldPreview(i));
@@ -405,6 +444,7 @@ namespace GOWL
 					specDate [i] = (TextView)journeyPartRtoL[i].FindViewById (Resource.Id.date);
 					connectionLine [i] = (ImageView)journeyPartRtoL [i].FindViewById (Resource.Id.ConnectionLineRtoL);
 					accomodationView [i] = (ImageView)journeyPartRtoL [i].FindViewById (Resource.Id.AccomodationView);
+					previewName [i] = (TextView)journeyPartRtoL [i].FindViewById (Resource.Id.name);
 
 					specDate [i].Text = newDate [i];
 					buttonOne[i].SetImageResource (findDestinationFoldPreview(i));
@@ -427,7 +467,7 @@ namespace GOWL
 			}
 		}
 
-
+		//----------thumbnail button event listener----------//
 		// clicking round imagebutton for getting unfolded preview about specific destination
 		private void clickingFoldImage(ImageButton button, LinearLayout currentPart, int _rightOrder) {
 
@@ -437,7 +477,8 @@ namespace GOWL
 				if(!isClicked) {
 
 					if (isUnfold[rightOrder] == false) {
-						
+
+						// for every thumbnail button there will be a corresponding full preview image
 						unfoldPreviewScreen[rightOrder] = inflater.Inflate(Resource.Drawable.JourneyPreviewUnfold, null);
 						unfoldImage[rightOrder] = (ImageView) unfoldPreviewScreen[rightOrder].FindViewById(Resource.Id.imageView1);
 						unfoldDescription[rightOrder] = (TextView) unfoldPreviewScreen[rightOrder].FindViewById (Resource.Id.UnfoldDescription);
@@ -454,6 +495,7 @@ namespace GOWL
 						unfoldPreviewScreen[rightOrder].Visibility = ViewStates.Visible;
 					}
 
+				
 					unfoldDurationBar[rightOrder].ProgressChanged += (object sender, SeekBar.ProgressChangedEventArgs e) => {
 						if(e.FromUser && duration > 0) {
 
@@ -462,6 +504,7 @@ namespace GOWL
 
 							progress[rightOrder] = e.Progress;
 
+							// the date is (kind of) dynamically calculated
 							if (e.Progress != durationPerDestination) {
 								if (e.Progress > durationPerDestination) {
 									tempDateDay[rightOrder] += 1;
@@ -521,7 +564,8 @@ namespace GOWL
 			};
 
 		}
-
+			
+		//----------unfold view for accomodations----------//
 		private void unfoldAccomodation(ImageView accomodation) {
 
 			accomodation.Click += delegate {
@@ -530,6 +574,9 @@ namespace GOWL
 
 		}
 
+		//----------handling of accomodations---------//
+		// at the moment accomodations are just "fake" as there is no database specifically for these category
+		// but of course this is handled in the concept
 		private void accomodation(int _order) {
 
 			int order = _order;

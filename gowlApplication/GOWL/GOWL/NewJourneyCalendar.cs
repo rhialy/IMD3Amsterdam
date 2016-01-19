@@ -127,8 +127,11 @@ namespace GOWL
 					endDay = view.DayOfMonth;
 					Log.Info(Tag, "Current Day - End: " + endDay.ToString());	
 					settingTags();
-					StartActivity(typeof(JourneyPreview));
-					Finish();
+					Intent intent = new Intent(this, typeof(JourneyPreview));
+					intent.AddFlags(ActivityFlags.ClearTop);
+					StartActivity(intent);
+					//StartActivity(typeof(JourneyPreview));
+					//Finish();
 				}
 			};
 		}

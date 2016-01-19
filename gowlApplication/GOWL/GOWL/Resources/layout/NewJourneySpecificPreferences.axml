@@ -29,7 +29,7 @@
                 android:gravity="center_vertical"
                 android:layout_gravity="center_vertical">
                 <TextView
-                    android:text="Wähle auf den nächsten Seiten das Bild aus, das dir am meisten gefällt."
+                    android:text="Wähle auf der nächsten Seite das Bild aus, dass deinem Traum-Urlaubsziel am nähesten kommt."
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -37,8 +37,21 @@
                     android:id="@+id/textView1"
                     android:gravity="center_horizontal"
                     android:layout_gravity="center_vertical"
-                    android:textSize="28dp"
-                    android:layout_marginTop="100dp" />
+                    android:textSize="25dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="5dp" />
+                <TextView
+                    android:text="Dann wähle mit wem und wie vielen du in den Urlaub fahren willst."
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ff414141"
+                    android:id="@+id/textView1"
+                    android:gravity="center_horizontal"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="25dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="5dp" />
                 <ImageView
                     android:src="@drawable/viech_gowl_alleine_mini"
                     android:layout_width="wrap_content"
