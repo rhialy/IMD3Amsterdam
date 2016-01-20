@@ -230,7 +230,7 @@ namespace GOWL
 
 				case 1:
 					command = "SELECT * FROM Destination WHERE VacationTarget = ?";
-					var imageResIdOne = db.Query<Destination> (command, whichReturn);
+					var imageResIdOne = db.Query<Destination> (command, vacationTarget);
 					foreach (var s in  imageResIdOne) {
 						int imageResourceId = s.ImageResID;
 						if (s.Order == rightOder) {
@@ -255,7 +255,7 @@ namespace GOWL
 							previewName [rightOder].Text = s.Name;
 							return imageResourceId;
 						} else {
-							//findDestinationFoldPreview (rightOder);
+							//findDestinationFoldPreview (rightOder); -- y no recursive functions, dunald?!?! ;( ;( ;(
 						}
 					}
 					break;
@@ -264,14 +264,14 @@ namespace GOWL
 					command = "SELECT * FROM Destination WHERE InterestCity = ?";
 					var imageResIdThree = db.Query<Destination> (command, interestCity);
 					foreach (var s in  imageResIdThree) {
-						int imageResourceId = s.ImageResID;
+						int imageResourceId = s.ImageResID;						
 						if (s.Order == rightOder) {
 							description[rightOder] = s.Description;
 							imageUnfoldId [rightOder] = s.ImageResID;
 							previewName [rightOder].Text = s.Name;
 							return imageResourceId;
 						} else {
-							//findDestinationFoldPreview (rightOder);
+							//findDestinationFoldPreview (rightOder); -- y no recursive functions, dunald?!?! ;( ;( ;(
 						}
 					}
 					break;
@@ -287,7 +287,7 @@ namespace GOWL
 							previewName [rightOder].Text = s.Name;
 							return imageResourceId;
 						} else {
-							//findDestinationFoldPreview (rightOder);
+							//findDestinationFoldPreview (rightOder); -- y no recursive functions, dunald?!?! ;( ;( ;(
 						}
 					}
 					break;
@@ -303,7 +303,7 @@ namespace GOWL
 							previewName [rightOder].Text = s.Name;
 							return imageResourceId;
 						} else {
-							//findDestinationFoldPreview (rightOder);
+							//findDestinationFoldPreview (rightOder); -- y no recursive functions, dunald?!?! ;( ;( ;(
 						}
 					}
 					break;
@@ -319,7 +319,7 @@ namespace GOWL
 							previewName [rightOder].Text = s.Name;
 							return imageResourceId;
 						} else {
-							//findDestinationFoldPreview (rightOder);
+							//findDestinationFoldPreview (rightOder); -- y no recursive functions, dunald?!?! ;( ;( ;(
 						}
 					}
 					break;
@@ -335,7 +335,7 @@ namespace GOWL
 							previewName [rightOder].Text = s.Name;
 							return imageResourceId;
 						} else {
-							//findDestinationFoldPreview (rightOder);
+							//findDestinationFoldPreview (rightOder); -- y no recursive functions, dunald?!?! ;( ;( ;(
 						}
 					}
 					break;

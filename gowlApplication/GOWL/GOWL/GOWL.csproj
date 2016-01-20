@@ -186,6 +186,31 @@
     <AndroidResource Include="Resources\drawable\personFour_confirmed.png" />
     <AndroidResource Include="Resources\drawable\personThree_confirmed.png" />
     <AndroidResource Include="Resources\drawable\personTwo_confirmed.png" />
+    <AndroidResource Include="Resources\drawable\arhus.png" />
+    <AndroidResource Include="Resources\drawable\knuden.png" />
+    <AndroidResource Include="Resources\drawable\labyrinthia.png" />
+    <AndroidResource Include="Resources\drawable\tivoli.png" />
+    <AndroidResource Include="Resources\drawable\amagerstrandpark.png" />
+    <AndroidResource Include="Resources\drawable\biketour.png" />
+    <AndroidResource Include="Resources\drawable\boerbakerij.png" />
+    <AndroidResource Include="Resources\drawable\bremen.png" />
+    <AndroidResource Include="Resources\drawable\denmarknationalmusem.png" />
+    <AndroidResource Include="Resources\drawable\esbjerg.png" />
+    <AndroidResource Include="Resources\drawable\fisketorvet.png" />
+    <AndroidResource Include="Resources\drawable\funenarchipel.png" />
+    <AndroidResource Include="Resources\drawable\groningen.png" />
+    <AndroidResource Include="Resources\drawable\Herning.png" />
+    <AndroidResource Include="Resources\drawable\jutland.png" />
+    <AndroidResource Include="Resources\drawable\kokvin.png" />
+    <AndroidResource Include="Resources\drawable\lamer.png" />
+    <AndroidResource Include="Resources\drawable\miro.png" />
+    <AndroidResource Include="Resources\drawable\moesgardmuseum.png" />
+    <AndroidResource Include="Resources\drawable\nomarestaurant.png" />
+    <AndroidResource Include="Resources\drawable\passebaekgardgolf.png" />
+    <AndroidResource Include="Resources\drawable\reiterhofhennings.png" />
+    <AndroidResource Include="Resources\drawable\segworld.png" />
+    <AndroidResource Include="Resources\drawable\surfin.png" />
+    <AndroidResource Include="Resources\drawable\tunotrip.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
