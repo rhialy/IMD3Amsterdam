@@ -1,18 +1,20 @@
 ﻿<Properties StartupItem="GOWL\GOWL.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus 5 (Lollipop) 5.1.0" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="GOWL\WelcomeScreen.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" PreferredExecutionTarget="Android.Nexus 5 (Lollipop) 5.1.0" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="GOWL\JourneyPreview.cs">
     <Files>
       <File FileName="GOWL\JourneyPreview.cs" Line="1" Column="1" />
       <File FileName="GOWL\NewJourneySpecificPreference.cs" Line="1" Column="1" />
       <File FileName="GOWL\NewJourneyCalendar.cs" Line="1" Column="1" />
       <File FileName="GOWL\GowlMain.cs" Line="1" Column="1" />
-      <File FileName="GOWL\WelcomeScreen.cs" Line="770" Column="143" />
+      <File FileName="GOWL\WelcomeScreen.cs" Line="1" Column="1" />
       <File FileName="GOWL\Properties\AndroidManifest.xml" Line="1" Column="1" />
+      <File FileName="GOWL\MainPreferencesPhaseOne.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <AuthorInfo Name="Daniel Stehlik" Email="stehlik@creunity.de" Copyright="Daniel" Company="" Trademark="" />
   <MonoDevelop.Ide.ItemProperties.GOWL AndroidDesignerPreferredDevice="Nexus 4" AndroidDesignerPreferredTheme="Theme.Material" />
 </Properties>

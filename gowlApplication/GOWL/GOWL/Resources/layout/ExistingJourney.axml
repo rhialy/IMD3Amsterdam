@@ -27,7 +27,6 @@
                 android:background="#ff216877"
                 android:minHeight="65dp" />
             <TextView
-                android:text="Speech to Text:"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

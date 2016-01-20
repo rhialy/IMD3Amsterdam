@@ -35,13 +35,14 @@ namespace GOWL
 
 		private string gowlVoiceHallo = "Hallo";
 		private string gowlVoiceStatus = "wie geht es dir";
+		private string gowlVoiceStatusAlt = "wie geht's dir";
 		private string gowlVoiceErleben = "alles zu erleben";
 		private string gowlVoiceStrand = "zum strand";
 		private string gowlVoiceRestaurant = "lust auf das restaurant";
 		private string gowlVoiceBegleiten = "begleite uns zu";
 		private string gowlVoiceNationalpark = "erzähl uns doch mal";
 		private string gowlVoiceVogelarten = "mehr über die Vogelarten";
-		private string gowlVoiceFoto = "kannst du ein foto";
+		private string gowlVoiceFoto = "ein Foto";
 	
 		private bool existingJourney = true;
 
@@ -140,8 +141,7 @@ namespace GOWL
 			};
 
 			resetBtn.Click += (object sender, EventArgs e) => {
-				// WIEDER ZURÜCKÄNDERN!!!
-				StartActivity(typeof(WelcomeScreen));
+				StartActivity(typeof(MainPreferencesPhaseOne));
 			};
 
 		}
@@ -175,7 +175,7 @@ namespace GOWL
 					if (result.Text == gowlVoiceHallo) {
 						MediaPlayer mediaPlayer = MediaPlayer.Create (this, Resource.Raw.IchBinGowl);
 						mediaPlayer.Start ();
-					} else if (result.Text.Contains (gowlVoiceStatus)) {
+					} else if (result.Text.Contains (gowlVoiceStatus) || result.Text.Contains (gowlVoiceStatusAlt)) {
 						MediaPlayer mediaPlayer = MediaPlayer.Create (this, Resource.Raw.AkkuAufladen2);
 						mediaPlayer.Start ();
 					} else if (result.Text.Contains (gowlVoiceErleben)) {
